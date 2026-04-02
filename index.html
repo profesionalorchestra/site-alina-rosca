@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-
 <html lang="ro">
 <head>
   <meta charset="UTF-8" />
@@ -9,457 +8,526 @@
   <style>
     * { box-sizing: border-box; margin: 0; padding: 0; }
 
-```
-:root{
-  --bg:#0f0b14;
-  --bg2:#17111f;
-  --gold:#e3c38b;
-  --gold-soft:#f4dfb8;
-  --text:rgba(255,255,255,0.88);
-  --muted:rgba(255,255,255,0.66);
-  --line:rgba(227,195,139,0.18);
-  --card:rgba(255,255,255,0.05);
-  --shadow:0 18px 40px rgba(0,0,0,0.22);
-  --radius:24px;
-}
+    :root{
+      --bg:#0b0912;
+      --bg2:#15101d;
+      --gold:#e3c38b;
+      --gold-soft:#f4dfb8;
+      --text:rgba(255,255,255,0.88);
+      --muted:rgba(255,255,255,0.66);
+      --line:rgba(227,195,139,0.18);
+      --card:rgba(255,255,255,0.05);
+      --shadow:0 18px 40px rgba(0,0,0,0.22);
+      --radius:24px;
+    }
 
-html { scroll-behavior: smooth; }
+    html { scroll-behavior: smooth; }
 
-body{
-  font-family: Arial, sans-serif;
-  color:#fff;
-  line-height:1.7;
-  background:
-    radial-gradient(circle at top left, rgba(227,195,139,0.08), transparent 25%),
-    linear-gradient(135deg, var(--bg), var(--bg2));
-  min-height:100vh;
-}
+    body{
+      font-family: Arial, sans-serif;
+      color:#fff;
+      line-height:1.7;
+      background:
+        radial-gradient(circle at top left, rgba(227,195,139,0.08), transparent 25%),
+        linear-gradient(135deg, var(--bg), var(--bg2));
+      min-height:100vh;
+      position:relative;
+      overflow-x:hidden;
+    }
 
-a{ color:inherit; text-decoration:none; }
+    body::before{
+      content:"♪ ♫ ♬ ♩   ♪ ♫ ♬ ♩   ♪ ♫ ♬ ♩   ♪ ♫ ♬ ♩";
+      position:fixed;
+      inset:0;
+      pointer-events:none;
+      z-index:-1;
+      font-size:120px;
+      letter-spacing:90px;
+      line-height:2.2;
+      color:rgba(244,223,184,0.05);
+      white-space:pre-wrap;
+      padding:40px 60px;
+      animation: floatNotes 18s ease-in-out infinite alternate;
+    }
 
-.topbar{
-  position:sticky;
-  top:0;
-  z-index:50;
-  background:rgba(15,11,20,0.85);
-  backdrop-filter:blur(12px);
-  border-bottom:1px solid var(--line);
-}
+    @keyframes floatNotes{
+      0%{
+        transform:translateY(0) translateX(0);
+        opacity:0.9;
+      }
+      50%{
+        transform:translateY(-12px) translateX(8px);
+        opacity:1;
+      }
+      100%{
+        transform:translateY(10px) translateX(-8px);
+        opacity:0.85;
+      }
+    }
 
-.topbar-inner{
-  max-width:1180px;
-  margin:auto;
-  padding:16px 22px;
-  display:flex;
-  align-items:center;
-  justify-content:space-between;
-  gap:18px;
-}
+    a{ color:inherit; text-decoration:none; }
 
-.brand{
-  display:flex;
-  flex-direction:column;
-  gap:2px;
-}
+    .topbar{
+      position:sticky;
+      top:0;
+      z-index:50;
+      background:rgba(15,11,20,0.85);
+      backdrop-filter:blur(12px);
+      border-bottom:1px solid var(--line);
+      box-shadow:0 8px 24px rgba(0,0,0,0.18);
+    }
 
-.brand-title{
-  color:var(--gold-soft);
-  font-size:20px;
-  font-weight:700;
-}
+    .topbar-inner{
+      max-width:1180px;
+      margin:auto;
+      padding:16px 22px;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:18px;
+    }
 
-.brand-sub{
-  color:rgba(255,255,255,0.45);
-  font-size:11px;
-  letter-spacing:1.5px;
-  text-transform:uppercase;
-}
+    .brand{
+      display:flex;
+      flex-direction:column;
+      gap:2px;
+    }
 
-.menu{
-  display:flex;
-  gap:18px;
-  font-size:14px;
-  color:rgba(255,255,255,0.78);
-}
+    .brand-title{
+      color:var(--gold-soft);
+      font-size:20px;
+      font-weight:700;
+    }
 
-.menu a:hover{
-  color:var(--gold-soft);
-}
+    .brand-sub{
+      color:rgba(255,255,255,0.45);
+      font-size:11px;
+      letter-spacing:1.5px;
+      text-transform:uppercase;
+    }
 
-.top-actions{
-  display:flex;
-  gap:10px;
-  align-items:center;
-}
+    .menu{
+      display:flex;
+      gap:18px;
+      font-size:14px;
+      color:rgba(255,255,255,0.78);
+    }
 
-.btn-top,
-.btn-top-outline,
-.btn-primary,
-.btn-secondary{
-  display:inline-block;
-  padding:12px 18px;
-  border-radius:999px;
-  font-weight:700;
-  transition:.2s ease;
-}
+    .menu a{
+      position:relative;
+      padding:8px 4px;
+      transition:.25s ease;
+    }
 
-.btn-top,
-.btn-primary{
-  background:linear-gradient(90deg,#f4dfb8,#d4ac69);
-  color:#18120d;
-  box-shadow:0 10px 24px rgba(227,195,139,0.14);
-}
+    .menu a::after{
+      content:"";
+      position:absolute;
+      left:0;
+      bottom:0;
+      width:0;
+      height:1px;
+      background:linear-gradient(90deg,#f4dfb8,#d4ac69);
+      transition:.3s ease;
+    }
 
-.btn-top-outline,
-.btn-secondary{
-  border:1px solid var(--line);
-  background:rgba(255,255,255,0.04);
-  color:#fff;
-}
+    .menu a::before{
+      content:"";
+      position:absolute;
+      inset:-6px -10px;
+      border-radius:999px;
+      background:rgba(244,223,184,0.06);
+      opacity:0;
+      transform:scale(0.9);
+      transition:.25s ease;
+      z-index:-1;
+    }
 
-.btn-top:hover,
-.btn-top-outline:hover,
-.btn-primary:hover,
-.btn-secondary:hover{
-  transform:translateY(-2px);
-}
+    .menu a:hover{
+      color:var(--gold-soft);
+      transform:translateY(-1px);
+    }
 
-.container{
-  max-width:1180px;
-  margin:auto;
-  padding:22px;
-}
+    .menu a:hover::after{
+      width:100%;
+    }
 
-.hero{
-  position:relative;
-  min-height:76vh;
-  border-radius:32px;
-  overflow:hidden;
-  margin-top:18px;
-  display:flex;
-  align-items:flex-end;
-  border:1px solid var(--line);
-  box-shadow:var(--shadow);
-}
+    .menu a:hover::before{
+      opacity:1;
+      transform:scale(1);
+    }
 
-.hero-bg{
-  position:absolute;
-  inset:0;
-  width:100%;
-  height:100%;
-  object-fit:cover;
-}
+    .top-actions{
+      display:flex;
+      gap:10px;
+      align-items:center;
+    }
 
-.hero-overlay{
-  position:absolute;
-  inset:0;
-  background:
-    linear-gradient(to right, rgba(9,9,12,0.82), rgba(9,9,12,0.35)),
-    linear-gradient(to top, rgba(9,9,12,0.75), transparent 42%);
-}
+    .btn-top,
+    .btn-top-outline,
+    .btn-primary,
+    .btn-secondary{
+      display:inline-block;
+      padding:12px 18px;
+      border-radius:999px;
+      font-weight:700;
+      transition:.2s ease;
+    }
 
-.hero-content{
-  position:relative;
-  z-index:2;
-  max-width:780px;
-  padding:48px;
-}
+    .btn-top,
+    .btn-primary{
+      background:linear-gradient(90deg,#f4dfb8,#d4ac69);
+      color:#18120d;
+      box-shadow:0 10px 24px rgba(227,195,139,0.14);
+    }
 
-.eyebrow{
-  display:inline-block;
-  margin-bottom:16px;
-  padding:8px 14px;
-  border-radius:999px;
-  border:1px solid rgba(255,255,255,0.14);
-  background:rgba(255,255,255,0.05);
-  color:var(--gold-soft);
-  font-size:12px;
-  letter-spacing:.8px;
-  text-transform:uppercase;
-}
+    .btn-top-outline,
+    .btn-secondary{
+      border:1px solid var(--line);
+      background:rgba(255,255,255,0.04);
+      color:#fff;
+    }
 
-h1{
-  font-family: Georgia, "Times New Roman", serif;
-  font-size:58px;
-  line-height:1.04;
-  margin-bottom:16px;
-  color:#fff9f1;
-}
+    .btn-top:hover,
+    .btn-top-outline:hover,
+    .btn-primary:hover,
+    .btn-secondary:hover{
+      transform:translateY(-2px);
+    }
 
-.hero p{
-  font-size:19px;
-  max-width:700px;
-  color:var(--text);
-}
+    .container{
+      max-width:1180px;
+      margin:auto;
+      padding:22px;
+    }
 
-.hero-buttons{
-  margin-top:26px;
-  display:flex;
-  gap:14px;
-  flex-wrap:wrap;
-}
+    .hero{
+      position:relative;
+      min-height:76vh;
+      border-radius:32px;
+      overflow:hidden;
+      margin-top:18px;
+      display:flex;
+      align-items:flex-end;
+      border:1px solid var(--line);
+      box-shadow:var(--shadow);
+    }
 
-.hero-pills{
-  display:flex;
-  flex-wrap:wrap;
-  gap:10px;
-  margin-top:22px;
-}
+    .hero-bg{
+      position:absolute;
+      inset:0;
+      width:100%;
+      height:100%;
+      object-fit:cover;
+    }
 
-.pill{
-  padding:9px 13px;
-  border-radius:999px;
-  border:1px solid rgba(255,255,255,0.12);
-  background:rgba(255,255,255,0.05);
-  color:var(--gold-soft);
-  font-size:13px;
-}
+    .hero-overlay{
+      position:absolute;
+      inset:0;
+      background:
+        linear-gradient(to right, rgba(9,9,12,0.82), rgba(9,9,12,0.35)),
+        linear-gradient(to top, rgba(9,9,12,0.75), transparent 42%);
+    }
 
-.section{
-  padding:42px 0;
-}
+    .hero-content{
+      position:relative;
+      z-index:2;
+      max-width:780px;
+      padding:48px;
+    }
 
-.section h2{
-  font-family: Georgia, "Times New Roman", serif;
-  font-size:40px;
-  color:var(--gold-soft);
-  margin-bottom:14px;
-}
+    .eyebrow{
+      display:inline-block;
+      margin-bottom:16px;
+      padding:8px 14px;
+      border-radius:999px;
+      border:1px solid rgba(255,255,255,0.14);
+      background:rgba(255,255,255,0.05);
+      color:var(--gold-soft);
+      font-size:12px;
+      letter-spacing:.8px;
+      text-transform:uppercase;
+    }
 
-.section-intro{
-  max-width:940px;
-  color:var(--text);
-}
+    h1{
+      font-family: Georgia, "Times New Roman", serif;
+      font-size:58px;
+      line-height:1.04;
+      margin-bottom:16px;
+      color:#fff9f1;
+    }
 
-.grid-2,
-.grid-3,
-.members-grid,
-.contact-grid{
-  display:grid;
-  gap:18px;
-  margin-top:24px;
-}
+    .hero p{
+      font-size:19px;
+      max-width:700px;
+      color:var(--text);
+    }
 
-.grid-2{ grid-template-columns:repeat(2,1fr); }
-.grid-3{ grid-template-columns:repeat(3,1fr); }
-.members-grid{ grid-template-columns:repeat(3,1fr); }
-.contact-grid{ grid-template-columns:repeat(2,1fr); }
+    .hero-buttons{
+      margin-top:26px;
+      display:flex;
+      gap:14px;
+      flex-wrap:wrap;
+    }
 
-.card{
-  background:var(--card);
-  border:1px solid var(--line);
-  border-radius:var(--radius);
-  padding:24px;
-  box-shadow:var(--shadow);
-  transition:.2s ease;
-}
+    .hero-pills{
+      display:flex;
+      flex-wrap:wrap;
+      gap:10px;
+      margin-top:22px;
+    }
 
-.card:hover{
-  transform:translateY(-3px);
-}
+    .pill{
+      padding:9px 13px;
+      border-radius:999px;
+      border:1px solid rgba(255,255,255,0.12);
+      background:rgba(255,255,255,0.05);
+      color:var(--gold-soft);
+      font-size:13px;
+    }
 
-.card h3{
-  font-size:24px;
-  margin-bottom:8px;
-  color:#fff8ef;
-}
+    .section{
+      padding:42px 0;
+    }
 
-.muted{ color:var(--muted); }
+    .section h2{
+      font-family: Georgia, "Times New Roman", serif;
+      font-size:40px;
+      color:var(--gold-soft);
+      margin-bottom:14px;
+    }
 
-.list{
-  padding-left:18px;
-  margin-top:12px;
-  color:var(--text);
-}
+    .section-intro{
+      max-width:940px;
+      color:var(--text);
+    }
 
-.list li{ margin-bottom:8px; }
+    .grid-2,
+    .grid-3,
+    .members-grid,
+    .contact-grid{
+      display:grid;
+      gap:18px;
+      margin-top:24px;
+    }
 
-.tag{
-  display:inline-block;
-  margin-bottom:10px;
-  padding:6px 10px;
-  border-radius:999px;
-  background:rgba(244,223,184,0.10);
-  border:1px solid rgba(244,223,184,0.18);
-  color:var(--gold-soft);
-  font-size:12px;
-  text-transform:uppercase;
-  letter-spacing:.8px;
-  font-weight:700;
-}
+    .grid-2{ grid-template-columns:repeat(2,1fr); }
+    .grid-3{ grid-template-columns:repeat(3,1fr); }
+    .members-grid{ grid-template-columns:repeat(3,1fr); }
+    .contact-grid{ grid-template-columns:repeat(2,1fr); }
 
-.media-wrap{
-  display:grid;
-  grid-template-columns:1.15fr 0.85fr;
-  gap:18px;
-  margin-top:24px;
-}
+    .card{
+      background:var(--card);
+      border:1px solid var(--line);
+      border-radius:var(--radius);
+      padding:24px;
+      box-shadow:var(--shadow);
+      transition:.2s ease;
+    }
 
-.video-frame{
-  border-radius:28px;
-  padding:10px;
-  background:linear-gradient(135deg, rgba(227,195,139,0.18), rgba(255,255,255,0.06));
-  box-shadow:var(--shadow);
-}
+    .card:hover{
+      transform:translateY(-3px);
+    }
 
-.video-frame iframe{
-  width:100%;
-  height:500px;
-  border:0;
-  border-radius:20px;
-  background:#000;
-}
+    .card h3{
+      font-size:24px;
+      margin-bottom:8px;
+      color:#fff8ef;
+    }
 
-.spotify-frame iframe{
-  width:100%;
-  min-height:500px;
-  border:0;
-  border-radius:20px;
-  background:#111;
-}
+    .muted{ color:var(--muted); }
 
-.gallery-wow{
-  display:grid;
-  grid-template-columns:1.2fr 1fr 1fr;
-  grid-template-rows:240px 240px;
-  gap:18px;
-  margin-top:24px;
-}
+    .list{
+      padding-left:18px;
+      margin-top:12px;
+      color:var(--text);
+    }
 
-.gallery-wow img{
-  width:100%;
-  height:100%;
-  object-fit:cover;
-  border-radius:22px;
-  cursor:pointer;
-  border:1px solid var(--line);
-  box-shadow:var(--shadow);
-  transition:.25s ease;
-}
+    .list li{ margin-bottom:8px; }
 
-.gallery-wow img:first-child{
-  grid-row:span 2;
-}
+    .tag{
+      display:inline-block;
+      margin-bottom:10px;
+      padding:6px 10px;
+      border-radius:999px;
+      background:rgba(244,223,184,0.10);
+      border:1px solid rgba(244,223,184,0.18);
+      color:var(--gold-soft);
+      font-size:12px;
+      text-transform:uppercase;
+      letter-spacing:.8px;
+      font-weight:700;
+    }
 
-.gallery-wow img:hover{
-  transform:translateY(-4px);
-}
+    .media-wrap{
+      display:grid;
+      grid-template-columns:1.15fr 0.85fr;
+      gap:18px;
+      margin-top:24px;
+    }
 
-.testimonial{
-  min-height:210px;
-}
+    .video-frame{
+      border-radius:28px;
+      padding:10px;
+      background:linear-gradient(135deg, rgba(227,195,139,0.18), rgba(255,255,255,0.06));
+      box-shadow:var(--shadow);
+    }
 
-.form-wrap{
-  display:grid;
-  grid-template-columns:0.9fr 1.1fr;
-  gap:18px;
-  margin-top:24px;
-}
+    .video-frame iframe{
+      width:100%;
+      height:500px;
+      border:0;
+      border-radius:20px;
+      background:#000;
+    }
 
-.mini-list{
-  display:grid;
-  gap:12px;
-  margin-top:20px;
-}
+    .spotify-frame iframe{
+      width:100%;
+      min-height:500px;
+      border:0;
+      border-radius:20px;
+      background:#111;
+    }
 
-.mini{
-  border:1px solid var(--line);
-  border-radius:18px;
-  padding:14px 16px;
-  background:rgba(255,255,255,0.04);
-  color:var(--text);
-}
+    .gallery-wow{
+      display:grid;
+      grid-template-columns:1.2fr 1fr 1fr;
+      grid-template-rows:240px 240px;
+      gap:18px;
+      margin-top:24px;
+    }
 
-input, textarea, select{
-  width:100%;
-  padding:14px 15px;
-  margin-bottom:12px;
-  border-radius:16px;
-  border:1px solid rgba(255,255,255,0.08);
-  background:rgba(255,255,255,0.06);
-  color:#fff;
-  outline:none;
-  font-family:Arial, sans-serif;
-}
+    .gallery-wow img{
+      width:100%;
+      height:100%;
+      object-fit:cover;
+      border-radius:22px;
+      cursor:pointer;
+      border:1px solid var(--line);
+      box-shadow:var(--shadow);
+      transition:.25s ease;
+    }
 
-input::placeholder, textarea::placeholder{
-  color:rgba(255,255,255,0.5);
-}
+    .gallery-wow img:first-child{
+      grid-row:span 2;
+    }
 
-button{
-  width:100%;
-  padding:15px;
-  border:none;
-  border-radius:999px;
-  cursor:pointer;
-  background:linear-gradient(90deg,#f4dfb8,#d4ac69);
-  color:#18120d;
-  font-weight:700;
-  box-shadow:0 10px 24px rgba(227,195,139,0.14);
-}
+    .gallery-wow img:hover{
+      transform:translateY(-4px);
+    }
 
-.footer{
-  margin-top:40px;
-  padding:28px 10px 40px;
-  text-align:center;
-  border-top:1px solid var(--line);
-  color:rgba(255,255,255,0.62);
-  font-size:14px;
-}
+    .testimonial{
+      min-height:210px;
+    }
 
-.lightbox{
-  display:none;
-  position:fixed;
-  inset:0;
-  background:rgba(0,0,0,0.9);
-  z-index:9999;
-  align-items:center;
-  justify-content:center;
-  padding:30px;
-}
+    .form-wrap{
+      display:grid;
+      grid-template-columns:0.9fr 1.1fr;
+      gap:18px;
+      margin-top:24px;
+    }
 
-.lightbox img{
-  max-width:92vw;
-  max-height:88vh;
-  border-radius:18px;
-  box-shadow:0 25px 60px rgba(0,0,0,0.45);
-}
+    .mini-list{
+      display:grid;
+      gap:12px;
+      margin-top:20px;
+    }
 
-.lightbox-close{
-  position:absolute;
-  top:18px;
-  right:28px;
-  font-size:42px;
-  color:white;
-  cursor:pointer;
-}
+    .mini{
+      border:1px solid var(--line);
+      border-radius:18px;
+      padding:14px 16px;
+      background:rgba(255,255,255,0.04);
+      color:var(--text);
+    }
 
-@media (max-width: 1040px){
-  .menu{ display:none; }
-  h1{ font-size:44px; }
-  .hero-content{ padding:28px; }
-  .grid-2, .grid-3, .members-grid, .contact-grid, .media-wrap, .form-wrap{
-    grid-template-columns:1fr;
-  }
-  .gallery-wow{
-    grid-template-columns:1fr;
-    grid-template-rows:auto;
-  }
-  .gallery-wow img:first-child{ grid-row:auto; }
-  .video-frame iframe{ height:260px; }
-  .spotify-frame iframe{ min-height:420px; }
-}
+    input, textarea, select{
+      width:100%;
+      padding:14px 15px;
+      margin-bottom:12px;
+      border-radius:16px;
+      border:1px solid rgba(255,255,255,0.08);
+      background:rgba(255,255,255,0.06);
+      color:#fff;
+      outline:none;
+      font-family:Arial, sans-serif;
+    }
 
-@media (max-width: 700px){
-  .container{ padding:16px; }
-  .hero{ min-height:70vh; border-radius:24px; }
-  h1{ font-size:36px; }
-  .hero p{ font-size:17px; }
-  .section h2{ font-size:32px; }
-  .top-actions .btn-top-outline{ display:none; }
-}
-```
+    input::placeholder, textarea::placeholder{
+      color:rgba(255,255,255,0.5);
+    }
 
+    button{
+      width:100%;
+      padding:15px;
+      border:none;
+      border-radius:999px;
+      cursor:pointer;
+      background:linear-gradient(90deg,#f4dfb8,#d4ac69);
+      color:#18120d;
+      font-weight:700;
+      box-shadow:0 10px 24px rgba(227,195,139,0.14);
+    }
+
+    .footer{
+      margin-top:40px;
+      padding:28px 10px 40px;
+      text-align:center;
+      border-top:1px solid var(--line);
+      color:rgba(255,255,255,0.62);
+      font-size:14px;
+    }
+
+    .lightbox{
+      display:none;
+      position:fixed;
+      inset:0;
+      background:rgba(0,0,0,0.9);
+      z-index:9999;
+      align-items:center;
+      justify-content:center;
+      padding:30px;
+    }
+
+    .lightbox img{
+      max-width:92vw;
+      max-height:88vh;
+      border-radius:18px;
+      box-shadow:0 25px 60px rgba(0,0,0,0.45);
+    }
+
+    .lightbox-close{
+      position:absolute;
+      top:18px;
+      right:28px;
+      font-size:42px;
+      color:white;
+      cursor:pointer;
+    }
+
+    @media (max-width: 1040px){
+      .menu{ display:none; }
+      h1{ font-size:44px; }
+      .hero-content{ padding:28px; }
+      .grid-2, .grid-3, .members-grid, .contact-grid, .media-wrap, .form-wrap{
+        grid-template-columns:1fr;
+      }
+      .gallery-wow{
+        grid-template-columns:1fr;
+        grid-template-rows:auto;
+      }
+      .gallery-wow img:first-child{ grid-row:auto; }
+      .video-frame iframe{ height:260px; }
+      .spotify-frame iframe{ min-height:420px; }
+    }
+
+    @media (max-width: 700px){
+      .container{ padding:16px; }
+      .hero{ min-height:70vh; border-radius:24px; }
+      h1{ font-size:36px; }
+      .hero p{ font-size:17px; }
+      .section h2{ font-size:32px; }
+      .top-actions .btn-top-outline{ display:none; }
+    }
   </style>
 </head>
 <body>
@@ -471,283 +539,278 @@ button{
         <div class="brand-sub">Live Band • Premium Events</div>
       </div>
 
-```
-  <div class="menu">
-    <a href="#despre">Despre</a>
-    <a href="#servicii">Servicii</a>
-    <a href="#media">Media</a>
-    <a href="#galerie">Galerie</a>
-    <a href="#pachete">Pachete</a>
-    <a href="#oferta">Ofertă</a>
-    <a href="#contact">Contact</a>
-  </div>
+      <div class="menu">
+        <a href="#despre">Despre</a>
+        <a href="#servicii">Servicii</a>
+        <a href="#media">Media</a>
+        <a href="#galerie">Galerie</a>
+        <a href="#pachete">Pachete</a>
+        <a href="#oferta">Ofertă</a>
+        <a href="#contact">Contact</a>
+      </div>
 
-  <div class="top-actions">
-    <a class="btn-top-outline" href="tel:0723829791">Sună acum</a>
-    <a class="btn-top" href="https://wa.me/40723829791" target="_blank">WhatsApp</a>
-  </div>
-</div>
-```
-
+      <div class="top-actions">
+        <a class="btn-top-outline" href="tel:0723829791">Sună acum</a>
+        <a class="btn-top" href="https://wa.me/40723829791" target="_blank">WhatsApp</a>
+      </div>
+    </div>
   </div>
 
   <div class="container">
 
-```
-<section class="hero">
-  <img src="1.jpg" alt="Alina Roșca & Profesional Orchestra" class="hero-bg">
-  <div class="hero-overlay"></div>
+    <section class="hero">
+      <img src="1.jpg" alt="Alina Roșca & Profesional Orchestra" class="hero-bg">
+      <div class="hero-overlay"></div>
 
-  <div class="hero-content">
-    <div class="eyebrow">Muzică live premium pentru nunți, botezuri și evenimente private</div>
-    <h1>Alina Roșca & Profesional Orchestra</h1>
-    <p>
-      Eleganță, rafinament și spectacol live pentru momente de neuitat,
-      alături de interpreți vocali, orchestră live și servicii premium complete.
-    </p>
+      <div class="hero-content">
+        <div class="eyebrow">Muzică live premium pentru nunți, botezuri și evenimente private</div>
+        <h1>Alina Roșca & Profesional Orchestra</h1>
+        <p>
+          Eleganță, rafinament și spectacol live pentru momente de neuitat,
+          alături de interpreți vocali, orchestră live și servicii premium complete.
+        </p>
 
-    <div class="hero-buttons">
-      <a class="btn-primary" href="#oferta">Cere ofertă</a>
-      <a class="btn-secondary" href="https://www.youtube.com/watch?v=G37C2lHENog" target="_blank">Vezi videoclipul</a>
-    </div>
+        <div class="hero-buttons">
+          <a class="btn-primary" href="#oferta">Cere ofertă</a>
+          <a class="btn-secondary" href="https://www.youtube.com/watch?v=G37C2lHENog" target="_blank">Vezi videoclipul</a>
+        </div>
 
-    <div class="hero-pills">
-      <div class="pill">Solistă</div>
-      <div class="pill">Solist vocal</div>
-      <div class="pill">Vioară</div>
-      <div class="pill">Acordeon</div>
-      <div class="pill">Clarinet</div>
-      <div class="pill">Live Show</div>
-    </div>
-  </div>
-</section>
+        <div class="hero-pills">
+          <div class="pill">Solistă</div>
+          <div class="pill">Solist vocal</div>
+          <div class="pill">Vioară</div>
+          <div class="pill">Acordeon</div>
+          <div class="pill">Clarinet</div>
+          <div class="pill">Live Show</div>
+        </div>
+      </div>
+    </section>
 
-<section class="section" id="despre">
-  <h2>Despre noi</h2>
-  <p class="section-intro">
-    Alina Roșca & Profesional Orchestra este o formație dedicată evenimentelor care au nevoie de
-    atmosferă autentică, muzică live și o prezență scenică elegantă. Adaptăm programul în funcție
-    de public, de tipul evenimentului și de preferințele organizatorilor, astfel încât fiecare
-    apariție să fie memorabilă și perfect integrată în desfășurarea serii.
-  </p>
-
-  <div class="grid-2">
-    <div class="card">
-      <h3>Instrumentație și opțiuni suplimentare</h3>
-      <ul class="list">
-        <li>Formulă standard: solistă, solist vocal, clape, vioară, acordeon, clarinet</li>
-        <li>Opțional: saxofon</li>
-        <li>Opțional: trompetă</li>
-        <li>Opțional: percuție / tobe electronice</li>
-        <li>Opțional: DJ pentru pauze și after party</li>
-      </ul>
-    </div>
-
-    <div class="card">
-      <h3>Ce oferim</h3>
-      <ul class="list">
-        <li>Program live personalizat</li>
-        <li>Repertoriu variat pentru toate vârstele</li>
-        <li>Imagine elegantă și atmosferă de petrecere</li>
-        <li>Coordonare atentă a momentelor muzicale</li>
-        <li>Comunicare rapidă pentru booking și organizare</li>
-      </ul>
-    </div>
-  </div>
-</section>
-
-<section class="section" id="servicii">
-  <h2>Servicii complete pentru eveniment</h2>
-  <p class="section-intro">
-    Oferim mai mult decât o simplă formație: construim un pachet complet de entertainment,
-    imagine și producție tehnică, pentru un eveniment coerent, elegant și memorabil.
-  </p>
-
-  <div class="grid-2">
-    <div class="card">
-      <div class="tag">Muzică live</div>
-      <h3>Muzică live & show</h3>
-      <ul class="list">
-        <li>Formație live completă</li>
-        <li>Program muzical elegant și dinamic</li>
-        <li>Repertoriu adaptat în timp real după public</li>
-        <li>Atmosferă garantată pentru momente de neuitat</li>
-      </ul>
-    </div>
-
-    <div class="card">
-      <div class="tag">Tehnic</div>
-      <h3>Producție tehnică</h3>
-      <ul class="list">
-        <li>Sonorizare profesională completă</li>
-        <li>Lumini ambientale și de scenă</li>
-        <li>Mașini de fum</li>
-        <li>Efecte speciale pentru momente cheie</li>
-      </ul>
-    </div>
-
-    <div class="card">
-      <div class="tag">Extra premium</div>
-      <h3>Servicii extra premium</h3>
-      <ul class="list">
-        <li>DJ pentru pauze și after party</li>
-        <li>Posibilitate colaborare cu artiști de top din România</li>
-        <li>Organizare și integrare momente artistice speciale</li>
-        <li>Coordonare artistică completă a evenimentului</li>
-      </ul>
-    </div>
-
-    <div class="card">
-      <div class="tag">Media</div>
-      <h3>Foto & video</h3>
-      <ul class="list">
-        <li>Colaborări cu fotografi profesioniști</li>
-        <li>Colaborări cu videografi profesioniști</li>
-        <li>Clip highlights și materiale premium</li>
-        <li>Echipă coordonată pentru un flux impecabil</li>
-      </ul>
-    </div>
-  </div>
-</section>
-
-<section class="section" id="media">
-  <h2>Media</h2>
-  <div class="media-wrap">
-    <div class="video-frame">
-      <iframe
-        src="https://www.youtube.com/embed/G37C2lHENog"
-        title="Alina Roșca & Profesional Orchestra"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-        allowfullscreen>
-      </iframe>
-    </div>
-
-    <div class="card spotify-frame">
-      <div class="tag">Spotify</div>
-      <h3>Ascultă-ne online</h3>
-      <iframe
-        src="https://open.spotify.com/embed/artist/6KnhUZCGsxfoBtpVjv3Ffg?utm_source=generator"
-        allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
-        loading="lazy">
-      </iframe>
-    </div>
-  </div>
-</section>
-
-<section class="section" id="galerie">
-  <h2>Atmosferă reală din evenimente</h2>
-  <div class="gallery-wow">
-    <img src="1.jpg" alt="Galerie 1" onclick="openLightbox(this.src)">
-    <img src="2.jpg" alt="Galerie 2" onclick="openLightbox(this.src)">
-    <img src="3.jpg" alt="Galerie 3" onclick="openLightbox(this.src)">
-    <img src="4.jpg" alt="Galerie 4" onclick="openLightbox(this.src)">
-  </div>
-</section>
-
-<section class="section" id="pachete">
-  <h2>Pachete</h2>
-  <div class="grid-3">
-    <div class="card">
-      <h3>Essential</h3>
-      <ul class="list">
-        <li>Formulă standard</li>
-        <li>Program live</li>
-        <li>Repertoriu variat</li>
-        <li>Sonorizare inclusă</li>
-      </ul>
-    </div>
-
-    <div class="card">
-      <div class="tag">Recomandat</div>
-      <h3>Premium</h3>
-      <ul class="list">
-        <li>Formulă extinsă</li>
-        <li>Instrumente opționale</li>
-        <li>Program personalizat</li>
-        <li>Atmosferă completă</li>
-        <li>Lumini și efecte</li>
-      </ul>
-    </div>
-
-    <div class="card">
-      <h3>Exclusive</h3>
-      <ul class="list">
-        <li>Formație completă</li>
-        <li>Show live extins</li>
-        <li>Producție tehnică premium</li>
-        <li>Experiență completă pentru evenimente mari</li>
-      </ul>
-    </div>
-  </div>
-</section>
-
-<section class="section" id="oferta">
-  <h2>Cere ofertă</h2>
-  <div class="form-wrap">
-    <div class="card">
-      <div class="tag">Răspuns rapid</div>
-      <h3>Hai să discutăm despre evenimentul tău</h3>
-      <p class="section-intro" style="margin-top:10px;">
-        Trimite-ne câteva detalii și revenim cu o ofertă personalizată, adaptată
-        tipului de eveniment, locației și serviciilor dorite.
+    <section class="section" id="despre">
+      <h2>Despre noi</h2>
+      <p class="section-intro">
+        Alina Roșca & Profesional Orchestra este o formație dedicată evenimentelor care au nevoie de
+        atmosferă autentică, muzică live și o prezență scenică elegantă. Adaptăm programul în funcție
+        de public, de tipul evenimentului și de preferințele organizatorilor, astfel încât fiecare
+        apariție să fie memorabilă și perfect integrată în desfășurarea serii.
       </p>
 
-      <div class="mini-list">
-        <div class="mini">Telefon: 0723829791</div>
-        <div class="mini">WhatsApp disponibil pentru răspuns rapid</div>
-        <div class="mini">București și deplasări în toată țara</div>
+      <div class="grid-2">
+        <div class="card">
+          <h3>Instrumentație și opțiuni suplimentare</h3>
+          <ul class="list">
+            <li>Formulă standard: solistă, solist vocal, clape, vioară, acordeon, clarinet</li>
+            <li>Opțional: saxofon</li>
+            <li>Opțional: trompetă</li>
+            <li>Opțional: percuție / tobe electronice</li>
+            <li>Opțional: DJ pentru pauze și after party</li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <h3>Ce oferim</h3>
+          <ul class="list">
+            <li>Program live personalizat</li>
+            <li>Repertoriu variat pentru toate vârstele</li>
+            <li>Imagine elegantă și atmosferă de petrecere</li>
+            <li>Coordonare atentă a momentelor muzicale</li>
+            <li>Comunicare rapidă pentru booking și organizare</li>
+          </ul>
+        </div>
       </div>
-    </div>
+    </section>
 
-    <div class="card">
-      <form action="https://formsubmit.co/roscaiulian91@gmail.com" method="POST">
-        <input type="text" name="nume" placeholder="Nume" required>
-        <input type="tel" name="telefon" placeholder="Telefon" required>
+    <section class="section" id="servicii">
+      <h2>Servicii complete pentru eveniment</h2>
+      <p class="section-intro">
+        Oferim mai mult decât o simplă formație: construim un pachet complet de entertainment,
+        imagine și producție tehnică, pentru un eveniment coerent, elegant și memorabil.
+      </p>
 
-        <select name="eveniment">
-          <option value="">Tip eveniment</option>
-          <option>Nuntă</option>
-          <option>Botez</option>
-          <option>Aniversare</option>
-          <option>Eveniment privat</option>
-          <option>Corporate</option>
-        </select>
+      <div class="grid-2">
+        <div class="card">
+          <div class="tag">Muzică live</div>
+          <h3>Muzică live & show</h3>
+          <ul class="list">
+            <li>Formație live completă</li>
+            <li>Program muzical elegant și dinamic</li>
+            <li>Repertoriu adaptat în timp real după public</li>
+            <li>Atmosferă garantată pentru momente de neuitat</li>
+          </ul>
+        </div>
 
-        <input type="date" name="data">
-        <input type="text" name="locatie" placeholder="Locație eveniment">
-        <textarea name="mesaj" rows="5" placeholder="Detalii suplimentare"></textarea>
-        <button type="submit">Trimite cererea</button>
-      </form>
-    </div>
-  </div>
-</section>
+        <div class="card">
+          <div class="tag">Tehnic</div>
+          <h3>Producție tehnică</h3>
+          <ul class="list">
+            <li>Sonorizare profesională completă</li>
+            <li>Lumini ambientale și de scenă</li>
+            <li>Mașini de fum</li>
+            <li>Efecte speciale pentru momente cheie</li>
+          </ul>
+        </div>
 
-<section class="section" id="contact">
-  <h2>Contact & Booking</h2>
-  <div class="contact-grid">
-    <div class="card">
-      <h3>Telefon</h3>
-      <div class="muted">0723829791</div>
-    </div>
-    <div class="card">
-      <h3>Oraș</h3>
-      <div class="muted">București și deplasări în toată țara</div>
-    </div>
-    <div class="card">
-      <h3>Facebook</h3>
-      <div class="muted"><a href="https://www.facebook.com/AlinaRoscaArtist/" target="_blank">Alina Roșca Artist</a></div>
-    </div>
-    <div class="card">
-      <h3>TikTok</h3>
-      <div class="muted"><a href="https://www.tiktok.com/@profesionalorchestra" target="_blank">@profesionalorchestra</a></div>
-    </div>
-  </div>
-</section>
+        <div class="card">
+          <div class="tag">Extra premium</div>
+          <h3>Servicii extra premium</h3>
+          <ul class="list">
+            <li>DJ pentru pauze și after party</li>
+            <li>Posibilitate colaborare cu artiști de top din România</li>
+            <li>Organizare și integrare momente artistice speciale</li>
+            <li>Coordonare artistică completă a evenimentului</li>
+          </ul>
+        </div>
 
-<div class="footer">
-  © 2026 Alina Roșca & Profesional Orchestra • București
-</div>
-```
+        <div class="card">
+          <div class="tag">Media</div>
+          <h3>Foto & video</h3>
+          <ul class="list">
+            <li>Colaborări cu fotografi profesioniști</li>
+            <li>Colaborări cu videografi profesioniști</li>
+            <li>Clip highlights și materiale premium</li>
+            <li>Echipă coordonată pentru un flux impecabil</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="media">
+      <h2>Media</h2>
+      <div class="media-wrap">
+        <div class="video-frame">
+          <iframe
+            src="https://www.youtube.com/embed/G37C2lHENog"
+            title="Alina Roșca & Profesional Orchestra"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen>
+          </iframe>
+        </div>
+
+        <div class="card spotify-frame">
+          <div class="tag">Spotify</div>
+          <h3>Ascultă-ne online</h3>
+          <iframe
+            src="https://open.spotify.com/embed/artist/6KnhUZCGsxfoBtpVjv3Ffg?utm_source=generator"
+            allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+            loading="lazy">
+          </iframe>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="galerie">
+      <h2>Atmosferă reală din evenimente</h2>
+      <div class="gallery-wow">
+        <img src="1.jpg" alt="Galerie 1" onclick="openLightbox(this.src)">
+        <img src="2.jpg" alt="Galerie 2" onclick="openLightbox(this.src)">
+        <img src="3.jpg" alt="Galerie 3" onclick="openLightbox(this.src)">
+        <img src="4.jpg" alt="Galerie 4" onclick="openLightbox(this.src)">
+      </div>
+    </section>
+
+    <section class="section" id="pachete">
+      <h2>Pachete</h2>
+      <div class="grid-3">
+        <div class="card">
+          <h3>Essential</h3>
+          <ul class="list">
+            <li>Formulă standard</li>
+            <li>Program live</li>
+            <li>Repertoriu variat</li>
+            <li>Sonorizare inclusă</li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <div class="tag">Recomandat</div>
+          <h3>Premium</h3>
+          <ul class="list">
+            <li>Formulă extinsă</li>
+            <li>Instrumente opționale</li>
+            <li>Program personalizat</li>
+            <li>Atmosferă completă</li>
+            <li>Lumini și efecte</li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <h3>Exclusive</h3>
+          <ul class="list">
+            <li>Formație completă</li>
+            <li>Show live extins</li>
+            <li>Producție tehnică premium</li>
+            <li>Experiență completă pentru evenimente mari</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="oferta">
+      <h2>Cere ofertă</h2>
+      <div class="form-wrap">
+        <div class="card">
+          <div class="tag">Răspuns rapid</div>
+          <h3>Hai să discutăm despre evenimentul tău</h3>
+          <p class="section-intro" style="margin-top:10px;">
+            Trimite-ne câteva detalii și revenim cu o ofertă personalizată, adaptată
+            tipului de eveniment, locației și serviciilor dorite.
+          </p>
+
+          <div class="mini-list">
+            <div class="mini">Telefon: 0723829791</div>
+            <div class="mini">WhatsApp disponibil pentru răspuns rapid</div>
+            <div class="mini">București și deplasări în toată țara</div>
+          </div>
+        </div>
+
+        <div class="card">
+          <form action="https://formsubmit.co/roscaiulian91@gmail.com" method="POST">
+            <input type="text" name="nume" placeholder="Nume" required>
+            <input type="tel" name="telefon" placeholder="Telefon" required>
+
+            <select name="eveniment">
+              <option value="">Tip eveniment</option>
+              <option>Nuntă</option>
+              <option>Botez</option>
+              <option>Aniversare</option>
+              <option>Eveniment privat</option>
+              <option>Corporate</option>
+            </select>
+
+            <input type="date" name="data">
+            <input type="text" name="locatie" placeholder="Locație eveniment">
+            <textarea name="mesaj" rows="5" placeholder="Detalii suplimentare"></textarea>
+            <button type="submit">Trimite cererea</button>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="contact">
+      <h2>Contact & Booking</h2>
+      <div class="contact-grid">
+        <div class="card">
+          <h3>Telefon</h3>
+          <div class="muted">0723829791</div>
+        </div>
+        <div class="card">
+          <h3>Oraș</h3>
+          <div class="muted">București și deplasări în toată țara</div>
+        </div>
+        <div class="card">
+          <h3>Facebook</h3>
+          <div class="muted"><a href="https://www.facebook.com/AlinaRoscaArtist/" target="_blank">Alina Roșca Artist</a></div>
+        </div>
+        <div class="card">
+          <h3>TikTok</h3>
+          <div class="muted"><a href="https://www.tiktok.com/@profesionalorchestra" target="_blank">@profesionalorchestra</a></div>
+        </div>
+      </div>
+    </section>
+
+    <div class="footer">
+      © 2026 Alina Roșca & Profesional Orchestra • București
+    </div>
 
   </div>
 
