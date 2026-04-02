@@ -95,6 +95,7 @@
       display:flex;
       flex-direction:column;
       gap:2px;
+      min-width: 0;
     }
 
     .brand-title{
@@ -115,6 +116,7 @@
       gap:18px;
       font-size:14px;
       color:rgba(255,255,255,0.78);
+      flex-wrap:wrap;
     }
 
     .menu a{
@@ -173,6 +175,7 @@
       display:flex;
       gap:10px;
       align-items:center;
+      flex-wrap:wrap;
     }
 
     .btn-top,
@@ -184,6 +187,7 @@
       border-radius:999px;
       font-weight:700;
       transition:.2s ease;
+      white-space: nowrap;
     }
 
     .btn-top,
@@ -518,28 +522,95 @@
     }
 
     @media (max-width: 1040px){
-      .menu{ display:none; }
       h1{ font-size:44px; }
       .hero-content{ padding:28px; }
+
       .grid-2, .grid-3, .members-grid, .contact-grid, .media-wrap, .form-wrap{
         grid-template-columns:1fr;
       }
+
       .gallery-wow{
         grid-template-columns:1fr;
         grid-template-rows:auto;
       }
-      .gallery-wow img:first-child{ grid-row:auto; }
-      .video-frame iframe{ height:260px; }
-      .spotify-frame iframe{ min-height:420px; }
+
+      .gallery-wow img:first-child{
+        grid-row:auto;
+      }
+
+      .video-frame iframe{
+        height:260px;
+      }
+
+      .spotify-frame iframe{
+        min-height:420px;
+      }
     }
 
     @media (max-width: 700px){
-      .container{ padding:16px; }
-      .hero{ min-height:70vh; border-radius:24px; }
-      h1{ font-size:36px; }
-      .hero p{ font-size:17px; }
-      .section h2{ font-size:32px; }
-      .top-actions .btn-top-outline{ display:none; }
+      .container{
+        padding:16px;
+      }
+
+      .topbar-inner{
+        flex-direction:column;
+        align-items:flex-start;
+        gap:12px;
+      }
+
+      .menu{
+        display:flex;
+        flex-wrap:wrap;
+        gap:10px 14px;
+        width:100%;
+      }
+
+      .menu a{
+        font-size:13px;
+        padding:6px 4px;
+      }
+
+      .top-actions{
+        display:flex;
+        flex-wrap:wrap;
+        gap:10px;
+        width:100%;
+      }
+
+      .top-actions .btn-top-outline{
+        display:inline-block;
+      }
+
+      .hero{
+        min-height:70vh;
+        border-radius:24px;
+      }
+
+      .hero-content{
+        padding:24px;
+      }
+
+      h1{
+        font-size:36px;
+      }
+
+      .hero p{
+        font-size:17px;
+      }
+
+      .section h2{
+        font-size:32px;
+      }
+
+      .spotlight{
+        display:none;
+      }
+
+      body::before{
+        font-size:60px;
+        letter-spacing:60px;
+        padding:30px 20px;
+      }
     }
   </style>
 </head>
@@ -573,7 +644,7 @@
 
   <div class="container">
 
-    <section class="hero">
+    <section class="hero" id="hero">
       <img src="1.jpg" alt="Alina Roșca & Profesional Orchestra" class="hero-bg">
       <div class="hero-overlay"></div>
 
@@ -593,8 +664,6 @@
         <div class="hero-pills">
           <div class="pill">Solistă</div>
           <div class="pill">Solist vocal</div>
-          <div class="pill">Backing Vocal</div>
-          <div class="pill">Clape</div>
           <div class="pill">Vioară</div>
           <div class="pill">Acordeon</div>
           <div class="pill">Clarinet</div>
@@ -618,7 +687,7 @@
           <ul class="list">
             <li>Formulă standard: solistă, solist vocal, clape, vioară, acordeon, clarinet</li>
             <li>Opțional: saxofon</li>
-            <li>Opțional: tambal</li>
+            <li>Opțional: trompetă</li>
             <li>Opțional: percuție / tobe electronice</li>
             <li>Opțional: DJ pentru pauze și after party</li>
           </ul>
@@ -848,8 +917,10 @@
 
     const spotlight = document.getElementById('spotlight');
     document.addEventListener('mousemove', function(e){
-      spotlight.style.left = e.clientX + 'px';
-      spotlight.style.top = e.clientY + 'px';
+      if (window.innerWidth > 700) {
+        spotlight.style.left = e.clientX + 'px';
+        spotlight.style.top = e.clientY + 'px';
+      }
     });
 
     const sections = document.querySelectorAll('section[id]');
