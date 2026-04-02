@@ -1,294 +1,156 @@
-html = r'''<!DOCTYPE html>
+<!DOCTYPE html>
+
 <html lang="ro">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Alina Roșca & Profesional Orchestra</title>
-  <meta name="description" content="Alina Roșca & Profesional Orchestra - muzică de petrecere pentru nunți, botezuri și evenimente private." />
-  <style>
-    * { box-sizing: border-box; margin: 0; padding: 0; }
-    body {
-      font-family: Arial, sans-serif;
-      background: linear-gradient(135deg, #0b0b0f, #1a0033);
-      color: #fff;
-      line-height: 1.6;
-    }
-    a { text-decoration: none; color: inherit; }
-    .topbar {
-      position: sticky; top: 0; z-index: 1000;
-      background: rgba(10, 10, 20, 0.85);
-      border-bottom: 1px solid rgba(255,255,255,0.08);
-      backdrop-filter: blur(10px);
-    }
-    .topbar-inner {
-      max-width: 1150px; margin: auto; padding: 16px 20px;
-      display: flex; justify-content: space-between; align-items: center; gap: 16px;
-    }
-    .logo { font-size: 18px; font-weight: bold; letter-spacing: 1px; }
-    .wa-btn {
-      background: #fff; color: #111; padding: 10px 16px; border-radius: 12px; font-weight: bold;
-    }
-    .hero {
-      max-width: 1150px; margin: auto; padding: 70px 20px 50px;
-      display: grid; grid-template-columns: 1.2fr 0.8fr; gap: 30px; align-items: center;
-    }
-    .badge {
-      display: inline-block; padding: 8px 14px; border-radius: 999px;
-      background: rgba(255,255,255,0.08); border: 1px solid rgba(255,255,255,0.1);
-      margin-bottom: 18px; color: rgba(255,255,255,0.86); font-size: 14px;
-    }
-    h1 { font-size: 54px; line-height: 1.1; margin-bottom: 20px; }
-    .hero p { color: rgba(255,255,255,0.82); font-size: 18px; max-width: 700px; }
-    .hero-buttons { margin-top: 28px; display: flex; flex-wrap: wrap; gap: 14px; }
-    .btn-primary, .btn-secondary {
-      display: inline-block; padding: 13px 20px; border-radius: 14px; font-weight: bold;
-    }
-    .btn-primary { background: #fff; color: #111; }
-    .btn-secondary {
-      border: 1px solid rgba(255,255,255,0.2); color: #fff; background: rgba(255,255,255,0.05);
-    }
-    .hero-card {
-      background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.1);
-      border-radius: 28px; padding: 30px; box-shadow: 0 10px 30px rgba(0,0,0,0.25);
-    }
-    .hero-card h3 { font-size: 28px; margin-bottom: 12px; }
-    .hero-card p { font-size: 16px; }
-    .section { max-width: 1150px; margin: auto; padding: 60px 20px; }
-    .section h2 { font-size: 34px; margin-bottom: 18px; }
-    .section-text { color: rgba(255,255,255,0.82); max-width: 900px; }
-    .grid-3, .grid-2, .members-grid, .packages-grid {
-      display: grid; gap: 20px; margin-top: 28px;
-    }
-    .grid-3, .packages-grid { grid-template-columns: repeat(3, 1fr); }
-    .grid-2 { grid-template-columns: repeat(2, 1fr); }
-    .members-grid { grid-template-columns: repeat(3, 1fr); }
-    .card {
-      background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.1);
-      border-radius: 22px; padding: 22px;
-    }
-    .card h3 { margin-bottom: 8px; font-size: 22px; }
-    .muted { color: rgba(255,255,255,0.7); }
-    .list { margin-top: 16px; padding-left: 18px; color: rgba(255,255,255,0.82); }
-    .list li { margin-bottom: 8px; }
-    .highlight { border: 2px solid rgba(255,255,255,0.25); background: rgba(255,255,255,0.10); }
-    .tag {
-      display: inline-block; font-size: 12px; font-weight: bold; letter-spacing: 0.6px;
-      text-transform: uppercase; padding: 6px 10px; border-radius: 999px;
-      background: rgba(255,255,255,0.12); margin-bottom: 12px;
-    }
-    .video-wrap iframe { width: 100%; height: 420px; border: 0; border-radius: 22px; }
-    .contact-boxes {
-      display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; margin-top: 24px;
-    }
-    .footer {
-      border-top: 1px solid rgba(255,255,255,0.08);
-      text-align: center; padding: 28px 20px; color: rgba(255,255,255,0.6);
-    }
-    @media (max-width: 900px) {
-      .hero, .grid-3, .grid-2, .members-grid, .packages-grid, .contact-boxes {
-        grid-template-columns: 1fr;
-      }
-      h1 { font-size: 38px; }
-      .video-wrap iframe { height: 240px; }
-    }
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Alina Roșca & Profesional Orchestra</title>
+
+<style>
+* { margin:0; padding:0; box-sizing:border-box; }
+
+body {
+  font-family: Arial, sans-serif;
+  color:white;
+  background:
+    radial-gradient(circle at 20% 30%, rgba(255,0,150,0.25), transparent 40%),
+    radial-gradient(circle at 80% 20%, rgba(0,200,255,0.25), transparent 40%),
+    radial-gradient(circle at 50% 80%, rgba(255,200,0,0.2), transparent 40%),
+    linear-gradient(135deg,#0b0b0f,#1a0033);
+}
+
+.container {
+  max-width:1100px;
+  margin:auto;
+  padding:20px;
+}
+
+h1 {
+  font-size:50px;
+  margin-bottom:20px;
+  background: linear-gradient(90deg,#ff4ecd,#7afcff,#ffffff);
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;
+}
+
+h2 {
+  margin-top:40px;
+  margin-bottom:15px;
+}
+
+.card {
+  background: rgba(255,255,255,0.06);
+  border-radius:20px;
+  padding:20px;
+  margin:10px 0;
+  box-shadow: 0 0 20px rgba(255,0,150,0.2);
+  transition:0.3s;
+}
+
+.card:hover {
+  transform:translateY(-5px);
+  box-shadow: 0 0 30px rgba(0,200,255,0.4);
+}
+
+.btn {
+  display:inline-block;
+  padding:12px 18px;
+  background: linear-gradient(90deg,#ff4ecd,#7afcff);
+  color:black;
+  border-radius:12px;
+  font-weight:bold;
+  margin-top:15px;
+}
+
+.video iframe {
+  width:100%;
+  height:350px;
+  border-radius:15px;
+}
+
+.grid {
+  display:grid;
+  grid-template-columns: repeat(auto-fit,minmax(220px,1fr));
+  gap:15px;
+}
+</style>
+
 </head>
+
 <body>
-  <div class="topbar">
-    <div class="topbar-inner">
-      <div class="logo">Alina Roșca & Profesional Orchestra</div>
-      <a class="wa-btn" href="https://wa.me/40723829791" target="_blank">WhatsApp</a>
-    </div>
-  </div>
 
-  <section class="hero">
-    <div>
-      <div class="badge">Muzică de petrecere pentru nunți, botezuri și evenimente private</div>
-      <h1>Alina Roșca & Profesional Orchestra</h1>
-      <p>
-        Interpreți vocali și orchestră live pentru evenimente memorabile, cu atmosferă autentică,
-        repertoriu variat și energie care ține invitații pe ring până la final.
-      </p>
-      <div class="hero-buttons">
-        <a class="btn-primary" href="#contact">Cere ofertă</a>
-        <a class="btn-secondary" href="https://www.youtube.com/@AlinaRoscaOfficial/videos" target="_blank">Vezi videoclipuri</a>
-      </div>
-    </div>
+<div class="container">
 
-    <div class="hero-card">
-      <div class="muted">București</div>
-      <h3>Show live pentru momente speciale</h3>
-      <p>
-        Program muzical elegant, dinamic și personalizat pentru nunți, botezuri,
-        aniversări, petreceri private și evenimente corporate.
-      </p>
-    </div>
-  </section>
+<h1>Alina Roșca & Profesional Orchestra</h1>
 
-  <section class="section">
-    <h2>Despre noi</h2>
-    <p class="section-text">
-      Alina Roșca & Profesional Orchestra este o formație dedicată evenimentelor care au nevoie
-      de atmosferă adevărată, muzică live și energie de petrecere de la început până la final.
-      Oferim un repertoriu variat, interpretare live și o prezență scenică elegantă, potrivită
-      pentru nunți, botezuri, aniversări și petreceri private.
-    </p>
+<p>Muzică de petrecere pentru nunți, botezuri și evenimente private</p>
 
-    <div class="grid-2">
-      <div class="card">
-        <h3>Instrumentație și opțiuni</h3>
-        <ul class="list">
-          <li>Formulă standard: solistă, solist vocal, clape, vioară, acordeon, clarinet</li>
-          <li>Opțional: saxofon</li>
-          <li>Opțional: trompetă</li>
-          <li>Opțional: percuție / tobe electronice</li>
-          <li>Opțional: DJ pentru pauze și after party</li>
-        </ul>
-      </div>
+<a class="btn" href="tel:0723829791">Cere ofertă</a>
 
-      <div class="card">
-        <h3>Ce oferim</h3>
-        <ul class="list">
-          <li>Program live personalizat pentru tipul evenimentului</li>
-          <li>Repertoriu variat pentru toate vârstele</li>
-          <li>Imagine elegantă și atmosferă de petrecere</li>
-          <li>Comunicare rapidă pentru booking și organizare</li>
-        </ul>
-      </div>
-    </div>
-  </section>
+<h2>Despre noi</h2>
+<div class="card">
+Alina Roșca & Profesional Orchestra oferă muzică live pentru nunți, botezuri,
+aniversări și evenimente private. Interpreți vocali și orchestră live pentru o
+atmosferă autentică și memorabilă.
+</div>
 
-  <section class="section">
-    <h2>De ce să ne alegi</h2>
-    <div class="grid-3">
-      <div class="card">Atmosferă garantată pentru momente de neuitat</div>
-      <div class="card">Repertoriu adaptat în timp real după public</div>
-      <div class="card">Imagine elegantă și prezență scenică profesionistă</div>
-    </div>
-  </section>
+<h2>Instrumentație</h2>
+<div class="card">
+• Solistă, solist vocal<br>
+• Clape, vioară, acordeon, clarinet<br>
+• Opțional: saxofon, trompetă, percuție, DJ
+</div>
 
-  <section class="section">
-    <h2>Membrii formației</h2>
-    <div class="members-grid">
-      <div class="card"><h3>Alina Roșca</h3><div class="muted">Solistă</div></div>
-      <div class="card"><h3>Dragoș Paraschiv</h3><div class="muted">Solist vocal</div></div>
-      <div class="card"><h3>Iulian Roșca</h3><div class="muted">Clape</div></div>
-      <div class="card"><h3>Rareș Florescu</h3><div class="muted">Vioară</div></div>
-      <div class="card"><h3>Florinel Caraivan</h3><div class="muted">Acordeon</div></div>
-      <div class="card"><h3>Alexandru Sârbușcă</h3><div class="muted">Clarinet</div></div>
-    </div>
-  </section>
+<h2>Membrii formației</h2>
+<div class="grid">
+<div class="card">Alina Roșca — Solistă</div>
+<div class="card">Dragoș Paraschiv — Solist vocal</div>
+<div class="card">Iulian Roșca — Clape</div>
+<div class="card">Rareș Florescu — Vioară</div>
+<div class="card">Florinel Caraivan — Acordeon</div>
+<div class="card">Alexandru Sârbușcă — Clarinet</div>
+</div>
 
-  <section class="section">
-    <h2>Repertoriu</h2>
-    <div class="grid-2">
-      <div class="card">Muzică de petrecere</div>
-      <div class="card">Muzică live pentru nunți și botezuri</div>
-      <div class="card">Sârbe, hore și muzică de joc</div>
-      <div class="card">Cover-uri românești și internaționale pentru atmosferă</div>
-    </div>
-  </section>
+<h2>Repertoriu</h2>
+<div class="card">
+Muzică de petrecere • Nunți • Botezuri • Hore • Sârbe • Cover-uri
+</div>
 
-  <section class="section">
-    <h2>Video promo</h2>
-    <div class="video-wrap">
-      <iframe
-        src="https://www.youtube.com/embed?listType=user_uploads&list=AlinaRoscaOfficial"
-        title="Alina Roșca & Profesional Orchestra"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-        allowfullscreen>
-      </iframe>
-    </div>
-  </section>
+<h2>Video</h2>
+<div class="video">
+<iframe src="https://www.youtube.com/embed?listType=user_uploads&list=AlinaRoscaOfficial"></iframe>
+</div>
 
-  <section class="section">
-    <h2>Evenimente</h2>
-    <div class="grid-3">
-      <div class="card">
-        <h3>Nunți</h3>
-        <div class="muted">București & țară</div>
-      </div>
-      <div class="card">
-        <h3>Botezuri</h3>
-        <div class="muted">Program personalizat</div>
-      </div>
-      <div class="card">
-        <h3>Evenimente private</h3>
-        <div class="muted">Corporate & petreceri</div>
-      </div>
-    </div>
-  </section>
+<h2>Pachete</h2>
+<div class="grid">
+<div class="card">
+<b>Basic</b><br>
+Formulă standard<br>
+Program live
+</div>
 
-  <section class="section">
-    <h2>Pachete</h2>
-    <div class="packages-grid">
-      <div class="card">
-        <h3>Basic</h3>
-        <ul class="list">
-          <li>Formulă standard</li>
-          <li>Program live</li>
-          <li>Repertoriu variat</li>
-          <li>Sonorizare inclusă</li>
-        </ul>
-      </div>
+<div class="card">
+<b>Premium ⭐</b><br>
+Instrumente opționale<br>
+Atmosferă completă
+</div>
 
-      <div class="card highlight">
-        <div class="tag">Recomandat</div>
-        <h3>Premium</h3>
-        <ul class="list">
-          <li>Formulă extinsă</li>
-          <li>Instrumente opționale</li>
-          <li>Program personalizat</li>
-          <li>Atmosferă completă</li>
-        </ul>
-      </div>
+<div class="card">
+<b>Full Band</b><br>
+Show complet<br>
+Experiență premium
+</div>
+</div>
 
-      <div class="card">
-        <h3>Full Band</h3>
-        <ul class="list">
-          <li>Formație completă</li>
-          <li>Show live extins</li>
-          <li>Instrumentație completă</li>
-          <li>Experiență premium</li>
-        </ul>
-      </div>
-    </div>
-  </section>
+<h2>Contact</h2>
+<div class="card">
+Telefon: 0723829791<br>
+București & deplasări<br>
+<a href="https://www.facebook.com/AlinaRoscaArtist/" target="_blank">Facebook</a><br>
+<a href="https://www.tiktok.com/@profesionalorchestra" target="_blank">TikTok</a>
+</div>
 
-  <section class="section" id="contact">
-    <h2>Contact & Booking</h2>
-    <p class="section-text">
-      Pentru rezervări, ofertă personalizată sau verificarea disponibilității,
-      contactează-ne direct.
-    </p>
+</div>
 
-    <div class="contact-boxes">
-      <div class="card">
-        <h3>Telefon</h3>
-        <div class="muted">0723829791</div>
-      </div>
-      <div class="card">
-        <h3>Oraș</h3>
-        <div class="muted">București și deplasări în toată țara</div>
-      </div>
-      <div class="card">
-        <h3>Facebook</h3>
-        <div class="muted"><a href="https://www.facebook.com/AlinaRoscaArtist/" target="_blank">Alina Roșca Artist</a></div>
-      </div>
-      <div class="card">
-        <h3>TikTok</h3>
-        <div class="muted"><a href="https://www.tiktok.com/@profesionalorchestra" target="_blank">@profesionalorchestra</a></div>
-      </div>
-    </div>
-  </section>
-
-  <div class="footer">
-    © 2026 Alina Roșca & Profesional Orchestra • București
-  </div>
 </body>
 </html>
-'''
-path = "/mnt/data/index.html"
-with open(path, "w", encoding="utf-8") as f:
-    f.write(html)
-print(path)
