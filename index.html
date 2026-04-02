@@ -1,178 +1,351 @@
-<!DOCTYPE html>
-<html lang="ro">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Alina Roșca & Profesional Orchestra</title>
-  <meta name="description" content="Formație de muzică de petrecere pentru nunți, botezuri și evenimente private. București și deplasări în toată țara." />
-  <style>
-    * { box-sizing: border-box; margin: 0; padding: 0; }
-    body {
-      font-family: Arial, sans-serif;
-      background: #0b0b0f;
-      color: white;
-      line-height: 1.6;
-    }
-    a { text-decoration: none; color: inherit; }
-    header {
-      position: sticky; top: 0; z-index: 10;
-      background: rgba(11,11,15,0.9);
-      border-bottom: 1px solid rgba(255,255,255,0.08);
-      backdrop-filter: blur(10px);
-    }
-    .nav {
-      max-width: 1100px; margin: auto; padding: 16px 20px;
-      display: flex; justify-content: space-between; align-items: center;
-    }
-    .brand { font-weight: bold; letter-spacing: 1px; }
-    .btn {
-      display: inline-block;
-      padding: 12px 18px;
-      border-radius: 14px;
-      font-weight: bold;
-    }
-    .btn-primary { background: white; color: black; }
-    .btn-secondary { border: 1px solid rgba(255,255,255,0.2); }
-    .hero {
-      max-width: 1100px; margin: auto; padding: 80px 20px 50px;
-      display: grid; gap: 30px;
-    }
-    .tag {
-      display: inline-block;
-      padding: 8px 14px;
-      border: 1px solid rgba(255,255,255,0.15);
-      border-radius: 999px;
-      color: rgba(255,255,255,0.8);
-      margin-bottom: 20px;
-    }
-    h1 { font-size: 48px; margin-bottom: 20px; }
-    h2 { font-size: 30px; margin-bottom: 20px; }
-    p { color: rgba(255,255,255,0.8); }
-    .actions { margin-top: 28px; display: flex; gap: 12px; flex-wrap: wrap; }
-    .section {
-      max-width: 1100px; margin: auto; padding: 60px 20px;
-    }
-    .cards {
-      display: grid; grid-template-columns: repeat(auto-fit, minmax(220px,1fr));
-      gap: 20px;
-    }
-    .card {
-      background: rgba(255,255,255,0.04);
-      border: 1px solid rgba(255,255,255,0.08);
-      border-radius: 22px;
-      padding: 22px;
-    }
-    ul { padding-left: 20px; color: rgba(255,255,255,0.82); }
-    li { margin-bottom: 8px; }
-    iframe {
-      width: 100%; height: 420px; border: 0; border-radius: 22px;
-    }
-    footer {
-      border-top: 1px solid rgba(255,255,255,0.08);
-      padding: 30px 20px; text-align: center; color: rgba(255,255,255,0.55);
-    }
-    .socials {
-      margin-top: 14px; display: flex; justify-content: center; gap: 14px; flex-wrap: wrap;
-    }
-    @media (max-width: 700px) {
-      h1 { font-size: 34px; }
-      iframe { height: 240px; }
-    }
-  </style>
-</head>
-<body>
-  <header>
-    <div class="nav">
-      <div class="brand">Alina Roșca & Profesional Orchestra</div>
-      <a class="btn btn-secondary" href="https://wa.me/40723829791" target="_blank">WhatsApp</a>
-    </div>
-  </header>
+export default function BandWebsite() {
+  const members = [
+    { name: "Alina Roșca", role: "Voce" },
+    { name: "Dragoș Paraschiv", role: "Voce" },
+    { name: "Iulian Roșca", role: "Clape" },
+    { name: "Rareș Florescu", role: "Vioară" },
+    { name: "Florinel Caraivan", role: "Acordeon" },
+    { name: "Alexandru Sârbușcă", role: "Clarinet" },
+  ];
 
-  <section class="hero">
-    <div>
-      <div class="tag">Muzică de petrecere pentru nunți, botezuri și evenimente private</div>
-      <h1>Alina Roșca & Profesional Orchestra</h1>
-      <p>
-        Eleganță, voce, orchestră live și energie autentică pentru evenimente memorabile.
-        București și deplasări în toată țara.
-      </p>
-      <div class="actions">
-        <a class="btn btn-primary" href="tel:0723829791">Sună acum</a>
-        <a class="btn btn-secondary" href="https://www.youtube.com/@AlinaRoscaOfficial/videos" target="_blank">Vezi videoclipuri</a>
+  const events = [
+    { date: "Nunți", place: "București & țară", type: "Atmosferă completă" },
+    { date: "Botezuri", place: "Program personalizat", type: "Momente elegante" },
+    { date: "Evenimente private", place: "Corporate & petreceri", type: "Show live" },
+  ];
+
+  const repertoire = [
+    "Muzică de petrecere",
+    "Muzică live pentru nunți și botezuri",
+    "Sârbe, hore și muzică de joc",
+    "Cover-uri românești și internaționale pentru atmosferă",
+  ];
+
+  const highlights = [
+    "Repertoriu adaptat fiecărui eveniment",
+    "Prezență scenică elegantă și energie live",
+    "Soliști și instrumentiști profesioniști",
+    "Booking rapid pentru București și deplasări",
+  ];
+
+  const testimonials = [
+    {
+      text: "O atmosferă extraordinară de la început până la final. Invitații au dansat toată seara.",
+      name: "Eveniment privat",
+    },
+    {
+      text: "Profesionalism, eleganță și un repertoriu foarte bine ales pentru toate gusturile.",
+      name: "Petrecere de nuntă",
+    },
+    {
+      text: "Voce, orchestră, energie și organizare excelentă. Recomandăm cu toată încrederea.",
+      name: "Client booking",
+    },
+  ];
+
+  return (
+    <div className="min-h-screen bg-neutral-950 text-white selection:bg-white selection:text-black">
+      <div className="sticky top-0 z-50 border-b border-white/10 bg-neutral-950/80 backdrop-blur-xl">
+        <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4 md:px-10">
+          <a href="#top" className="text-sm font-semibold tracking-[0.2em] text-white/85 uppercase">
+            Alina Roșca & Profesional Orchestra
+          </a>
+          <div className="hidden items-center gap-6 text-sm text-white/70 md:flex">
+            <a href="#despre" className="hover:text-white">Despre</a>
+            <a href="#membri" className="hover:text-white">Membri</a>
+            <a href="#repertoriu" className="hover:text-white">Repertoriu</a>
+            <a href="#evenimente" className="hover:text-white">Evenimente</a>
+            <a href="#contact" className="hover:text-white">Contact</a>
+          </div>
+          <a
+            href="https://wa.me/40723829791"
+            target="_blank"
+            rel="noreferrer"
+            className="rounded-2xl border border-white/15 bg-white/10 px-4 py-2 text-sm font-semibold text-white transition hover:bg-white hover:text-black"
+          >
+            WhatsApp
+          </a>
+        </div>
       </div>
+      <section id="top" className="relative overflow-hidden border-b border-white/10">
+        <div className="absolute inset-0 bg-gradient-to-br from-fuchsia-600/20 via-transparent to-cyan-500/20" />
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(255,255,255,0.18),transparent_32%)]" />
+        <div className="relative mx-auto grid max-w-7xl gap-12 px-6 py-20 md:grid-cols-[1.1fr_0.9fr] md:px-10 md:py-28">
+          <div className="max-w-3xl">
+            <p className="mb-4 inline-flex rounded-full border border-white/15 bg-white/5 px-4 py-1 text-sm text-white/80">
+              Muzică de petrecere pentru nunți, botezuri și evenimente private
+            </p>
+            <h1 className="text-5xl font-bold tracking-tight md:text-7xl">
+              Alina Roșca & Profesional Orchestra
+            </h1>
+            <p className="mt-6 max-w-2xl text-lg leading-8 text-white/75 md:text-xl">
+              Atmosferă garantată pentru evenimente de neuitat. Voce, orchestră live și energie autentică care țin invitații pe ring până la final.
+            </p>
+            <div className="mt-8 flex flex-wrap gap-4">
+              <a
+                href="#contact"
+                className="rounded-2xl bg-white px-6 py-3 font-semibold text-black shadow-lg transition hover:scale-[1.02]"
+              >
+                Verifică disponibilitatea
+              </a>
+              <a
+                href="tel:0723829791"
+                className="rounded-2xl border border-white/20 bg-white/5 px-6 py-3 font-semibold text-white transition hover:bg-white hover:text-black"
+              >
+                Sună acum
+              </a>
+            </div>
+            <div className="mt-10 grid gap-3 sm:grid-cols-2">
+              {highlights.map((item) => (
+                <div key={item} className="rounded-2xl border border-white/10 bg-white/5 px-4 py-4 text-sm text-white/80">
+                  {item}
+                </div>
+              ))}
+            </div>
+          </div>
+
+          <div className="rounded-[2rem] border border-white/10 bg-white/5 p-4 shadow-2xl shadow-black/30 backdrop-blur">
+            <div className="overflow-hidden rounded-[1.5rem] border border-white/10 bg-black/30">
+              <div className="flex aspect-[4/5] items-end bg-[linear-gradient(180deg,rgba(255,255,255,0.08),rgba(0,0,0,0.45))] p-8">
+                <div>
+                  <p className="text-sm uppercase tracking-[0.3em] text-white/55">București</p>
+                  <h2 className="mt-3 text-3xl font-semibold">Show live pentru momente speciale</h2>
+                  <p className="mt-3 max-w-md text-white/70">
+                    Repertoriu variat, program dinamic și o formulă muzicală profesionistă pentru o atmosferă completă.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="mx-auto grid max-w-7xl gap-6 px-6 py-12 md:grid-cols-3 md:px-10">
+        {[
+          ["Live", "Voce și orchestră profesionistă"],
+          ["București", "Disponibili și pentru deplasări"],
+          ["Premium", "Imagine elegantă pentru evenimente"],
+        ].map(([value, label]) => (
+          <div key={label} className="rounded-3xl border border-white/10 bg-white/5 p-6 shadow-xl shadow-black/20">
+            <div className="text-3xl font-bold">{value}</div>
+            <div className="mt-2 text-white/70">{label}</div>
+          </div>
+        ))}
+      </section>
+
+      <section id="despre" className="mx-auto max-w-7xl px-6 py-16 md:px-10">
+        <div className="grid gap-10 md:grid-cols-2 md:items-center">
+          <div>
+            <h2 className="text-3xl font-bold md:text-4xl">Despre noi</h2>
+            <p className="mt-5 text-white/75 leading-8">
+              Alina Roșca & Profesional Orchestra este o formație dedicată evenimentelor care au nevoie de atmosferă adevărată, muzică live și energie de petrecere de la început până la final. Oferim un repertoriu variat, interpretare live și o prezență scenică elegantă, potrivită pentru nunți, botezuri, aniversări și petreceri private.
+            </p>
+            <p className="mt-4 text-white/75 leading-8">
+              Adaptăm programul în funcție de public, de tipul evenimentului și de preferințele organizatorilor, astfel încât fiecare apariție să fie memorabilă, dinamică și potrivită momentului.
+            </p>
+            <div className="mt-6 text-white/75 leading-8">
+              <p className="font-semibold text-white">Instrumentație și opțiuni suplimentare:</p>
+              <ul className="mt-3 space-y-2">
+                <li>• Formulă standard: voce, clape, vioară, acordeon, clarinet</li>
+                <li>• Opțional: saxofon</li>
+                <li>• Opțional: trompetă</li>
+                <li>• Opțional: percuție / tobe electronice</li>
+                <li>• Opțional: DJ pentru pauze și after party</li>
+              </ul>
+              <p className="mt-4">
+                Configurația formației poate fi ajustată în funcție de dimensiunea evenimentului, locație și preferințele muzicale, pentru un rezultat perfect adaptat fiecărei petreceri.
+              </p>
+            </div>
+          </div>
+          <div className="rounded-[2rem] border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-8 shadow-2xl">
+            <h3 className="text-xl font-semibold">Ce oferim</h3>
+            <ul className="mt-5 space-y-3 text-white/75">
+              <li>• Program live personalizat pentru tipul evenimentului</li>
+              <li>• Repertoriu variat pentru toate vârstele</li>
+              <li>• Imagine elegantă și atmosferă de petrecere</li>
+              <li>• Comunicare rapidă pentru booking și organizare</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section className="mx-auto max-w-7xl px-6 py-4 md:px-10">
+        <div className="rounded-[2rem] border border-white/10 bg-gradient-to-r from-fuchsia-600/10 to-cyan-500/10 p-8 mb-10">
+          <h2 className="text-2xl md:text-3xl font-bold">De ce să ne alegi</h2>
+          <div className="mt-6 grid gap-4 md:grid-cols-3 text-white/80">
+            <div className="rounded-2xl border border-white/10 p-4">✔ Atmosferă garantată – invitații dansează, nu stau la masă</div>
+            <div className="rounded-2xl border border-white/10 p-4">✔ Repertoriu adaptat în timp real după public</div>
+            <div className="rounded-2xl border border-white/10 p-4">✔ Experiență în sute de evenimente</div>
+            <div className="rounded-2xl border border-white/10 p-4">✔ Sunet profesionist și imagine elegantă</div>
+            <div className="rounded-2xl border border-white/10 p-4">✔ Comunicare rapidă și organizare fără stres</div>
+            <div className="rounded-2xl border border-white/10 p-4">✔ Opțiuni flexibile de instrumentație</div>
+          </div>
+        </div>
+        <div className="rounded-[2rem] border border-white/10 bg-white/[0.04] p-8">
+          <div className="grid gap-6 md:grid-cols-3">
+            {testimonials.map((item) => (
+              <div key={item.name} className="rounded-3xl border border-white/10 bg-black/20 p-6">
+                <p className="text-white/80 leading-7">“{item.text}”</p>
+                <p className="mt-4 text-sm uppercase tracking-[0.25em] text-white/45">{item.name}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section id="membri" className="border-y border-white/10 bg-white/[0.03]">
+        <div className="mx-auto max-w-7xl px-6 py-16 md:px-10">
+          <h2 className="text-3xl font-bold md:text-4xl">Membrii formației</h2>
+          <div className="mt-8 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+            {members.map((member) => (
+              <div key={member.name} className="rounded-3xl border border-white/10 bg-white/5 p-6">
+                <div className="mb-4 aspect-square rounded-2xl bg-white/10" />
+                <h3 className="text-xl font-semibold">{member.name}</h3>
+                <p className="mt-2 text-white/65">{member.role}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section id="repertoriu" className="mx-auto max-w-7xl px-6 py-16 md:px-10">
+        <div className="grid gap-6 md:grid-cols-2">
+          <div className="rounded-3xl border border-white/10 bg-white/5 p-8">
+            <h2 className="text-3xl font-bold">Repertoriu</h2>
+            <div className="mt-6 grid gap-3">
+              {repertoire.map((item) => (
+                <div key={item} className="rounded-2xl border border-white/10 bg-black/20 px-4 py-3 text-white/80">
+                  {item}
+                </div>
+              ))}
+            </div>
+          </div>
+          <div id="video" className="rounded-3xl border border-white/10 bg-white/5 p-8">
+            <h2 className="text-3xl font-bold">Video promo</h2>
+            <div className="mt-6 aspect-video overflow-hidden rounded-2xl border border-white/10 bg-black/20 shadow-xl shadow-black/20">
+              <iframe
+                className="h-full w-full"
+                src="https://www.youtube.com/embed?listType=user_uploads&list=AlinaRoscaOfficial"
+                title="Alina Roșca & Profesional Orchestra"
+                frameBorder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowFullScreen
+              ></iframe>
+            </div>
+            <div className="mt-4 flex flex-wrap gap-3">
+              <a
+                href="https://www.youtube.com/@AlinaRoscaOfficial/videos"
+                target="_blank"
+                rel="noreferrer"
+                className="rounded-2xl border border-white/15 bg-white/10 px-4 py-2 text-sm font-semibold text-white transition hover:bg-white hover:text-black"
+              >
+                Canal YouTube
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="evenimente" className="border-y border-white/10 bg-white/[0.03]">
+        <div className="mx-auto max-w-7xl px-6 py-16 md:px-10">
+          <h2 className="text-3xl font-bold md:text-4xl">Evenimente</h2>
+          <div className="mt-8 grid gap-6 md:grid-cols-3">
+            {events.map((event) => (
+              <div key={event.date + event.place} className="rounded-3xl border border-white/10 bg-white/5 p-6">
+                <p className="text-sm uppercase tracking-wide text-white/50">{event.type}</p>
+                <h3 className="mt-3 text-2xl font-semibold">{event.date}</h3>
+                <p className="mt-2 text-white/70">{event.place}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section id="pachete" className="mx-auto max-w-7xl px-6 py-16 md:px-10">
+        <h2 className="text-3xl font-bold md:text-4xl">Pachete</h2>
+        <div className="mt-8 grid gap-6 md:grid-cols-3">
+
+          <div className="rounded-3xl border border-white/10 bg-white/5 p-6">
+            <h3 className="text-xl font-semibold">Basic</h3>
+            <ul className="mt-4 space-y-2 text-white/75">
+              <li>• Formulă standard</li>
+              <li>• Program live</li>
+              <li>• Repertoriu variat</li>
+              <li>• Sonorizare inclusă</li>
+            </ul>
+          </div>
+
+          <div className="rounded-3xl border-2 border-fuchsia-500 bg-white/10 p-6 scale-[1.02]">
+            <h3 className="text-xl font-semibold">Premium</h3>
+            <ul className="mt-4 space-y-2 text-white/85">
+              <li>• Formulă extinsă</li>
+              <li>• Instrumente opționale</li>
+              <li>• Program personalizat</li>
+              <li>• Atmosferă completă</li>
+            </ul>
+          </div>
+
+          <div className="rounded-3xl border border-white/10 bg-white/5 p-6">
+            <h3 className="text-xl font-semibold">Full Band</h3>
+            <ul className="mt-4 space-y-2 text-white/75">
+              <li>• Formație completă</li>
+              <li>• Show live extins</li>
+              <li>• Instrumentație completă</li>
+              <li>• Experiență premium</li>
+            </ul>
+          </div>
+
+        </div>
+      </section>
+
+      <section id="contact" className="mx-auto max-w-7xl px-6 py-16 md:px-10">
+        <div className="grid gap-8 md:grid-cols-2">
+          <div>
+            <h2 className="text-3xl font-bold md:text-4xl">Contact & Booking</h2>
+            <p className="mt-5 max-w-xl text-white/75 leading-8">
+              Pentru rezervări, ofertă personalizată sau verificarea disponibilității,
+              contactează-ne direct. Răspundem rapid pentru nunți, botezuri,
+              petreceri private și evenimente corporate.
+            </p>
+            <div className="mt-6 space-y-3 text-white/80">
+              <p>📞 Telefon: 0723829791</p>
+              <p>✉️ Email: contact@alinarosca-profesionalorchestra.ro</p>
+              <p>📍 București și deplasări pentru evenimente în toată țara</p>
+              <p>📘 Facebook: Alina Roșca Artist</p>
+              <p>🎵 TikTok: @profesionalorchestra</p>
+            </div>
+            <div className="mt-6 flex flex-wrap gap-3">
+              <a href="https://www.facebook.com/AlinaRoscaArtist/" target="_blank" rel="noreferrer" className="rounded-2xl border border-white/15 bg-white/10 px-4 py-2 text-sm font-semibold text-white transition hover:bg-white hover:text-black">Facebook</a>
+              <a href="https://www.tiktok.com/@profesionalorchestra" target="_blank" rel="noreferrer" className="rounded-2xl border border-white/15 bg-white/10 px-4 py-2 text-sm font-semibold text-white transition hover:bg-white hover:text-black">TikTok</a>
+              <a href="https://www.youtube.com/@AlinaRoscaOfficial/videos" target="_blank" rel="noreferrer" className="rounded-2xl border border-white/15 bg-white/10 px-4 py-2 text-sm font-semibold text-white transition hover:bg-white hover:text-black">YouTube</a>
+            </div>
+          </div>
+
+          <form className="rounded-3xl border border-white/10 bg-white/5 p-6 shadow-2xl shadow-black/20">
+            <div className="grid gap-4">
+              <input className="rounded-2xl border border-white/10 bg-black/20 px-4 py-3 outline-none placeholder:text-white/35" placeholder="Numele tău" />
+              <input className="rounded-2xl border border-white/10 bg-black/20 px-4 py-3 outline-none placeholder:text-white/35" placeholder="Telefon" />
+              <input className="rounded-2xl border border-white/10 bg-black/20 px-4 py-3 outline-none placeholder:text-white/35" placeholder="Data evenimentului" />
+              <textarea className="min-h-[140px] rounded-2xl border border-white/10 bg-black/20 px-4 py-3 outline-none placeholder:text-white/35" placeholder="Spune-ne câteva detalii despre eveniment" />
+              <button className="rounded-2xl bg-white px-6 py-3 font-semibold text-black transition hover:scale-[1.01]">
+                Trimite cererea
+              </button>
+            </div>
+          </form>
+        </div>
+      </section>
+
+      <footer className="border-t border-white/10 px-6 py-8 text-center text-sm text-white/50 md:px-10">
+        <div>© 2026 Alina Roșca & Profesional Orchestra • București</div>
+        <div className="mt-3 flex items-center justify-center gap-4">
+          <a href="https://www.facebook.com/AlinaRoscaArtist/" target="_blank" rel="noreferrer" className="transition hover:text-white">
+            Facebook
+          </a>
+          <a href="https://www.tiktok.com/@profesionalorchestra" target="_blank" rel="noreferrer" className="transition hover:text-white">
+            TikTok
+          </a>
+        </div>
+      </footer>
     </div>
-  </section>
-
-  <section class="section">
-    <h2>Despre formație</h2>
-    <p>
-      Alina Roșca & Profesional Orchestra oferă muzică live pentru nunți, botezuri,
-      aniversări, petreceri private și evenimente corporate. Repertoriul este adaptat
-      publicului și momentului, pentru o atmosferă elegantă și plină de energie.
-    </p>
-  </section>
-
-  <section class="section">
-    <h2>Membrii formației</h2>
-    <div class="cards">
-      <div class="card"><strong>Alina Roșca</strong><br>Voce</div>
-      <div class="card"><strong>Dragoș Paraschiv</strong><br>Voce</div>
-      <div class="card"><strong>Iulian Roșca</strong><br>Clape</div>
-      <div class="card"><strong>Rareș Florescu</strong><br>Vioară</div>
-      <div class="card"><strong>Florinel Caraivan</strong><br>Acordeon</div>
-      <div class="card"><strong>Alexandru Sârbușcă</strong><br>Clarinet</div>
-    </div>
-  </section>
-
-  <section class="section">
-    <h2>Repertoriu</h2>
-    <ul>
-      <li>Muzică de petrecere</li>
-      <li>Muzică live pentru nunți și botezuri</li>
-      <li>Sârbe, hore și muzică de joc</li>
-      <li>Cover-uri românești și internaționale</li>
-    </ul>
-  </section>
-
-  <section class="section">
-    <h2>Video</h2>
-    <iframe
-      src="https://www.youtube.com/embed?listType=user_uploads&list=AlinaRoscaOfficial"
-      title="Alina Roșca & Profesional Orchestra"
-      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-      allowfullscreen>
-    </iframe>
-  </section>
-
-  <section class="section">
-    <h2>Contact & Booking</h2>
-    <div class="cards">
-      <div class="card">
-        <strong>Telefon</strong><br>
-        0723829791
-      </div>
-      <div class="card">
-        <strong>Oraș</strong><br>
-        București
-      </div>
-      <div class="card">
-        <strong>Facebook</strong><br>
-        <a href="https://www.facebook.com/AlinaRoscaArtist/" target="_blank">Alina Roșca Artist</a>
-      </div>
-      <div class="card">
-        <strong>TikTok</strong><br>
-        <a href="https://www.tiktok.com/@profesionalorchestra" target="_blank">@profesionalorchestra</a>
-      </div>
-    </div>
-  </section>
-
-  <footer>
-    <div>© 2026 Alina Roșca & Profesional Orchestra • București</div>
-    <div class="socials">
-      <a href="https://www.facebook.com/AlinaRoscaArtist/" target="_blank">Facebook</a>
-      <a href="https://www.tiktok.com/@profesionalorchestra" target="_blank">TikTok</a>
-      <a href="https://www.youtube.com/@AlinaRoscaOfficial/videos" target="_blank">YouTube</a>
-    </div>
-  </footer>
-</body>
-</html>
+  );
+}
