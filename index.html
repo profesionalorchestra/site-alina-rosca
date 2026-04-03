@@ -1,4 +1,4 @@
-html = r'''<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="ro">
 <head>
   <meta charset="UTF-8" />
@@ -9,8 +9,9 @@ html = r'''<!DOCTYPE html>
     * { box-sizing: border-box; margin: 0; padding: 0; }
 
     :root{
-      --bg:#0b0912;
-      --bg2:#15101d;
+      --bg:#09070d;
+      --bg2:#140f1d;
+      --bg3:#1b1326;
       --gold:#e3c38b;
       --gold-soft:#f4dfb8;
       --text:rgba(255,255,255,0.88);
@@ -27,33 +28,52 @@ html = r'''<!DOCTYPE html>
       font-family: Arial, sans-serif;
       color:#fff;
       line-height:1.7;
-      background:
-        radial-gradient(circle at top left, rgba(227,195,139,0.08), transparent 25%),
-        linear-gradient(135deg, var(--bg), var(--bg2));
       min-height:100vh;
       position:relative;
       overflow-x:hidden;
+      background:
+        radial-gradient(circle at 10% 15%, rgba(227,195,139,0.10), transparent 24%),
+        radial-gradient(circle at 85% 12%, rgba(255,255,255,0.04), transparent 18%),
+        radial-gradient(circle at 50% 85%, rgba(227,195,139,0.06), transparent 22%),
+        linear-gradient(135deg, var(--bg), var(--bg2), var(--bg3));
     }
 
     body::before{
-      content:"♪   ♫   ♬   ♩   ♪   ♫   ♬   ♩";
+      content:"♪  ♫  ♬  ♩    ♪  ♫  ♬  ♩    ♪  ♫  ♬  ♩";
       position:fixed;
       inset:0;
       pointer-events:none;
       z-index:-2;
-      font-size:100px;
-      letter-spacing:120px;
-      line-height:2.5;
+      font-size:90px;
+      letter-spacing:80px;
+      line-height:2.3;
       color:rgba(244,223,184,0.035);
       white-space:pre-wrap;
-      padding:60px;
-      animation: floatMusic 25s linear infinite;
+      padding:40px 50px;
+      animation: floatMusic 22s ease-in-out infinite alternate;
+    }
+
+    body::after{
+      content:"";
+      position:fixed;
+      inset:0;
+      pointer-events:none;
+      z-index:-3;
+      background:
+        linear-gradient(to bottom, rgba(255,255,255,0.02), transparent 15%),
+        repeating-linear-gradient(
+          90deg,
+          transparent 0,
+          transparent 84px,
+          rgba(227,195,139,0.015) 85px,
+          transparent 86px
+        );
     }
 
     @keyframes floatMusic{
       0%{ transform:translateY(0) translateX(0); }
-      50%{ transform:translateY(-20px) translateX(10px); }
-      100%{ transform:translateY(20px) translateX(-10px); }
+      50%{ transform:translateY(-18px) translateX(10px); }
+      100%{ transform:translateY(14px) translateX(-8px); }
     }
 
     a{ color:inherit; text-decoration:none; }
@@ -75,15 +95,10 @@ html = r'''<!DOCTYPE html>
       position:sticky;
       top:0;
       z-index:50;
-      background:rgba(15,11,20,0.78);
+      background:rgba(12,9,17,0.78);
       backdrop-filter:blur(14px);
       border-bottom:1px solid var(--line);
       box-shadow:0 8px 24px rgba(0,0,0,0.18);
-      transition:transform .35s ease, background .25s ease;
-    }
-
-    .topbar.hide{
-      transform:translateY(-100%);
     }
 
     .topbar-inner{
@@ -126,7 +141,7 @@ html = r'''<!DOCTYPE html>
 
     .menu a{
       position:relative;
-      padding:6px 4px;
+      padding:7px 6px;
       transition:.3s ease;
       letter-spacing:0.2px;
       white-space:nowrap;
@@ -146,11 +161,11 @@ html = r'''<!DOCTYPE html>
     .menu a::before{
       content:"";
       position:absolute;
-      inset:-6px -10px;
+      inset:-7px -10px;
       border-radius:999px;
       background:radial-gradient(circle, rgba(244,223,184,0.12), transparent 70%);
       opacity:0;
-      transform:scale(0.8);
+      transform:scale(0.82);
       transition:.3s ease;
       z-index:-1;
     }
@@ -226,11 +241,11 @@ html = r'''<!DOCTYPE html>
     }
 
     .btn-top{
-      animation:pulseBtn 2.5s infinite;
+      animation:pulseBtn 2.8s infinite;
     }
 
     @keyframes pulseBtn{
-      0%{ box-shadow:0 0 0 0 rgba(227,195,139,0.3); }
+      0%{ box-shadow:0 0 0 0 rgba(227,195,139,0.28); }
       70%{ box-shadow:0 0 0 10px rgba(227,195,139,0); }
       100%{ box-shadow:0 0 0 0 rgba(227,195,139,0); }
     }
@@ -279,8 +294,8 @@ html = r'''<!DOCTYPE html>
       position:absolute;
       inset:0;
       background:
-        linear-gradient(to right, rgba(9,9,12,0.82), rgba(9,9,12,0.35)),
-        linear-gradient(to top, rgba(9,9,12,0.75), transparent 42%);
+        linear-gradient(to right, rgba(9,9,12,0.84), rgba(9,9,12,0.34)),
+        linear-gradient(to top, rgba(9,9,12,0.78), transparent 42%);
     }
 
     .hero-content{
@@ -377,6 +392,7 @@ html = r'''<!DOCTYPE html>
       padding:24px;
       box-shadow:var(--shadow);
       transition:.2s ease;
+      backdrop-filter:blur(8px);
     }
 
     .card:hover{
@@ -468,6 +484,28 @@ html = r'''<!DOCTYPE html>
 
     .gallery-wow img:hover{
       transform:translateY(-4px);
+    }
+
+    .testimonial{
+      min-height:230px;
+      position:relative;
+      font-style:italic;
+    }
+
+    .testimonial::before{
+      content:"“";
+      position:absolute;
+      top:6px;
+      left:16px;
+      font-size:44px;
+      color:rgba(244,223,184,0.16);
+      font-family:Georgia, "Times New Roman", serif;
+    }
+
+    .testimonial p{
+      position:relative;
+      z-index:1;
+      color:var(--text);
     }
 
     .form-wrap{
@@ -912,6 +950,32 @@ html = r'''<!DOCTYPE html>
       </div>
     </section>
 
+    <section class="section">
+      <h2>Ce spun clienții</h2>
+      <div class="grid-3">
+        <div class="card testimonial">
+          <p>
+            Atmosfera a fost incredibilă. Invitații au rămas pe ring toată seara, iar totul a fost exact cum ne-am dorit.
+          </p>
+          <div class="muted" style="margin-top:16px; font-style:normal;">— Nuntă București</div>
+        </div>
+
+        <div class="card testimonial">
+          <p>
+            Profesionalism total, repertoriu foarte bine ales și o colaborare fără stres de la început până la final.
+          </p>
+          <div class="muted" style="margin-top:16px; font-style:normal;">— Eveniment privat</div>
+        </div>
+
+        <div class="card testimonial">
+          <p>
+            Sunet impecabil, atmosferă elegantă și energie extraordinară. O alegere care chiar a făcut diferența.
+          </p>
+          <div class="muted" style="margin-top:16px; font-style:normal;">— Botez</div>
+        </div>
+      </div>
+    </section>
+
     <section class="section" id="pachete">
       <h2>Pachete</h2>
       <div class="grid-3">
@@ -1065,27 +1129,7 @@ html = r'''<!DOCTYPE html>
         }
       });
     });
-
-    let lastScroll = 0;
-    const topbar = document.querySelector('.topbar');
-
-    window.addEventListener('scroll', () => {
-      const currentScroll = window.pageYOffset;
-
-      if (currentScroll > lastScroll && currentScroll > 120) {
-        topbar.classList.add('hide');
-      } else {
-        topbar.classList.remove('hide');
-      }
-
-      lastScroll = currentScroll;
-    });
   </script>
 
 </body>
 </html>
-'''
-path = "/mnt/data/index_pro_complet.html"
-with open(path, "w", encoding="utf-8") as f:
-    f.write(html)
-print(path)
