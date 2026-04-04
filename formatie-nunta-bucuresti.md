@@ -1,5 +1,5 @@
 ---
-layout: default
+
 title: Formație nuntă București – Prețuri, Live Band | Profesional Orchestra
 description: Formație nuntă București cu muzică live, repertoriu variat și show energic. Cere ofertă pentru evenimentul tău.
 permalink: /formatie-nunta-bucuresti/
