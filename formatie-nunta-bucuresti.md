@@ -120,7 +120,7 @@ De aceea, alegerea formației potrivite este una dintre cele mai importante deci
 
 ## 🎥 Media
 
-Dacă ai un clip pe YouTube, pune-l mai jos în loc de `VIDEO_ID`:
+Dacă ai un clip pe YouTube, pune-l mai jos în loc de `(https://www.youtube.com/watch?v=G37C2lHENog)`:
 
 ```html
 <iframe width="100%" height="315"
