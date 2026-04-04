@@ -67,9 +67,10 @@ La Profesional Orchestra, fiecare eveniment este analizat în funcție de nevoil
 [Vezi oferta pentru formație nuntă București](/formatie-nunta-bucuresti/)
 
 [Contactează-ne pentru ofertă](/#contact)
+
 ## Cere o ofertă personalizată
 
 Dacă vrei să afli exact cât costă o formație pentru evenimentul tău, contactează Profesional Orchestra.
 
-👉 Vezi detalii aici:
+👉 Vezi oferta completă aici:
 [Formație nuntă București](/formatie-nunta-bucuresti)
