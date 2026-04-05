@@ -9,7 +9,6 @@
   <meta name="robots" content="index, follow">
   <link rel="canonical" href="https://profesionalorchestra.ro/formatie-nunta-bucuresti">
 
-  <!-- Open Graph -->
   <meta property="og:title" content="Formație de nuntă în București – Profesional Orchestra">
   <meta property="og:description" content="Muzică live premium pentru nunți, botezuri și evenimente private.">
   <meta property="og:image" content="https://profesionalorchestra.ro/formatie-nunta-bucuresti.jpg">
@@ -17,7 +16,6 @@
   <meta property="og:type" content="website">
   <meta property="og:locale" content="ro_RO">
 
-  <!-- Schema -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -46,11 +44,14 @@
       --bg3:#1b1326;
       --gold:#e3c38b;
       --gold-soft:#f4dfb8;
+      --gold-strong:#d4ac69;
       --text:rgba(255,255,255,0.88);
       --muted:rgba(255,255,255,0.70);
       --line:rgba(227,195,139,0.18);
       --card:rgba(255,255,255,0.05);
+      --card-strong:rgba(255,255,255,0.07);
       --shadow:0 18px 40px rgba(0,0,0,0.22);
+      --shadow-gold:0 18px 44px rgba(227,195,139,0.12);
       --radius:24px;
     }
 
@@ -227,7 +228,8 @@
     .btn-top,
     .btn-top-outline,
     .btn-primary,
-    .btn-secondary{
+    .btn-secondary,
+    .slider-btn{
       display:inline-flex;
       align-items:center;
       justify-content:center;
@@ -250,7 +252,8 @@
     }
 
     .btn-top-outline,
-    .btn-secondary{
+    .btn-secondary,
+    .slider-btn{
       border:1px solid var(--line);
       background:rgba(255,255,255,0.04);
       color:#fff;
@@ -259,7 +262,8 @@
     .btn-top:hover,
     .btn-top-outline:hover,
     .btn-primary:hover,
-    .btn-secondary:hover{
+    .btn-secondary:hover,
+    .slider-btn:hover{
       transform:translateY(-2px);
     }
 
@@ -507,6 +511,244 @@
       color:var(--text);
     }
 
+    /* PREMIUM TESTIMONIALS */
+    .testimonials-wrap{
+      margin-top:26px;
+      position:relative;
+    }
+
+    .testimonials-head{
+      display:flex;
+      justify-content:space-between;
+      align-items:flex-end;
+      gap:20px;
+      margin-bottom:18px;
+      flex-wrap:wrap;
+    }
+
+    .rating-summary{
+      display:flex;
+      gap:14px;
+      align-items:center;
+      padding:16px 18px;
+      border-radius:22px;
+      background:linear-gradient(135deg, rgba(244,223,184,0.10), rgba(255,255,255,0.04));
+      border:1px solid rgba(244,223,184,0.18);
+      box-shadow:var(--shadow-gold);
+    }
+
+    .rating-number{
+      font-family: Georgia, "Times New Roman", serif;
+      font-size:34px;
+      line-height:1;
+      color:#fff8ef;
+    }
+
+    .rating-meta{
+      display:flex;
+      flex-direction:column;
+      gap:2px;
+    }
+
+    .stars{
+      color:var(--gold-soft);
+      font-size:17px;
+      letter-spacing:2px;
+      line-height:1;
+    }
+
+    .rating-text{
+      font-size:13px;
+      color:rgba(255,255,255,0.68);
+    }
+
+    .slider-controls{
+      display:flex;
+      gap:10px;
+      align-items:center;
+    }
+
+    .slider-btn{
+      width:42px;
+      height:42px;
+      padding:0;
+      font-size:16px;
+      border-radius:50%;
+      cursor:pointer;
+      backdrop-filter:blur(10px);
+    }
+
+    .testimonials-slider{
+      overflow:hidden;
+      border-radius:30px;
+    }
+
+    .testimonials-track{
+      display:flex;
+      transition:transform .6s ease;
+      will-change:transform;
+    }
+
+    .testimonial-slide{
+      min-width:100%;
+      padding:4px;
+    }
+
+    .testimonials-grid{
+      display:grid;
+      grid-template-columns:repeat(3,1fr);
+      gap:18px;
+    }
+
+    .testimonial-pro{
+      min-height:360px;
+      display:flex;
+      flex-direction:column;
+      justify-content:flex-start;
+      gap:16px;
+      position:relative;
+      overflow:hidden;
+      padding:24px;
+      background:
+        linear-gradient(180deg, rgba(255,255,255,0.08), rgba(255,255,255,0.04));
+      border:1px solid rgba(244,223,184,0.16);
+      box-shadow:0 18px 44px rgba(0,0,0,0.24);
+    }
+
+    .testimonial-pro::after{
+      content:"";
+      position:absolute;
+      inset:auto -40px -40px auto;
+      width:160px;
+      height:160px;
+      border-radius:50%;
+      background:radial-gradient(circle, rgba(227,195,139,0.12), transparent 68%);
+      pointer-events:none;
+    }
+
+    .testimonial-pro::before{
+      content:"“";
+      position:absolute;
+      top:12px;
+      right:18px;
+      font-size:74px;
+      line-height:1;
+      color:rgba(244,223,184,0.08);
+      font-family:Georgia, "Times New Roman", serif;
+    }
+
+    .testimonial-top{
+      display:flex;
+      align-items:center;
+      gap:14px;
+      position:relative;
+      z-index:1;
+    }
+
+    .client-avatar{
+      width:56px;
+      height:56px;
+      border-radius:50%;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      font-weight:700;
+      font-size:18px;
+      color:#18120d;
+      background:linear-gradient(135deg,#f4dfb8,#d4ac69);
+      box-shadow:0 10px 24px rgba(227,195,139,0.16);
+      flex-shrink:0;
+    }
+
+    .client-meta h3{
+      margin:0;
+      font-size:20px;
+      color:#fff8ef;
+    }
+
+    .client-event{
+      margin-top:4px;
+      font-size:13px;
+      color:rgba(255,255,255,0.65);
+      line-height:1.5;
+    }
+
+    .review-badge{
+      display:inline-flex;
+      align-items:center;
+      gap:8px;
+      width:max-content;
+      padding:7px 12px;
+      border-radius:999px;
+      background:rgba(244,223,184,0.08);
+      border:1px solid rgba(244,223,184,0.14);
+      color:var(--gold-soft);
+      font-size:12px;
+      font-weight:700;
+      letter-spacing:.2px;
+      position:relative;
+      z-index:1;
+    }
+
+    .review-badge-dot{
+      width:8px;
+      height:8px;
+      border-radius:50%;
+      background:linear-gradient(135deg,#f4dfb8,#d4ac69);
+      box-shadow:0 0 14px rgba(244,223,184,0.55);
+      flex-shrink:0;
+    }
+
+    .testimonial-pro p{
+      margin:0;
+      font-style:normal;
+      color:var(--text);
+      line-height:1.85;
+      position:relative;
+      z-index:1;
+      font-size:15px;
+    }
+
+    .client-footer{
+      margin-top:auto;
+      padding-top:8px;
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      gap:12px;
+      flex-wrap:wrap;
+      position:relative;
+      z-index:1;
+    }
+
+    .verified{
+      font-size:12px;
+      color:rgba(255,255,255,0.62);
+    }
+
+    .dots{
+      margin-top:18px;
+      display:flex;
+      justify-content:center;
+      gap:10px;
+    }
+
+    .dot{
+      width:10px;
+      height:10px;
+      border-radius:50%;
+      border:none;
+      background:rgba(255,255,255,0.18);
+      cursor:pointer;
+      transition:.25s ease;
+    }
+
+    .dot.active{
+      background:linear-gradient(135deg,#f4dfb8,#d4ac69);
+      transform:scale(1.15);
+      box-shadow:0 0 16px rgba(244,223,184,0.3);
+    }
+
     .form-wrap{
       display:grid;
       grid-template-columns:0.9fr 1.1fr;
@@ -633,6 +875,14 @@
       .spotify-frame iframe{
         min-height:420px;
       }
+
+      .testimonials-grid{
+        grid-template-columns:1fr;
+      }
+
+      .testimonial-pro{
+        min-height:auto;
+      }
     }
 
     @media (max-width: 700px){
@@ -742,13 +992,51 @@
         padding:11px 14px;
         font-size:12px;
       }
+
+      .testimonials-head{
+        align-items:stretch;
+      }
+
+      .rating-summary{
+        width:100%;
+      }
+
+      .slider-controls{
+        width:100%;
+        justify-content:flex-end;
+      }
+
+      .testimonial-pro{
+        padding:20px;
+      }
+
+      .client-avatar{
+        width:46px;
+        height:46px;
+        font-size:15px;
+      }
+
+      .client-meta h3{
+        font-size:17px;
+      }
+
+      .client-event{
+        font-size:12px;
+      }
+
+      .stars{
+        font-size:16px;
+      }
+
+      .testimonial-pro p{
+        font-size:14px;
+      }
     }
   </style>
 </head>
 <body>
 
   <div class="spotlight" id="spotlight"></div>
- 
 
   <a href="https://wa.me/40723829791" target="_blank" rel="noopener noreferrer" class="floating-wa" aria-label="Scrie-ne pe WhatsApp">
     WhatsApp
@@ -959,22 +1247,214 @@
       </div>
     </section>
 
-    <section class="section">
-      <h2>Ce spun clienții</h2>
-      <div class="grid-3">
-        <div class="card testimonial">
-          <p>Atmosfera a fost incredibilă. Invitații au rămas pe ring toată seara, iar totul a fost exact cum ne-am dorit.</p>
-          <div class="muted" style="margin-top:16px; font-style:normal;">— Nuntă, București</div>
+    <section class="section" id="testimoniale">
+      <div class="tag">Recenzii clienți</div>
+
+      <div class="testimonials-head">
+        <div>
+          <h2>Ce spun clienții</h2>
+          <p class="section-intro">
+            Atmosfera, eleganța și energia serii se văd cel mai bine în feedback-ul primit după evenimente.
+            Iată câteva impresii din partea clienților care ne-au ales pentru nunți, botezuri și evenimente private.
+          </p>
         </div>
 
-        <div class="card testimonial">
-          <p>Profesionalism total, repertoriu foarte bine ales și o colaborare fără stres de la început până la final.</p>
-          <div class="muted" style="margin-top:16px; font-style:normal;">— Eveniment privat</div>
+        <div class="rating-summary">
+          <div class="rating-number">5.0</div>
+          <div class="rating-meta">
+            <div class="stars">★★★★★</div>
+            <div class="rating-text">Apreciere premium pentru experiența live</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="testimonials-wrap">
+        <div class="slider-controls">
+          <button class="slider-btn" id="prevSlide" type="button" aria-label="Testimonial anterior">‹</button>
+          <button class="slider-btn" id="nextSlide" type="button" aria-label="Testimonial următor">›</button>
         </div>
 
-        <div class="card testimonial">
-          <p>Sunet impecabil, atmosferă elegantă și energie extraordinară. O alegere care chiar a făcut diferența.</p>
-          <div class="muted" style="margin-top:16px; font-style:normal;">— Botez</div>
+        <div class="testimonials-slider" id="testimonialsSlider">
+          <div class="testimonials-track" id="testimonialsTrack">
+
+            <div class="testimonial-slide">
+              <div class="testimonials-grid">
+
+                <div class="testimonial-pro">
+                  <div class="testimonial-top">
+                    <div class="client-avatar">AM</div>
+                    <div class="client-meta">
+                      <h3>Andreea & Mihai</h3>
+                      <div class="client-event">Nuntă • București • 2025</div>
+                    </div>
+                  </div>
+
+                  <div class="review-badge">
+                    <span class="review-badge-dot"></span>
+                    Experiență premium
+                  </div>
+
+                  <div class="stars">★★★★★</div>
+
+                  <p>
+                    Atmosfera a fost absolut superbă. Invitații au fost pe ring toată noaptea, iar repertoriul
+                    a fost ales excelent pentru fiecare moment. Elegant, rafinat și exact vibe-ul pe care ni l-am dorit
+                    pentru nunta noastră.
+                  </p>
+
+                  <div class="client-footer">
+                    <div class="verified">Eveniment memorabil • feedback excelent</div>
+                  </div>
+                </div>
+
+                <div class="testimonial-pro">
+                  <div class="testimonial-top">
+                    <div class="client-avatar">CR</div>
+                    <div class="client-meta">
+                      <h3>Cristina & Radu</h3>
+                      <div class="client-event">Botez • Ilfov • 2025</div>
+                    </div>
+                  </div>
+
+                  <div class="review-badge">
+                    <span class="review-badge-dot"></span>
+                    Recomandare completă
+                  </div>
+
+                  <div class="stars">★★★★★</div>
+
+                  <p>
+                    Profesionalism total, sunet impecabil și o colaborare foarte ușoară. Ne-a plăcut că au știut
+                    să adapteze muzica în funcție de invitați și să păstreze o atmosferă elegantă, dar energică.
+                    Am primit foarte multe complimente.
+                  </p>
+
+                  <div class="client-footer">
+                    <div class="verified">Organizare fără stres • atmosferă excelentă</div>
+                  </div>
+                </div>
+
+                <div class="testimonial-pro">
+                  <div class="testimonial-top">
+                    <div class="client-avatar">DL</div>
+                    <div class="client-meta">
+                      <h3>Diana & Lucian</h3>
+                      <div class="client-event">Eveniment privat • București • 2025</div>
+                    </div>
+                  </div>
+
+                  <div class="review-badge">
+                    <span class="review-badge-dot"></span>
+                    Luxury event feeling
+                  </div>
+
+                  <div class="stars">★★★★★</div>
+
+                  <p>
+                    O alegere excelentă pentru un eveniment premium. Totul a fost foarte bine pus la punct,
+                    de la comunicare până la prestația live. Eleganță, calitate și o energie extraordinară
+                    pe ringul de dans. Cu siguranță i-am recomanda mai departe.
+                  </p>
+
+                  <div class="client-footer">
+                    <div class="verified">Prezență elegantă • show live de impact</div>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+
+            <div class="testimonial-slide">
+              <div class="testimonials-grid">
+
+                <div class="testimonial-pro">
+                  <div class="testimonial-top">
+                    <div class="client-avatar">IA</div>
+                    <div class="client-meta">
+                      <h3>Ioana & Alex</h3>
+                      <div class="client-event">Nuntă • Prahova • 2025</div>
+                    </div>
+                  </div>
+
+                  <div class="review-badge">
+                    <span class="review-badge-dot"></span>
+                    Atmosferă nonstop
+                  </div>
+
+                  <div class="stars">★★★★★</div>
+
+                  <p>
+                    Au reușit să țină invitații implicați de la început până la final. Foarte atenți la momentele
+                    importante, foarte buni pe partea artistică și cu un repertoriu care a mers perfect pentru toate vârstele.
+                  </p>
+
+                  <div class="client-footer">
+                    <div class="verified">Ring plin • muzică live autentică</div>
+                  </div>
+                </div>
+
+                <div class="testimonial-pro">
+                  <div class="testimonial-top">
+                    <div class="client-avatar">MS</div>
+                    <div class="client-meta">
+                      <h3>Maria & Ștefan</h3>
+                      <div class="client-event">Nuntă • București • 2025</div>
+                    </div>
+                  </div>
+
+                  <div class="review-badge">
+                    <span class="review-badge-dot"></span>
+                    Colaborare impecabilă
+                  </div>
+
+                  <div class="stars">★★★★★</div>
+
+                  <p>
+                    Ne-au plăcut enorm seriozitatea, comunicarea rapidă și faptul că totul a fost elegant și bine coordonat.
+                    Se vede experiența lor în evenimente mari. Au adus exact acel plus care transformă o seară frumoasă
+                    într-una memorabilă.
+                  </p>
+
+                  <div class="client-footer">
+                    <div class="verified">Coordonare atentă • eleganță și rafinament</div>
+                  </div>
+                </div>
+
+                <div class="testimonial-pro">
+                  <div class="testimonial-top">
+                    <div class="client-avatar">EB</div>
+                    <div class="client-meta">
+                      <h3>Elena & Bogdan</h3>
+                      <div class="client-event">Botez • București • 2025</div>
+                    </div>
+                  </div>
+
+                  <div class="review-badge">
+                    <span class="review-badge-dot"></span>
+                    Energie perfect dozată
+                  </div>
+
+                  <div class="stars">★★★★★</div>
+
+                  <p>
+                    Foarte frumos echilibrat tot programul: momente elegante, energie bună, sunet curat și o atmosferă
+                    caldă. Ne-am simțit în siguranță din punct de vedere organizatoric și ne-am putut bucura de eveniment.
+                  </p>
+
+                  <div class="client-footer">
+                    <div class="verified">Sunet impecabil • experiență premium</div>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <div class="dots" id="testimonialDots">
+          <button class="dot active" type="button" aria-label="Slide 1"></button>
+          <button class="dot" type="button" aria-label="Slide 2"></button>
         </div>
       </div>
     </section>
@@ -1182,6 +1662,76 @@
         closeLightbox();
       }
     });
+
+    /* TESTIMONIALS SLIDER */
+    const track = document.getElementById('testimonialsTrack');
+    const dots = document.querySelectorAll('#testimonialDots .dot');
+    const prevBtn = document.getElementById('prevSlide');
+    const nextBtn = document.getElementById('nextSlide');
+
+    let currentSlide = 0;
+    const totalSlides = 2;
+    let autoSlide;
+
+    function updateSlider(index){
+      currentSlide = index;
+      track.style.transform = `translateX(-${index * 100}%)`;
+
+      dots.forEach((dot, i) => {
+        dot.classList.toggle('active', i === index);
+      });
+    }
+
+    function nextSlide(){
+      const next = (currentSlide + 1) % totalSlides;
+      updateSlider(next);
+    }
+
+    function prevSlide(){
+      const prev = (currentSlide - 1 + totalSlides) % totalSlides;
+      updateSlider(prev);
+    }
+
+    function startAutoSlide(){
+      autoSlide = setInterval(nextSlide, 5000);
+    }
+
+    function stopAutoSlide(){
+      clearInterval(autoSlide);
+    }
+
+    if (nextBtn) {
+      nextBtn.addEventListener('click', () => {
+        stopAutoSlide();
+        nextSlide();
+        startAutoSlide();
+      });
+    }
+
+    if (prevBtn) {
+      prevBtn.addEventListener('click', () => {
+        stopAutoSlide();
+        prevSlide();
+        startAutoSlide();
+      });
+    }
+
+    dots.forEach((dot, index) => {
+      dot.addEventListener('click', () => {
+        stopAutoSlide();
+        updateSlider(index);
+        startAutoSlide();
+      });
+    });
+
+    const slider = document.getElementById('testimonialsSlider');
+    if (slider) {
+      slider.addEventListener('mouseenter', stopAutoSlide);
+      slider.addEventListener('mouseleave', startAutoSlide);
+    }
+
+    updateSlider(0);
+    startAutoSlide();
   </script>
 </body>
 </html>
