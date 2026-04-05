@@ -1,34 +1,36 @@
 <!DOCTYPE html>
 <html lang="ro">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Alina Roșca & Profesional Orchestra | Formație nuntă București</title>
-  <meta name="description" content="Formație de nuntă în București cu muzică live premium pentru nunți, botezuri și evenimente private. Alina Roșca & Profesional Orchestra - show live, repertoriu variat și ofertă personalizată." />
-  <meta name="robots" content="index, follow" />
-  <meta name="theme-color" content="#09060f" />
-  <link rel="canonical" href="https://profesionalorchestra.ro/formatie-nunta-bucuresti" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <meta property="og:title" content="Alina Roșca & Profesional Orchestra | Formație nuntă București" />
-  <meta property="og:description" content="Muzică live premium pentru nunți, botezuri și evenimente private în București, Ilfov și în toată țara." />
-  <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://profesionalorchestra.ro/formatie-nunta-bucuresti" />
-  <meta property="og:image" content="https://profesionalorchestra.ro/formatie-nunta-bucuresti.jpg" />
-  <meta property="og:locale" content="ro_RO" />
+  <title>Formație de nuntă în București – Alina Roșca & Profesional Orchestra</title>
+  <meta name="description" content="Formație de nuntă în București cu muzică live premium pentru nunți, botezuri și evenimente private. Repertoriu variat, sonorizare, lumini și ofertă personalizată.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://profesionalorchestra.ro/formatie-nunta-bucuresti">
 
+  <!-- Open Graph -->
+  <meta property="og:title" content="Formație de nuntă în București – Profesional Orchestra">
+  <meta property="og:description" content="Muzică live premium pentru nunți, botezuri și evenimente private.">
+  <meta property="og:image" content="https://profesionalorchestra.ro/formatie-nunta-bucuresti.jpg">
+  <meta property="og:url" content="https://profesionalorchestra.ro/formatie-nunta-bucuresti">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="ro_RO">
+
+  <!-- Schema -->
   <script type="application/ld+json">
   {
-    "@context":"https://schema.org",
-    "@type":"MusicGroup",
-    "name":"Alina Roșca & Profesional Orchestra",
-    "url":"https://profesionalorchestra.ro/formatie-nunta-bucuresti",
-    "telephone":"+40 723 829 791",
-    "address":{
-      "@type":"PostalAddress",
-      "addressLocality":"București",
-      "addressCountry":"RO"
+    "@context": "https://schema.org",
+    "@type": "MusicGroup",
+    "name": "Alina Roșca & Profesional Orchestra",
+    "url": "https://profesionalorchestra.ro/formatie-nunta-bucuresti",
+    "telephone": "+40 723 829 791",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "București",
+      "addressCountry": "RO"
     },
-    "sameAs":[
+    "sameAs": [
       "https://www.facebook.com/AlinaRoscaArtist/",
       "https://www.tiktok.com/@profesionalorchestra"
     ]
@@ -36,88 +38,86 @@
   </script>
 
   <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
     :root{
-      --bg:#09060f;
-      --bg2:#110b1a;
-      --bg3:#1a1027;
-      --card:rgba(255,255,255,.06);
-      --card-strong:rgba(255,255,255,.08);
-      --line:rgba(227,195,139,.18);
-      --line-strong:rgba(227,195,139,.28);
+      --bg:#09070d;
+      --bg2:#140f1d;
+      --bg3:#1b1326;
       --gold:#e3c38b;
-      --gold-soft:#f7e7c7;
-      --gold-deep:#d9ad67;
-      --text:rgba(255,255,255,.86);
-      --muted:rgba(255,255,255,.62);
-      --shadow:0 24px 70px rgba(0,0,0,.35);
-      --radius:28px;
-      --radius-lg:36px;
-      --container:1220px;
+      --gold-soft:#f4dfb8;
+      --text:rgba(255,255,255,0.88);
+      --muted:rgba(255,255,255,0.70);
+      --line:rgba(227,195,139,0.18);
+      --card:rgba(255,255,255,0.05);
+      --shadow:0 18px 40px rgba(0,0,0,0.22);
+      --radius:24px;
     }
 
-    *{box-sizing:border-box;margin:0;padding:0}
-    html{scroll-behavior:smooth}
+    html { scroll-behavior: smooth; }
+
     body{
-      font-family:Inter,Arial,sans-serif;
+      font-family: Arial, sans-serif;
       color:#fff;
-      background:
-        radial-gradient(circle at 12% 12%, rgba(227,195,139,.12), transparent 20%),
-        radial-gradient(circle at 85% 8%, rgba(255,255,255,.06), transparent 16%),
-        radial-gradient(circle at 48% 78%, rgba(227,195,139,.08), transparent 20%),
-        linear-gradient(135deg, var(--bg), var(--bg2), var(--bg3));
-      line-height:1.65;
-      overflow-x:hidden;
+      line-height:1.7;
       min-height:100vh;
       position:relative;
+      overflow-x:hidden;
+      background:
+        radial-gradient(circle at 10% 15%, rgba(227,195,139,0.10), transparent 24%),
+        radial-gradient(circle at 85% 12%, rgba(255,255,255,0.04), transparent 18%),
+        radial-gradient(circle at 50% 85%, rgba(227,195,139,0.06), transparent 22%),
+        linear-gradient(135deg, var(--bg), var(--bg2), var(--bg3));
     }
 
     body::before{
       content:"♪  ♫  ♬  ♩    ♪  ♫  ♬  ♩    ♪  ♫  ♬  ♩";
       position:fixed;
       inset:0;
-      z-index:-3;
       pointer-events:none;
-      color:rgba(247,231,199,.03);
+      z-index:-2;
+      font-size:90px;
+      letter-spacing:80px;
+      line-height:2.3;
+      color:rgba(244,223,184,0.03);
       white-space:pre-wrap;
-      font-size:88px;
-      letter-spacing:58px;
-      line-height:2.1;
-      padding:28px;
-      animation: floatNotes 24s ease-in-out infinite alternate;
+      padding:40px 50px;
+      animation: floatMusic 22s ease-in-out infinite alternate;
     }
 
     body::after{
       content:"";
       position:fixed;
       inset:0;
-      z-index:-4;
       pointer-events:none;
+      z-index:-3;
       background:
-        linear-gradient(to bottom, rgba(255,255,255,.02), transparent 16%),
-        repeating-linear-gradient(90deg, transparent 0, transparent 100px, rgba(227,195,139,.014) 101px, transparent 102px);
+        linear-gradient(to bottom, rgba(255,255,255,0.02), transparent 15%),
+        repeating-linear-gradient(
+          90deg,
+          transparent 0,
+          transparent 84px,
+          rgba(227,195,139,0.015) 85px,
+          transparent 86px
+        );
     }
 
-    @keyframes floatNotes{
-      0%{transform:translateY(0) translateX(0)}
-      50%{transform:translateY(-16px) translateX(10px)}
-      100%{transform:translateY(14px) translateX(-8px)}
+    @keyframes floatMusic{
+      0%{ transform:translateY(0) translateX(0); }
+      50%{ transform:translateY(-18px) translateX(10px); }
+      100%{ transform:translateY(14px) translateX(-8px); }
     }
 
-    a{text-decoration:none;color:inherit}
-    img{max-width:100%;display:block}
-    button,input,textarea,select{font:inherit}
+    a{ color:inherit; text-decoration:none; }
 
     a:focus-visible,
     button:focus-visible,
     input:focus-visible,
     textarea:focus-visible,
-    select:focus-visible,
-    summary:focus-visible{
+    select:focus-visible{
       outline:2px solid var(--gold-soft);
       outline-offset:3px;
     }
-
-    .container{width:min(var(--container),calc(100% - 28px));margin:auto}
 
     .spotlight{
       position:fixed;
@@ -126,7 +126,7 @@
       border-radius:50%;
       pointer-events:none;
       z-index:-1;
-      background:radial-gradient(circle, rgba(247,231,199,.10), transparent 65%);
+      background:radial-gradient(circle, rgba(244,223,184,0.08), transparent 65%);
       transform:translate(-50%,-50%);
       mix-blend-mode:screen;
       transition:transform .08s linear;
@@ -136,884 +136,925 @@
       position:sticky;
       top:0;
       z-index:50;
-      background:rgba(10,7,16,.74);
-      backdrop-filter:blur(18px);
+      background:rgba(12,9,17,0.82);
+      backdrop-filter:blur(14px);
       border-bottom:1px solid var(--line);
-      box-shadow:0 8px 24px rgba(0,0,0,.15);
+      box-shadow:0 8px 24px rgba(0,0,0,0.18);
     }
 
     .topbar-inner{
+      max-width:1180px;
+      margin:auto;
+      padding:10px 18px;
       display:flex;
       align-items:center;
       justify-content:space-between;
-      gap:18px;
-      min-height:78px;
+      gap:14px;
     }
 
-    .brand{display:flex;flex-direction:column;gap:2px;min-width:0}
-    .brand-title{font-size:19px;font-weight:800;color:var(--gold-soft);letter-spacing:.2px}
-    .brand-sub{font-size:11px;color:rgba(255,255,255,.45);text-transform:uppercase;letter-spacing:1.5px}
+    .brand{
+      display:flex;
+      flex-direction:column;
+      gap:1px;
+      min-width:0;
+    }
 
-    .menu{display:flex;gap:8px;align-items:center;justify-content:center;flex-wrap:wrap}
+    .brand-title{
+      color:var(--gold-soft);
+      font-size:18px;
+      font-weight:700;
+      line-height:1.1;
+    }
+
+    .brand-sub{
+      color:rgba(255,255,255,0.42);
+      font-size:10px;
+      letter-spacing:1.3px;
+      text-transform:uppercase;
+      line-height:1.1;
+    }
+
+    .menu{
+      display:flex;
+      gap:10px;
+      font-size:12px;
+      color:rgba(255,255,255,0.82);
+      flex-wrap:wrap;
+      align-items:center;
+    }
+
     .menu a{
       position:relative;
-      padding:8px 12px;
+      padding:5px 6px;
+      transition:.3s ease;
+      letter-spacing:0.15px;
+      white-space:nowrap;
+      display:inline-flex;
+      align-items:center;
       border-radius:999px;
-      color:rgba(255,255,255,.82);
-      font-size:14px;
-      transition:.25s ease;
     }
+
     .menu a::after{
       content:"";
       position:absolute;
-      left:10px;right:10px;bottom:4px;height:1px;
-      background:linear-gradient(90deg, var(--gold-soft), var(--gold-deep));
+      left:8px;
+      right:8px;
+      bottom:1px;
+      height:1px;
       transform:scaleX(0);
       transform-origin:left;
-      transition:.28s ease;
+      background:linear-gradient(90deg,#f4dfb8,#d4ac69);
+      transition:.35s ease;
     }
-    .menu a:hover,.menu a.active{color:var(--gold-soft);background:rgba(255,255,255,.04)}
-    .menu a:hover::after,.menu a.active::after{transform:scaleX(1)}
 
-    .actions{display:flex;gap:10px;align-items:center}
+    .menu a:hover,
+    .menu a.active{
+      color:var(--gold-soft);
+    }
 
-    .btn,.btn-outline,.btn-soft{
+    .menu a:hover::after,
+    .menu a.active::after{
+      transform:scaleX(1);
+    }
+
+    .top-actions{
+      display:flex;
+      gap:8px;
+      align-items:center;
+      flex-wrap:wrap;
+    }
+
+    .btn-top,
+    .btn-top-outline,
+    .btn-primary,
+    .btn-secondary{
       display:inline-flex;
       align-items:center;
       justify-content:center;
-      gap:8px;
-      padding:13px 20px;
+      padding:9px 12px;
       border-radius:999px;
       font-weight:700;
       transition:.25s ease;
-      cursor:pointer;
       white-space:nowrap;
+      font-size:12px;
+      line-height:1;
     }
 
-    .btn{
-      border:none;
-      color:#1b1208;
-      background:linear-gradient(90deg, var(--gold-soft), var(--gold-deep));
-      box-shadow:0 14px 34px rgba(227,195,139,.20);
+    .btn-top,
+    .btn-primary{
+      background:linear-gradient(90deg,#f4dfb8,#d4ac69);
+      color:#18120d;
+      box-shadow:0 10px 24px rgba(227,195,139,0.14);
       position:relative;
       overflow:hidden;
     }
 
-    .btn::before{
-      content:"";
-      position:absolute;
-      top:0;left:-120%;width:100%;height:100%;
-      background:linear-gradient(120deg, transparent, rgba(255,255,255,.45), transparent);
-      transition:.7s ease;
-    }
-
-    .btn:hover::before{left:120%}
-
-    .btn-outline{
+    .btn-top-outline,
+    .btn-secondary{
       border:1px solid var(--line);
-      background:rgba(255,255,255,.04);
+      background:rgba(255,255,255,0.04);
       color:#fff;
     }
 
-    .btn-soft{
-      border:1px solid rgba(255,255,255,.08);
-      background:rgba(255,255,255,.03);
-      color:var(--gold-soft);
-      padding:11px 16px;
+    .btn-top:hover,
+    .btn-top-outline:hover,
+    .btn-primary:hover,
+    .btn-secondary:hover{
+      transform:translateY(-2px);
     }
 
-    .btn:hover,.btn-outline:hover,.btn-soft:hover{transform:translateY(-2px) scale(1.01)}
+    .container{
+      max-width:1180px;
+      margin:auto;
+      padding:22px;
+    }
 
-    .hero{padding:26px 0 28px}
-    .hero-shell{
+    .hero{
       position:relative;
-      min-height:86vh;
+      min-height:76vh;
+      border-radius:32px;
       overflow:hidden;
-      border-radius:38px;
+      margin-top:18px;
+      display:flex;
+      align-items:flex-end;
       border:1px solid var(--line);
       box-shadow:var(--shadow);
-      display:grid;
-      grid-template-columns:1.05fr .95fr;
-      background:
-        linear-gradient(180deg, rgba(255,255,255,.05), rgba(255,255,255,.02)),
-        linear-gradient(135deg, rgba(9,6,15,.94), rgba(17,11,26,.88));
-      isolation:isolate;
     }
 
-    .hero-shell::before{
-      content:"";
+    .hero-bg{
       position:absolute;
-      width:680px;
-      height:680px;
-      border-radius:50%;
-      top:-220px;
-      left:-180px;
-      background:radial-gradient(circle, rgba(227,195,139,.14), transparent 66%);
-      z-index:0;
+      inset:0;
+      width:100%;
+      height:100%;
+      object-fit:cover;
     }
 
-    .hero-shell::after{
-      content:"";
+    .hero-overlay{
       position:absolute;
       inset:0;
       background:
-        linear-gradient(135deg, rgba(255,255,255,.02), transparent 28%),
-        linear-gradient(to top, rgba(255,255,255,.015), transparent 26%);
-      pointer-events:none;
-      z-index:0;
+        linear-gradient(to right, rgba(9,9,12,0.84), rgba(9,9,12,0.34)),
+        linear-gradient(to top, rgba(9,9,12,0.78), transparent 42%);
     }
 
-    .hero-copy{
+    .hero-content{
       position:relative;
       z-index:2;
-      padding:78px 58px 64px;
-      display:flex;
-      flex-direction:column;
-      justify-content:center;
+      max-width:780px;
+      padding:48px;
     }
 
     .eyebrow{
-      display:inline-flex;
-      align-items:center;
-      gap:8px;
-      width:max-content;
-      padding:9px 14px;
+      display:inline-block;
+      margin-bottom:16px;
+      padding:8px 14px;
       border-radius:999px;
-      border:1px solid rgba(255,255,255,.12);
-      background:rgba(255,255,255,.05);
+      border:1px solid rgba(255,255,255,0.14);
+      background:rgba(255,255,255,0.05);
       color:var(--gold-soft);
       font-size:12px;
-      letter-spacing:1px;
+      letter-spacing:.8px;
       text-transform:uppercase;
-      margin-bottom:18px;
     }
 
-    h1,h2,h3{font-family:Georgia,"Times New Roman",serif;line-height:1.05}
     h1{
-      font-size:70px;
-      max-width:760px;
-      margin-bottom:18px;
-      color:#fffaf2;
-      text-shadow:0 10px 34px rgba(0,0,0,.18);
+      font-family: Georgia, "Times New Roman", serif;
+      font-size:58px;
+      line-height:1.04;
+      margin-bottom:16px;
+      color:#fff9f1;
     }
 
-    .hero p{font-size:19px;color:var(--text);max-width:690px}
-    .hero-ctas{display:flex;gap:14px;flex-wrap:wrap;margin-top:28px}
-
-    .hero-metrics{
-      display:grid;
-      grid-template-columns:repeat(3, minmax(0,1fr));
-      gap:14px;
-      margin-top:30px;
-      max-width:760px;
-    }
-
-    .metric{
-      padding:18px 18px;
-      border-radius:22px;
-      border:1px solid rgba(255,255,255,.08);
-      background:rgba(255,255,255,.04);
-      backdrop-filter:blur(8px);
-    }
-
-    .metric b{display:block;font-size:30px;color:var(--gold-soft);margin-bottom:2px}
-    .metric span{font-size:13px;color:rgba(255,255,255,.72)}
-
-    .hero-visual{
-      position:relative;
-      z-index:2;
-      padding:24px;
-      display:flex;
-      align-items:stretch;
-      justify-content:center;
-    }
-
-    .hero-frame{
-      position:relative;
-      width:100%;
-      border-radius:30px;
-      overflow:hidden;
-      min-height:100%;
-      border:1px solid rgba(255,255,255,.09);
-      background:#0d0a14;
-      box-shadow:0 24px 60px rgba(0,0,0,.34);
-    }
-
-    .hero-frame img{
-      width:100%;height:100%;object-fit:cover;
-      filter:saturate(1.02) contrast(1.03);
-      transform:scale(1.02);
-    }
-
-    .hero-frame::after{
-      content:"";
-      position:absolute;
-      inset:0;
-      background:
-        linear-gradient(to top, rgba(9,6,15,.44), transparent 42%),
-        linear-gradient(to left, rgba(9,6,15,.24), transparent 34%);
-      pointer-events:none;
-    }
-
-    .glass-stack{
-      position:absolute;
-      inset:auto 22px 22px 22px;
-      z-index:3;
-      display:grid;
-      grid-template-columns:1.1fr .9fr;
-      gap:12px;
-      align-items:end;
-    }
-
-    .glass-card{
-      border:1px solid rgba(255,255,255,.10);
-      border-radius:22px;
-      padding:18px;
-      background:rgba(9,6,15,.58);
-      backdrop-filter:blur(12px);
-      color:#fff;
-    }
-
-    .glass-card h3{font-size:24px;margin-bottom:8px;color:var(--gold-soft)}
-    .glass-mini{
-      display:grid;
-      gap:10px;
-    }
-
-    .glass-mini .mini{
-      padding:12px 14px;
-      border-radius:16px;
-      background:rgba(255,255,255,.05);
-      border:1px solid rgba(255,255,255,.08);
+    .hero p{
+      font-size:19px;
+      max-width:700px;
       color:var(--text);
-      font-size:14px;
     }
 
-    .section{padding:86px 0}
-    .section-head{max-width:860px;margin-bottom:26px}
-    .section-head h2{font-size:46px;color:var(--gold-soft);margin-bottom:14px}
-    .section-head p{font-size:18px;color:var(--text)}
-
-    .grid-2,.grid-3,.grid-4{display:grid;gap:18px}
-    .grid-2{grid-template-columns:repeat(2,1fr)}
-    .grid-3{grid-template-columns:repeat(3,1fr)}
-    .grid-4{grid-template-columns:repeat(4,1fr)}
-
-    .card{
-      position:relative;
-      overflow:hidden;
-      background:var(--card);
-      border:1px solid var(--line);
-      border-radius:var(--radius);
-      padding:30px;
-      box-shadow:var(--shadow);
-      backdrop-filter:blur(10px);
+    .hero-buttons{
+      margin-top:26px;
+      display:flex;
+      gap:14px;
+      flex-wrap:wrap;
     }
 
-    .card::before{
-      content:"";
-      position:absolute;
-      inset:0;
-      background:linear-gradient(135deg, rgba(255,255,255,.03), transparent 36%);
-      pointer-events:none;
-    }
-
-    .card h3{font-size:30px;margin-bottom:12px;color:#fffaf2}
-    .card p{color:var(--text)}
-    .muted{color:var(--muted)}
-
-    .tag{
-      display:inline-flex;
-      width:max-content;
-      margin-bottom:12px;
-      padding:7px 11px;
-      border-radius:999px;
-      border:1px solid rgba(227,195,139,.20);
-      background:rgba(227,195,139,.08);
-      color:var(--gold-soft);
-      font-size:11px;
-      font-weight:800;
-      text-transform:uppercase;
-      letter-spacing:.9px;
-    }
-
-    .list{padding-left:18px;margin-top:12px;color:var(--text)}
-    .list li{margin-bottom:9px}
-
-    .split-lux{
-      display:grid;
-      grid-template-columns:1.02fr .98fr;
-      gap:18px;
-      align-items:stretch;
-    }
-
-    .image-wall{
-      display:grid;
-      grid-template-columns:1fr 1fr;
-      gap:18px;
-    }
-
-    .image-tall,.image-small{
-      position:relative;
-      overflow:hidden;
-      border-radius:30px;
-      border:1px solid var(--line);
-      box-shadow:var(--shadow);
-      min-height:100%;
-    }
-
-    .image-tall img,.image-small img{width:100%;height:100%;object-fit:cover}
-    .image-tall{grid-row:span 2;min-height:680px}
-    .image-small{min-height:330px}
-
-    .service-card{
-      min-height:260px;
-      transition:.25s ease;
-    }
-
-    .service-card:hover{transform:translateY(-4px)}
-
-    .media-grid{display:grid;grid-template-columns:1.16fr .84fr;gap:18px}
-
-    .frame{
-      overflow:hidden;
-      border-radius:30px;
-      border:1px solid var(--line);
-      background:rgba(255,255,255,.04);
-      box-shadow:var(--shadow);
-    }
-    .frame iframe{width:100%;border:0;display:block}
-    .video iframe{height:540px}
-    .spotify iframe{min-height:540px}
-
-    .gallery{
-      display:grid;
-      grid-template-columns:1.25fr 1fr 1fr;
-      grid-template-rows:260px 260px;
-      gap:18px;
-    }
-
-    .gallery img{
-      width:100%;height:100%;object-fit:cover;
-      border-radius:24px;
-      border:1px solid var(--line);
-      box-shadow:var(--shadow);
-      cursor:pointer;
-      transition:.28s ease;
-    }
-
-    .gallery img:first-child{grid-row:span 2}
-    .gallery img:hover{transform:translateY(-4px) scale(1.01)}
-
-    .highlight-row{
-      display:grid;
-      grid-template-columns:repeat(3,1fr);
-      gap:18px;
+    .hero-pills{
+      display:flex;
+      flex-wrap:wrap;
+      gap:10px;
       margin-top:22px;
     }
 
-    .highlight{
-      padding:20px;
-      border-radius:22px;
+    .pill{
+      padding:9px 13px;
+      border-radius:999px;
+      border:1px solid rgba(255,255,255,0.12);
+      background:rgba(255,255,255,0.05);
+      color:var(--gold-soft);
+      font-size:13px;
+    }
+
+    .section{
+      padding:42px 0;
+    }
+
+    .section h2{
+      font-family: Georgia, "Times New Roman", serif;
+      font-size:40px;
+      color:var(--gold-soft);
+      margin-bottom:14px;
+    }
+
+    .section-intro{
+      max-width:940px;
+      color:var(--text);
+    }
+
+    .grid-2,
+    .grid-3,
+    .contact-grid,
+    .faq-grid{
+      display:grid;
+      gap:18px;
+      margin-top:24px;
+    }
+
+    .grid-2{ grid-template-columns:repeat(2,1fr); }
+    .grid-3{ grid-template-columns:repeat(3,1fr); }
+    .contact-grid{ grid-template-columns:repeat(2,1fr); }
+    .faq-grid{ grid-template-columns:repeat(2,1fr); }
+
+    .card{
+      background:var(--card);
       border:1px solid var(--line);
-      background:rgba(255,255,255,.04);
+      border-radius:var(--radius);
+      padding:24px;
+      box-shadow:var(--shadow);
+      transition:.2s ease;
+      backdrop-filter:blur(8px);
+    }
+
+    .card:hover{
+      transform:translateY(-3px);
+    }
+
+    .card h3{
+      font-size:24px;
+      margin-bottom:8px;
+      color:#fff8ef;
+    }
+
+    .muted{ color:var(--muted); }
+
+    .list{
+      padding-left:18px;
+      margin-top:12px;
+      color:var(--text);
+    }
+
+    .list li{ margin-bottom:8px; }
+
+    .tag{
+      display:inline-block;
+      margin-bottom:10px;
+      padding:6px 10px;
+      border-radius:999px;
+      background:rgba(244,223,184,0.10);
+      border:1px solid rgba(244,223,184,0.18);
+      color:var(--gold-soft);
+      font-size:12px;
+      text-transform:uppercase;
+      letter-spacing:.8px;
+      font-weight:700;
+    }
+
+    .media-wrap{
+      display:grid;
+      grid-template-columns:1.15fr 0.85fr;
+      gap:18px;
+      margin-top:24px;
+    }
+
+    .video-frame{
+      border-radius:28px;
+      padding:10px;
+      background:linear-gradient(135deg, rgba(227,195,139,0.18), rgba(255,255,255,0.06));
       box-shadow:var(--shadow);
     }
 
-    .highlight b{display:block;font-size:18px;color:var(--gold-soft);margin-bottom:6px}
-    .highlight span{color:var(--text);font-size:15px}
-
-    .pricing .card{min-height:100%}
-    .pricing .featured{
-      transform:translateY(-10px);
-      border-color:var(--line-strong);
-      background:linear-gradient(180deg, rgba(227,195,139,.10), rgba(255,255,255,.05));
+    .video-frame iframe{
+      width:100%;
+      height:500px;
+      border:0;
+      border-radius:20px;
+      background:#000;
     }
 
-    .price-note{font-size:14px;color:var(--muted);margin-top:14px}
+    .spotify-frame iframe{
+      width:100%;
+      min-height:500px;
+      border:0;
+      border-radius:20px;
+      background:#111;
+    }
 
-    .review{
-      min-height:270px;
+    .gallery-wow{
+      display:grid;
+      grid-template-columns:1.2fr 1fr 1fr;
+      grid-template-rows:240px 240px;
+      gap:18px;
+      margin-top:24px;
+    }
+
+    .gallery-wow img{
+      width:100%;
+      height:100%;
+      object-fit:cover;
+      border-radius:22px;
+      cursor:pointer;
+      border:1px solid var(--line);
+      box-shadow:var(--shadow);
+      transition:.25s ease;
+    }
+
+    .gallery-wow img:first-child{
+      grid-row:span 2;
+    }
+
+    .gallery-wow img:hover{
+      transform:translateY(-4px);
+    }
+
+    .testimonial{
+      min-height:230px;
       position:relative;
       font-style:italic;
     }
 
-    .review::before{
+    .testimonial::before{
       content:"“";
       position:absolute;
-      top:2px;
-      left:10px;
-      font-size:56px;
-      color:rgba(247,231,199,.15);
+      top:6px;
+      left:16px;
+      font-size:44px;
+      color:rgba(244,223,184,0.16);
+      font-family:Georgia, "Times New Roman", serif;
     }
 
-    .review p{position:relative;z-index:1}
-
-    .cta-band{
+    .testimonial p{
       position:relative;
-      overflow:hidden;
-      padding:38px;
-      border-radius:32px;
-      border:1px solid rgba(227,195,139,.24);
-      background:linear-gradient(135deg, rgba(227,195,139,.10), rgba(255,255,255,.05));
-      display:flex;
-      justify-content:space-between;
-      gap:26px;
-      align-items:center;
-      box-shadow:var(--shadow);
-    }
-
-    .cta-band::before{
-      content:"";
-      position:absolute;
-      width:320px;
-      height:320px;
-      right:-80px;
-      top:-100px;
-      border-radius:50%;
-      background:radial-gradient(circle, rgba(247,231,199,.12), transparent 68%);
-      pointer-events:none;
-    }
-
-    .cta-band h3{font-size:36px;margin-bottom:8px}
-    .cta-band p{max-width:760px;color:var(--text)}
-
-    .offer{display:grid;grid-template-columns:.92fr 1.08fr;gap:18px}
-    .mini-stack{display:grid;gap:12px;margin-top:18px}
-    .mini-box{
-      padding:15px 16px;
-      border-radius:18px;
-      border:1px solid var(--line);
-      background:rgba(255,255,255,.04);
+      z-index:1;
       color:var(--text);
     }
 
-    form .row{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}
-
-    input,select,textarea{
-      width:100%;
-      padding:15px 16px;
-      border-radius:16px;
-      border:1px solid rgba(255,255,255,.09);
-      background:rgba(255,255,255,.05);
-      color:#fff;
-      margin-bottom:12px;
-      outline:none;
-    }
-
-    input::placeholder,textarea::placeholder{color:rgba(255,255,255,.48)}
-    option{color:#111}
-    textarea{min-height:150px;resize:vertical}
-
-    .faq details{
-      border:1px solid var(--line);
-      border-radius:20px;
-      background:rgba(255,255,255,.04);
-      padding:18px;
-      box-shadow:var(--shadow);
-    }
-
-    .faq details + details{margin-top:12px}
-    .faq summary{cursor:pointer;font-weight:700;color:#fffaf2;list-style:none}
-    .faq summary::-webkit-details-marker{display:none}
-    .faq p{margin-top:12px;color:var(--text)}
-
-    .contact-grid .card h3{font-size:24px}
-
-    .footer{
-      padding:30px 0 46px;
-      border-top:1px solid var(--line);
-      color:rgba(255,255,255,.62);
-      text-align:center;
+    .form-wrap{
+      display:grid;
+      grid-template-columns:0.9fr 1.1fr;
+      gap:18px;
       margin-top:24px;
+    }
+
+    .mini-list{
+      display:grid;
+      gap:12px;
+      margin-top:20px;
+    }
+
+    .mini{
+      border:1px solid var(--line);
+      border-radius:18px;
+      padding:14px 16px;
+      background:rgba(255,255,255,0.04);
+      color:var(--text);
+    }
+
+    input, textarea, select{
+      width:100%;
+      padding:14px 15px;
+      margin-bottom:12px;
+      border-radius:16px;
+      border:1px solid rgba(255,255,255,0.08);
+      background:rgba(255,255,255,0.06);
+      color:#fff;
+      outline:none;
+      font-family:Arial, sans-serif;
+    }
+
+    option {
+      color:#111;
+    }
+
+    input::placeholder, textarea::placeholder{
+      color:rgba(255,255,255,0.5);
+    }
+
+    button{
+      width:100%;
+      padding:15px;
+      border:none;
+      border-radius:999px;
+      cursor:pointer;
+      background:linear-gradient(90deg,#f4dfb8,#d4ac69);
+      color:#18120d;
+      font-weight:700;
+      box-shadow:0 10px 24px rgba(227,195,139,0.14);
     }
 
     .floating-wa{
       position:fixed;
-      right:16px;
-      bottom:16px;
+      right:18px;
+      bottom:18px;
       z-index:60;
       padding:14px 18px;
       border-radius:999px;
-      background:linear-gradient(90deg,var(--gold-soft),var(--gold-deep));
-      color:#1b1208;
-      font-weight:800;
-      box-shadow:0 16px 36px rgba(227,195,139,.22);
-      animation:waFloat 2.8s ease-in-out infinite;
+      background:linear-gradient(90deg,#f4dfb8,#d4ac69);
+      color:#18120d;
+      font-weight:700;
+      box-shadow:0 14px 30px rgba(227,195,139,0.18);
     }
 
-    @keyframes waFloat{
-      0%,100%{transform:translateY(0)}
-      50%{transform:translateY(-4px)}
+    .footer{
+      margin-top:40px;
+      padding:28px 10px 40px;
+      text-align:center;
+      border-top:1px solid var(--line);
+      color:rgba(255,255,255,0.62);
+      font-size:14px;
     }
 
     .lightbox{
       display:none;
       position:fixed;
       inset:0;
-      background:rgba(0,0,0,.92);
-      z-index:1000;
+      background:rgba(0,0,0,0.9);
+      z-index:9999;
       align-items:center;
       justify-content:center;
-      padding:24px;
+      padding:30px;
     }
 
-    .lightbox img{max-width:92vw;max-height:88vh;border-radius:18px;box-shadow:0 30px 70px rgba(0,0,0,.5)}
-    .lightbox-close{position:absolute;top:18px;right:22px;font-size:42px;cursor:pointer;color:#fff}
-
-    @media (max-width:1160px){
-      .hero-shell,.split-lux,.media-grid,.offer{grid-template-columns:1fr}
-      .video iframe{height:340px}
-      .spotify iframe{min-height:420px}
-      h1{font-size:56px}
-      .glass-stack{grid-template-columns:1fr}
+    .lightbox img{
+      max-width:92vw;
+      max-height:88vh;
+      border-radius:18px;
+      box-shadow:0 25px 60px rgba(0,0,0,0.45);
     }
 
-    @media (max-width:860px){
+    .lightbox-close{
+      position:absolute;
+      top:18px;
+      right:28px;
+      font-size:42px;
+      color:white;
+      cursor:pointer;
+    }
+
+    @media (max-width: 1040px){
+      h1{ font-size:44px; }
+      .hero-content{ padding:28px; }
+
+      .grid-2, .grid-3, .contact-grid, .media-wrap, .form-wrap, .faq-grid{
+        grid-template-columns:1fr;
+      }
+
+      .gallery-wow{
+        grid-template-columns:1fr;
+        grid-template-rows:auto;
+      }
+
+      .gallery-wow img:first-child{
+        grid-row:auto;
+      }
+
+      .video-frame iframe{
+        height:260px;
+      }
+
+      .spotify-frame iframe{
+        min-height:420px;
+      }
+    }
+
+    @media (max-width: 700px){
+      .container{
+        padding:12px;
+      }
+
       .topbar-inner{
+        padding:8px 12px;
         display:grid;
         grid-template-columns:1fr auto;
-        grid-template-areas:"brand actions" "menu menu";
-        gap:10px;
-        padding:10px 0;
+        grid-template-areas:
+          "brand actions"
+          "menu menu";
+        align-items:center;
+        gap:8px 10px;
       }
-      .brand{grid-area:brand}
-      .actions{grid-area:actions}
-      .menu{grid-area:menu;overflow:auto;flex-wrap:nowrap;justify-content:flex-start;padding-bottom:4px}
-      .grid-2,.grid-3,.grid-4,.gallery,.highlight-row,.image-wall,form .row,.hero-metrics{grid-template-columns:1fr}
-      .gallery{grid-template-rows:auto}
-      .gallery img:first-child{grid-row:auto}
-      .image-tall{min-height:380px;grid-row:auto}
-      .image-small{min-height:220px}
-      .hero-shell{min-height:auto}
-      .hero-copy{padding:28px 20px}
-      .hero-visual{padding:16px}
-      h1{font-size:36px}
-      .hero p,.section-head p{font-size:16px}
-      .section{padding:58px 0}
-      .section-head h2{font-size:32px}
-      .cta-band{flex-direction:column;align-items:flex-start}
-      .spotlight{display:none}
-      body::before{font-size:42px;letter-spacing:30px;padding:18px}
+
+      .brand{ grid-area:brand; }
+      .top-actions{ grid-area:actions; justify-content:flex-end; width:auto; gap:6px; }
+      .menu{
+        grid-area:menu;
+        display:flex;
+        overflow-x:auto;
+        gap:8px;
+        padding:2px 0 2px;
+        scrollbar-width:none;
+        flex-wrap:nowrap;
+      }
+
+      .menu::-webkit-scrollbar{ display:none; }
+
+      .menu a{
+        font-size:12px;
+        padding:5px 8px;
+        white-space:nowrap;
+        background:rgba(255,255,255,0.03);
+        border:1px solid rgba(255,255,255,0.05);
+      }
+
+      .brand-title{ font-size:15px; }
+      .brand-sub{ font-size:9px; letter-spacing:1px; }
+
+      .btn-top,
+      .btn-top-outline{
+        padding:8px 10px;
+        font-size:11px;
+      }
+
+      .hero{
+        min-height:54vh;
+        border-radius:18px;
+      }
+
+      .hero-content{
+        padding:16px;
+        max-width:100%;
+      }
+
+      h1{
+        font-size:27px;
+        line-height:1.08;
+        margin-bottom:10px;
+      }
+
+      .hero p{
+        font-size:14px;
+        line-height:1.45;
+      }
+
+      .hero-buttons{
+        margin-top:14px;
+        gap:8px;
+      }
+
+      .hero-pills{
+        margin-top:12px;
+        gap:6px;
+      }
+
+      .pill{
+        font-size:11px;
+        padding:6px 9px;
+      }
+
+      .section{
+        padding:32px 0;
+      }
+
+      .section h2{
+        font-size:24px;
+      }
+
+      .spotlight{
+        display:none;
+      }
+
+      body::before{
+        font-size:42px;
+        letter-spacing:34px;
+        padding:18px;
+      }
+
+      .floating-wa{
+        right:10px;
+        bottom:10px;
+        padding:11px 14px;
+        font-size:12px;
+      }
     }
   </style>
 </head>
 <body>
+
   <div class="spotlight" id="spotlight"></div>
-  <a class="floating-wa" href="https://wa.me/40723829791" target="_blank" rel="noopener noreferrer">WhatsApp</a>
+
+  <a href="https://wa.me/40723829791" target="_blank" rel="noopener noreferrer" class="floating-wa" aria-label="Scrie-ne pe WhatsApp">
+    WhatsApp
+  </a>
 
   <header class="topbar">
-    <div class="container topbar-inner">
+    <div class="topbar-inner">
       <div class="brand">
         <div class="brand-title">Alina Roșca & Profesional Orchestra</div>
-        <div class="brand-sub">Live band premium • nunți • evenimente private</div>
+        <div class="brand-sub">Live Band • Premium Events</div>
       </div>
 
       <nav class="menu" aria-label="Meniu principal">
-        <a href="#home">Home</a>
-        <a href="#despre">Band</a>
-        <a href="#galerie">Photo</a>
-        <a href="#media">Video</a>
+        <a href="#despre">Despre</a>
+        <a href="#servicii">Servicii</a>
+        <a href="#media">Media</a>
+        <a href="#galerie">Galerie</a>
+        <a href="#pachete">Pachete</a>
+        <a href="/formatie-nunta-pret.html">Prețuri</a>
+        <a href="#faq">FAQ</a>
         <a href="#contact">Contact</a>
       </nav>
 
-      <div class="actions">
-        <a class="btn-outline" href="tel:0723829791">Sună</a>
-        <a class="btn" href="#oferta">Cere ofertă</a>
+      <div class="top-actions">
+        <a class="btn-top-outline" href="tel:0723829791">Sună</a>
+        <a class="btn-top" href="https://wa.me/40723829791" target="_blank" rel="noopener noreferrer">WhatsApp</a>
       </div>
     </div>
   </header>
 
-  <main>
-    <section class="hero" id="home">
-      <div class="container">
-        <div class="hero-shell">
-          <div class="hero-copy">
-            <div class="eyebrow">Formație nuntă București • muzică live premium</div>
-            <h1>Formație nuntă București<br>cu vibe premium și atmosferă reală</h1>
-            <p>
-              Alina Roșca & Profesional Orchestra aduce acel mix de eleganță, energie și repertoriu bine ales care face o petrecere să se simtă vie de la început până la final. Pentru nunți, botezuri și evenimente private unde vrei mai mult decât muzică: vrei atmosferă.
-            </p>
+  <main class="container">
 
-            <div class="hero-ctas">
-              <a class="btn" href="#oferta">Book now</a>
-              <a class="btn-outline" href="#media">Watch video</a>
-              <a class="btn-soft" href="#galerie">Vezi poze</a>
-            </div>
+    <section class="hero" id="hero">
+      <img
+        src="1.jpg"
+        alt="Alina Roșca și Profesional Orchestra la un eveniment"
+        class="hero-bg"
+        width="1600"
+        height="900"
+        fetchpriority="high"
+      >
+      <div class="hero-overlay"></div>
 
-            <div class="hero-metrics">
-              <div class="metric">
-                <b>Live Band</b>
-                <span>muzică live cu impact real</span>
-              </div>
-              <div class="metric">
-                <b>Wedding</b>
-                <span>concept gândit pentru petreceri memorabile</span>
-              </div>
-              <div class="metric">
-                <b>Premium</b>
-                <span>sunet, lumini și prezență elegantă</span>
-              </div>
-            </div>
-              <div class="metric">
-                <b>Flexibil</b>
-                <span>repertoriu adaptat în timp real</span>
-              </div>
-              <div class="metric">
-                <b>Complet</b>
-                <span>muzică, tehnic, ritm și coordonare</span>
-              </div>
-            </div>
-          </div>
+      <div class="hero-content">
+        <div class="eyebrow">Muzică live premium pentru nunți, botezuri și evenimente private</div>
+        <h1>Formație de nuntă în București – muzică live premium pentru evenimente elegante</h1>
+        <p>
+          Oferim un show live rafinat, repertoriu variat și atmosferă autentică pentru nunți,
+          botezuri și petreceri private în București, Ilfov și în toată țara.
+        </p>
 
-          <div class="hero-visual">
-            <div class="hero-frame">
-              <img src="1.jpg" alt="Alina Roșca & Profesional Orchestra la eveniment premium" width="1200" height="1500" />
+        <div class="hero-buttons">
+          <a class="btn-primary" href="#oferta">Cere ofertă personalizată</a>
+          <a class="btn-secondary" href="https://www.youtube.com/watch?v=G37C2lHENog" target="_blank" rel="noopener noreferrer">Vezi videoclipul</a>
+        </div>
 
-              <div class="glass-stack">
-                <div class="glass-card">
-                  <h3>Perfect pentru un eveniment memorabil</h3>
-                  <p>Playlist variat, atmosferă reală și o prezență scenică ce transformă fiecare moment într-un highlight al serii.</p>
-                </div>
-
-                <div class="glass-mini">
-                  <div class="mini">Live band complet</div>
-                  <div class="mini">Scenă, lumini, sonorizare</div>
-                  <div class="mini">București & toată țara</div>
-                </div>
-              </div>
-            </div>
-          </div>
+        <div class="hero-pills">
+          <div class="pill">Solistă</div>
+          <div class="pill">Solist vocal</div>
+          <div class="pill">Clape</div>
+          <div class="pill">Vioară</div>
+          <div class="pill">Acordeon</div>
+          <div class="pill">Clarinet</div>
+          <div class="pill">Tarabană</div>
+          <div class="pill">Live Show</div>
         </div>
       </div>
     </section>
 
     <section class="section" id="despre">
-      <div class="container split-lux">
-        <div class="card">
-          <div class="tag">Despre noi</div>
-          <h3>Meet the Band</h3>
-          <p>
-            Suntem genul de formație care nu vine doar să cânte, ci să ridice întreaga petrecere. Punem accent pe vibe, pe repertoriu și pe acea energie bună care îi face pe invitați să rămână aproape de ring și să simtă că sunt parte dintr-o seară specială.
-          </p>
-          <ul class="list">
-            <li>Solistă principală cu prezență elegantă și voce puternică</li>
-            <li>Formație live completă pentru nunți și evenimente private</li>
-            <li>Repertoriu variat pentru toate generațiile</li>
-            <li>Opțiuni extra: DJ, saxofon, percuție, efecte și lumini</li>
-          </ul>
+      <h2>Despre noi</h2>
+      <p class="section-intro">
+        Suntem o formație de nuntă din București specializată în muzică live pentru evenimente premium.
+        Asigurăm atmosferă completă pentru nunți, botezuri și petreceri private, cu orchestră live,
+        repertoriu variat și servicii adaptate publicului și stilului evenimentului.
+      </p>
 
-          <div class="highlight-row">
-            <div class="highlight">
-              <b>Atmosferă</b>
-              <span>Invitați implicați, ring plin și energie bună pe toată durata serii.</span>
-            </div>
-            <div class="highlight">
-              <b>Eleganță</b>
-              <span>Imagine premium și prezență scenică potrivită pentru evenimente rafinate.</span>
-            </div>
-            <div class="highlight">
-              <b>Experiență</b>
-              <span>Evenimente construite atent, cu flow natural și momente bine dozate.</span>
-            </div>
-          </div>
-            <div class="highlight">
-              <b>Imagine premium</b>
-              <span>Prezență scenică elegantă și o comunicare profesionistă de la început până la final.</span>
-            </div>
-            <div class="highlight">
-              <b>Flow natural</b>
-              <span>Program construit astfel încât invitații să rămână conectați la atmosferă.</span>
-            </div>
-          </div>
+      <div class="grid-2">
+        <div class="card">
+          <h3>Instrumentație și opțiuni suplimentare</h3>
+          <ul class="list">
+            <li>Formulă standard: solistă, solist vocal, clape, vioară, acordeon, clarinet</li>
+            <li>Opțional: saxofon</li>
+            <li>Opțional: țambal</li>
+            <li>Opțional: percuție / tobe electronice</li>
+            <li>Opțional: DJ pentru pauze și after party</li>
+          </ul>
         </div>
 
-        <div class="image-wall">
-          <div class="image-tall">
-            <img src="formatie-nunta-bucuresti.jpg" alt="Formație de nuntă București eveniment premium" width="1200" height="1600" />
-          </div>
-          <div class="image-small">
-            <img src="muzica-live-nunta.jpg" alt="Muzică live la nuntă" width="1000" height="800" />
-          </div>
-          <div class="image-small">
-            <img src="orchestra-nunta-live.jpg" alt="Orchestră live pentru nuntă" width="1000" height="800" />
-          </div>
+        <div class="card">
+          <h3>Ce oferim</h3>
+          <ul class="list">
+            <li>Program live personalizat în funcție de tipul evenimentului</li>
+            <li>Repertoriu variat pentru toate vârstele și toate momentele serii</li>
+            <li>Imagine elegantă și atmosferă autentică de petrecere</li>
+            <li>Coordonare atentă a momentelor muzicale</li>
+            <li>Comunicare rapidă pentru booking și organizare</li>
+          </ul>
         </div>
       </div>
     </section>
 
     <section class="section" id="servicii">
-      <div class="container">
-        <div class="section-head">
-          <h2>Cum îți completăm petrecerea</h2>
-          <p>
-            Exact cum te-ai aștepta de la un cover band premium, venim cu servicii complete care ridică petrecerea: muzică live, playlist variat, sunet clar, lumini, DJ și o atmosferă care se simte din primele minute.
-          </p>
+      <h2>Servicii complete pentru eveniment</h2>
+      <p class="section-intro">
+        Oferim mai mult decât o simplă formație: construim un pachet complet de entertainment,
+        imagine și producție tehnică pentru un eveniment coerent, elegant și memorabil.
+      </p>
+
+      <div class="grid-2">
+        <div class="card">
+          <div class="tag">Muzică live</div>
+          <h3>Muzică live & show</h3>
+          <ul class="list">
+            <li>Formație live completă</li>
+            <li>Program muzical elegant și dinamic</li>
+            <li>Repertoriu adaptat în timp real după public</li>
+            <li>Atmosferă reală pe ringul de dans, pe tot parcursul serii</li>
+          </ul>
         </div>
 
-        <div class="grid-4">
-          <article class="card service-card">
-            <div class="tag">Playlist</div>
-            <h3>Playlist variat</h3>
-            <p>Repertoriu bine gândit pentru toate generațiile, de la momente elegante până la party adevărat.</p>
-          </article>
-
-          <article class="card service-card">
-            <div class="tag">Sound</div>
-            <h3>Sonorizare profesională</h3>
-            <p>Sunet clar, echilibrat și puternic, astfel încât muzica să se audă bine în fiecare colț al locației.</p>
-          </article>
-
-          <article class="card service-card">
-            <div class="tag">Lights</div>
-            <h3>Scenă & lumini</h3>
-            <p>Setup vizual elegant, lumini de scenă și un look care face evenimentul să pară mai mare, mai viu și mai premium.</p>
-          </article>
-
-          <article class="card service-card">
-            <div class="tag">Flow</div>
-            <h3>DJ fără pauze moarte</h3>
-            <p>Păstrăm ritmul serii și între seturi, astfel încât invitații să simtă petrecerea continuă, nu întreruperi.</p>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section class="section" id="media">
-      <div class="container">
-        <div class="section-head">
-          <h2>Vezi și ascultă energia reală</h2>
-          <p>Video live și muzică online, ca să simți exact atmosfera pe care o aducem la eveniment.</p>
+        <div class="card">
+          <div class="tag">Tehnic</div>
+          <h3>Producție tehnică</h3>
+          <ul class="list">
+            <li>Sonorizare profesională completă</li>
+            <li>Lumini ambientale și de scenă</li>
+            <li>Mașini de fum</li>
+            <li>Efecte speciale pentru momente cheie</li>
+          </ul>
         </div>
 
-        <div class="media-grid">
-          <div class="frame video">
-            <iframe src="https://www.youtube.com/embed/G37C2lHENog" title="Alina Roșca & Profesional Orchestra" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-          </div>
-          <div class="frame spotify">
-            <iframe src="https://open.spotify.com/embed/artist/6KnhUZCGsxfoBtpVjv3Ffg?utm_source=generator" title="Spotify Profesional Orchestra" loading="lazy" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="section" id="galerie">
-      <div class="container">
-        <div class="section-head">
-          <h2>Atmosferă reală din evenimente</h2>
-          <p>Eleganță, lumină, energie și invitați implicați. Exact lucrurile care contează într-o seară memorabilă.</p>
+        <div class="card">
+          <div class="tag">Extra premium</div>
+          <h3>Servicii extra premium</h3>
+          <ul class="list">
+            <li>DJ pentru pauze și after party</li>
+            <li>Posibilitate de colaborare cu artiști invitați</li>
+            <li>Integrare de momente artistice speciale</li>
+            <li>Coordonare artistică completă a evenimentului</li>
+          </ul>
         </div>
 
-        <div class="gallery">
-          <img src="formatie-nunta-bucuresti.jpg" alt="Formație nuntă București muzică live" onclick="openLightbox(this.src)">
-          <img src="muzica-live-nunta.jpg" alt="Muzică live la nuntă" onclick="openLightbox(this.src)">
-          <img src="orchestra-nunta-live.jpg" alt="Orchestră live pentru nuntă" onclick="openLightbox(this.src)">
-          <img src="band-evenimente-bucuresti.jpg" alt="Band pentru evenimente în București" onclick="openLightbox(this.src)">
-        </div>
-      </div>
-    </section>
-
-    <section class="section pricing" id="pachete">
-      <div class="container">
-        <div class="section-head">
-          <h2>Pachete create pentru impact și eleganță</h2>
-          <p>Fiecare eveniment are ritmul și personalitatea lui. Alegem împreună varianta potrivită, iar oferta finală se personalizează în funcție de dată, locație și servicii.</p>
-        </div>
-
-        <div class="grid-3">
-          <article class="card">
-            <div class="tag">Essential</div>
-            <h3>Elegant</h3>
-            <ul class="list">
-              <li>Formulă standard</li>
-              <li>Program live complet</li>
-              <li>Repertoriu variat</li>
-              <li>Sonorizare inclusă</li>
-            </ul>
-            <div class="price-note">Pentru evenimente echilibrate, rafinate și bine organizate.</div>
-          </article>
-
-          <article class="card featured">
-            <div class="tag">Recomandat</div>
-            <h3>Premium</h3>
-            <ul class="list">
-              <li>Formulă extinsă</li>
-              <li>Program personalizat</li>
-              <li>Instrumente opționale</li>
-              <li>Lumini și efecte</li>
-              <li>Atmosferă completă</li>
-            </ul>
-            <div class="price-note">Cea mai aleasă variantă pentru nunți premium cu impact vizual și energie bună.</div>
-          </article>
-
-          <article class="card">
-            <div class="tag">Exclusive</div>
-            <h3>Signature</h3>
-            <ul class="list">
-              <li>Formație completă</li>
-              <li>Show live extins</li>
-              <li>Producție tehnică premium</li>
-              <li>Coordonare artistică avansată</li>
-            </ul>
-            <div class="price-note">Pentru evenimente mari și o experiență care trebuie să impresioneze.</div>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section class="section" id="testimoniale">
-      <div class="container">
-        <div class="section-head">
-          <h2>Ce spun clienții</h2>
-          <p>Feedback-ul care contează cel mai mult este al oamenilor care au trăit deja seara alături de noi.</p>
-        </div>
-
-        <div class="grid-3">
-          <article class="card review">
-            <p>Atmosfera a fost incredibilă. Invitații au rămas pe ring toată seara, iar tot evenimentul a avut exact eleganța și energia pe care ni le-am dorit.</p>
-            <div class="muted" style="margin-top:18px;font-style:normal">— Nuntă, București</div>
-          </article>
-          <article class="card review">
-            <p>Foarte mult bun gust, profesionalism și implicare. S-a simțit că nu a fost doar un program muzical, ci o experiență construită atent.</p>
-            <div class="muted" style="margin-top:18px;font-style:normal">— Eveniment privat</div>
-          </article>
-          <article class="card review">
-            <p>Sunet impecabil, repertoriu excelent și o prezență scenică superbă. O alegere care chiar a ridicat nivelul întregului eveniment.</p>
-            <div class="muted" style="margin-top:18px;font-style:normal">— Botez</div>
-          </article>
+        <div class="card">
+          <div class="tag">Media</div>
+          <h3>Foto & video</h3>
+          <ul class="list">
+            <li>Colaborări cu fotografi profesioniști</li>
+            <li>Colaborări cu videografi profesioniști</li>
+            <li>Clip highlights și materiale premium</li>
+            <li>Flux de lucru organizat pentru un eveniment fără stres</li>
+          </ul>
         </div>
       </div>
     </section>
 
     <section class="section">
-      <div class="container">
-        <div class="cta-band">
-          <div>
-            <h3>Vrei un eveniment care să arate și să se simtă premium?</h3>
-            <p>Trimite-ne data, locația și stilul evenimentului, iar noi revenim rapid cu disponibilitate și o ofertă personalizată, clară și elegantă.</p>
-          </div>
-          <div style="display:flex;gap:12px;flex-wrap:wrap">
-            <a class="btn" href="#oferta">Cere ofertă</a>
-            <a class="btn-outline" href="https://wa.me/40723829791" target="_blank" rel="noopener noreferrer">Scrie pe WhatsApp</a>
-          </div>
+      <h2>De ce să ne alegi</h2>
+      <div class="grid-3">
+        <div class="card">
+          <h3>Muzică live cu impact</h3>
+          <p class="muted">Adaptăm repertoriul în timp real, astfel încât atmosfera să rămână vie și invitații să se bucure de fiecare moment.</p>
+        </div>
+        <div class="card">
+          <h3>Servicii complete</h3>
+          <p class="muted">Formație live, sonorizare, lumini, efecte și opțiuni extra într-un singur pachet bine organizat.</p>
+        </div>
+        <div class="card">
+          <h3>Profesionalism</h3>
+          <p class="muted">Comunicare clară, prezență elegantă și organizare atentă pentru un eveniment fără improvizații neplăcute.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="media">
+      <h2>Media</h2>
+      <div class="media-wrap">
+        <div class="video-frame">
+          <iframe
+            src="https://www.youtube.com/embed/G37C2lHENog"
+            title="Alina Roșca & Profesional Orchestra"
+            loading="lazy"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen>
+          </iframe>
+        </div>
+
+        <div class="card spotify-frame">
+          <div class="tag">Spotify</div>
+          <h3>Ascultă-ne online</h3>
+          <iframe
+            src="https://open.spotify.com/embed/artist/6KnhUZCGsxfoBtpVjv3Ffg?utm_source=generator"
+            title="Spotify Profesional Orchestra"
+            loading="lazy"
+            allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture">
+          </iframe>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="galerie">
+      <h2>Atmosferă reală din evenimente</h2>
+      <div class="gallery-wow">
+        <img src="formatie-nunta-bucuresti.jpg" alt="Formație de nuntă în București cu muzică live" loading="lazy" onclick="openLightbox(this.src)">
+        <img src="muzica-live-nunta.jpg" alt="Muzică live la nuntă și atmosferă de petrecere" loading="lazy" onclick="openLightbox(this.src)">
+        <img src="orchestra-nunta-live.jpg" alt="Orchestră live pentru nuntă în București" loading="lazy" onclick="openLightbox(this.src)">
+        <img src="band-evenimente-bucuresti.jpg" alt="Formație pentru evenimente în București" loading="lazy" onclick="openLightbox(this.src)">
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>Ce spun clienții</h2>
+      <div class="grid-3">
+        <div class="card testimonial">
+          <p>Atmosfera a fost incredibilă. Invitații au rămas pe ring toată seara, iar totul a fost exact cum ne-am dorit.</p>
+          <div class="muted" style="margin-top:16px; font-style:normal;">— Nuntă, București</div>
+        </div>
+
+        <div class="card testimonial">
+          <p>Profesionalism total, repertoriu foarte bine ales și o colaborare fără stres de la început până la final.</p>
+          <div class="muted" style="margin-top:16px; font-style:normal;">— Eveniment privat</div>
+        </div>
+
+        <div class="card testimonial">
+          <p>Sunet impecabil, atmosferă elegantă și energie extraordinară. O alegere care chiar a făcut diferența.</p>
+          <div class="muted" style="margin-top:16px; font-style:normal;">— Botez</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="pachete">
+      <h2>Pachete</h2>
+      <div class="grid-3">
+        <div class="card">
+          <h3>Essential</h3>
+          <p class="muted">Pentru evenimente elegante și echilibrate, cu tot ce este necesar pentru o atmosferă frumoasă.</p>
+          <ul class="list">
+            <li>Formulă standard</li>
+            <li>Program live</li>
+            <li>Repertoriu variat</li>
+            <li>Sonorizare inclusă</li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <div class="tag">Recomandat</div>
+          <h3>Premium</h3>
+          <p class="muted">Varianta cea mai aleasă, pentru evenimente unde vrei atmosferă, eleganță și experiență completă.</p>
+          <ul class="list">
+            <li>Formulă extinsă</li>
+            <li>Instrumente opționale</li>
+            <li>Program personalizat</li>
+            <li>Lumini și efecte</li>
+            <li>Atmosferă completă</li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <h3>Exclusive</h3>
+          <p class="muted">Pentru evenimente premium, unde fiecare detaliu trebuie să impresioneze.</p>
+          <ul class="list">
+            <li>Formație completă</li>
+            <li>Show live extins</li>
+            <li>Producție tehnică premium</li>
+            <li>Experiență completă pentru evenimente mari</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="faq">
+      <h2>Întrebări frecvente</h2>
+      <div class="faq-grid">
+        <div class="card">
+          <h3>Cântați doar în București?</h3>
+          <p class="muted">Nu. Ne deplasăm în București, Ilfov și în toată țara, în funcție de tipul evenimentului și disponibilitate.</p>
+        </div>
+        <div class="card">
+          <h3>Sonorizarea este inclusă?</h3>
+          <p class="muted">Da, putem include sonorizare profesională, iar în funcție de pachet putem adăuga și lumini sau alte efecte.</p>
+        </div>
+        <div class="card">
+          <h3>Se poate adăuga DJ?</h3>
+          <p class="muted">Da. Putem include DJ pentru pauze, after party sau pentru un mix complet între live și party.</p>
+        </div>
+        <div class="card">
+          <h3>Cum primiți cererile de ofertă?</h3>
+          <p class="muted">Ne poți suna, scrie pe WhatsApp sau trimite formularul de mai jos pentru o ofertă personalizată.</p>
         </div>
       </div>
     </section>
 
     <section class="section" id="oferta">
-      <div class="container offer">
+      <h2>Cere ofertă</h2>
+      <div class="form-wrap">
         <div class="card">
           <div class="tag">Răspuns rapid</div>
           <h3>Hai să discutăm despre evenimentul tău</h3>
-          <p>
-            Spune-ne data, locația și ce atmosferă îți dorești. Îți răspundem cu o variantă potrivită pentru stilul evenimentului și serviciile dorite.
+          <p class="section-intro" style="margin-top:10px;">
+            Trimite-ne câteva detalii și revenim cu o ofertă personalizată, adaptată tipului de eveniment,
+            locației și serviciilor dorite.
           </p>
 
-          <div class="mini-stack">
-            <div class="mini-box">Telefon: <a href="tel:0723829791">0723 829 791</a></div>
-            <div class="mini-box">WhatsApp disponibil pentru răspuns rapid</div>
-            <div class="mini-box">București, Ilfov și deplasări în toată țara</div>
-            <div class="mini-box">Nuntă • botez • aniversare • eveniment privat • corporate</div>
+          <div class="mini-list">
+            <div class="mini">Telefon: 0723 829 791</div>
+            <div class="mini">WhatsApp disponibil pentru răspuns rapid</div>
+            <div class="mini">București, Ilfov și deplasări în toată țara</div>
           </div>
         </div>
 
@@ -1023,116 +1064,104 @@
             <input type="hidden" name="_subject" value="Cerere ofertă - Profesional Orchestra">
             <input type="hidden" name="_next" value="https://profesionalorchestra.ro/multumim.html">
 
-            <div class="row">
-              <input type="text" name="nume" placeholder="Nume" required>
-              <input type="tel" name="telefon" placeholder="Telefon" required>
-            </div>
-            <div class="row">
-              <input type="email" name="email" placeholder="Email">
-              <select name="eveniment">
-                <option value="">Tip eveniment</option>
-                <option>Nuntă</option>
-                <option>Botez</option>
-                <option>Aniversare</option>
-                <option>Eveniment privat</option>
-                <option>Corporate</option>
-              </select>
-            </div>
-            <div class="row">
-              <input type="date" name="data">
-              <input type="text" name="locatie" placeholder="Locație eveniment">
-            </div>
-            <div class="row">
-              <input type="number" name="invitati" placeholder="Număr estimativ invitați" min="1">
-              <input type="text" name="pachet" placeholder="Pachet dorit / preferințe">
-            </div>
-            <textarea name="mesaj" placeholder="Spune-ne mai multe despre eveniment: stil, repertoriu, preferințe muzicale, servicii dorite"></textarea>
-            <button class="btn" type="submit" style="width:100%;border:none">Trimite cererea</button>
-            <p class="price-note">Răspundem cât mai rapid, de obicei în aceeași zi.</p>
+            <input type="text" name="nume" placeholder="Nume" required>
+            <input type="tel" name="telefon" placeholder="Telefon" required>
+            <input type="email" name="email" placeholder="Email">
+
+            <select name="eveniment">
+              <option value="">Tip eveniment</option>
+              <option>Nuntă</option>
+              <option>Botez</option>
+              <option>Aniversare</option>
+              <option>Eveniment privat</option>
+              <option>Corporate</option>
+            </select>
+
+            <input type="date" name="data">
+            <input type="text" name="locatie" placeholder="Locație eveniment">
+            <input type="number" name="invitati" placeholder="Număr estimativ invitați" min="1">
+            <textarea name="mesaj" rows="5" placeholder="Detalii suplimentare"></textarea>
+
+            <button type="submit">Trimite cererea</button>
+            <p class="muted" style="font-size:14px; margin-top:10px;">
+              Răspundem cât mai rapid, de obicei în aceeași zi.
+            </p>
           </form>
         </div>
       </div>
     </section>
 
-    <section class="section faq" id="faq">
-      <div class="container">
-        <div class="section-head">
-          <h2>Întrebări frecvente</h2>
-          <p>Răspunsuri clare la cele mai importante întrebări pe care le au mirii și organizatorii.</p>
-        </div>
-
-        <details>
-          <summary>Cântați doar în București?</summary>
-          <p>Nu. Cântăm în București, Ilfov și ne deplasăm în toată țara, în funcție de tipul evenimentului și disponibilitate.</p>
-        </details>
-
-        <details>
-          <summary>Se poate adăuga DJ în pachet?</summary>
-          <p>Da. Putem include DJ pentru pauze și after party, pentru o atmosferă continuă și o tranziție naturală între live și party.</p>
-        </details>
-
-        <details>
-          <summary>Sonorizarea și luminile sunt incluse?</summary>
-          <p>În funcție de pachetul ales, putem include sonorizare profesională, lumini ambientale și efecte speciale pentru momentele importante.</p>
-        </details>
-
-        <details>
-          <summary>Putem personaliza repertoriul?</summary>
-          <p>Da. Stabilim împreună direcția muzicală și adaptăm programul în funcție de invitați, stilul evenimentului și momentele speciale.</p>
-        </details>
-      </div>
-    </section>
-
     <section class="section" id="contact">
-      <div class="container">
-        <div class="section-head">
-          <h2>Contact & booking</h2>
-          <p>Ne poți suna direct, scrie pe WhatsApp sau trimite formularul de ofertă.</p>
+      <h2>Contact & Booking</h2>
+      <div class="contact-grid">
+        <div class="card">
+          <h3>Telefon</h3>
+          <div class="muted"><a href="tel:0723829791">0723 829 791</a></div>
         </div>
-
-        <div class="grid-4 contact-grid">
-          <div class="card">
-            <h3>Telefon</h3>
-            <p><a href="tel:0723829791">0723 829 791</a></p>
+        <div class="card">
+          <h3>Oraș</h3>
+          <div class="muted">București și deplasări în toată țara</div>
+        </div>
+        <div class="card">
+          <h3>Facebook</h3>
+          <div class="muted">
+            <a href="https://www.facebook.com/AlinaRoscaArtist/" target="_blank" rel="noopener noreferrer">
+              Alina Roșca Artist
+            </a>
           </div>
-          <div class="card">
-            <h3>Facebook</h3>
-            <p><a href="https://www.facebook.com/AlinaRoscaArtist/" target="_blank" rel="noopener noreferrer">Alina Roșca Artist</a></p>
-          </div>
-          <div class="card">
-            <h3>TikTok</h3>
-            <p><a href="https://www.tiktok.com/@profesionalorchestra" target="_blank" rel="noopener noreferrer">@profesionalorchestra</a></p>
-          </div>
-          <div class="card">
-            <h3>Arie de servicii</h3>
-            <p>București • Ilfov • deplasări în toată țara</p>
+        </div>
+        <div class="card">
+          <h3>TikTok</h3>
+          <div class="muted">
+            <a href="https://www.tiktok.com/@profesionalorchestra" target="_blank" rel="noopener noreferrer">
+              @profesionalorchestra
+            </a>
           </div>
         </div>
       </div>
     </section>
+
   </main>
 
   <footer class="footer">
-    <div class="container">
-      © 2026 Alina Roșca & Profesional Orchestra • Formație nuntă București • Toate drepturile rezervate
-    </div>
+    © 2026 Alina Roșca & Profesional Orchestra • București •
+    <a href="tel:0723829791">0723 829 791</a>
   </footer>
 
   <div id="lightbox" class="lightbox" onclick="closeLightbox()">
-    <span class="lightbox-close">&times;</span>
-    <img id="lightbox-img" src="" alt="Imagine mărită" />
+    <span class="lightbox-close" aria-label="Închide">&times;</span>
+    <img id="lightbox-img" src="" alt="Imagine mărită">
   </div>
 
   <script>
+    function openLightbox(src){
+      document.getElementById('lightbox').style.display = 'flex';
+      document.getElementById('lightbox-img').src = src;
+    }
+
+    function closeLightbox(){
+      document.getElementById('lightbox').style.display = 'none';
+    }
+
+    const spotlight = document.getElementById('spotlight');
+
+    document.addEventListener('mousemove', function(e){
+      if (window.innerWidth > 700 && spotlight) {
+        spotlight.style.left = e.clientX + 'px';
+        spotlight.style.top = e.clientY + 'px';
+      }
+    });
+
     const sections = document.querySelectorAll('section[id]');
     const navLinks = document.querySelectorAll('.menu a[href^="#"]');
-    const spotlight = document.getElementById('spotlight');
 
     window.addEventListener('scroll', () => {
       let current = '';
+
       sections.forEach(section => {
         const top = section.offsetTop - 140;
         const height = section.offsetHeight;
+
         if (window.scrollY >= top && window.scrollY < top + height) {
           current = section.getAttribute('id');
         }
@@ -1140,32 +1169,17 @@
 
       navLinks.forEach(link => {
         link.classList.remove('active');
-        if (link.getAttribute('href') === '#' + current) {
+        const href = link.getAttribute('href');
+        if (href === '#' + current) {
           link.classList.add('active');
         }
       });
     });
 
-    document.addEventListener('mousemove', function(e){
-      if (window.innerWidth > 860 && spotlight) {
-        spotlight.style.left = e.clientX + 'px';
-        spotlight.style.top = e.clientY + 'px';
-      }
-    });
-
-    function openLightbox(src){
-      const box = document.getElementById('lightbox');
-      const img = document.getElementById('lightbox-img');
-      img.src = src;
-      box.style.display = 'flex';
-    }
-
-    function closeLightbox(){
-      document.getElementById('lightbox').style.display = 'none';
-    }
-
     document.addEventListener('keydown', function(e){
-      if(e.key === 'Escape') closeLightbox();
+      if (e.key === 'Escape') {
+        closeLightbox();
+      }
     });
   </script>
 </body>
