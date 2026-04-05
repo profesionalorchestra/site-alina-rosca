@@ -39,14 +39,14 @@
     * { box-sizing: border-box; margin: 0; padding: 0; }
 
     :root{
-      --bg:#09070d;
-      --bg2:#140f1d;
+      --bg:#08060b;
+      --bg2:#130e1b;
       --bg3:#1b1326;
       --gold:#e3c38b;
       --gold-soft:#f4dfb8;
       --gold-strong:#d4ac69;
       --text:rgba(255,255,255,0.88);
-      --muted:rgba(255,255,255,0.70);
+      --muted:rgba(255,255,255,0.72);
       --line:rgba(227,195,139,0.18);
       --card:rgba(255,255,255,0.05);
       --card-strong:rgba(255,255,255,0.07);
@@ -230,11 +230,12 @@
     .btn-primary,
     .btn-secondary,
     .slider-btn,
-    .review-link{
+    .review-link,
+    .btn-glass{
       display:inline-flex;
       align-items:center;
       justify-content:center;
-      padding:9px 12px;
+      padding:10px 14px;
       border-radius:999px;
       font-weight:700;
       transition:.25s ease;
@@ -255,7 +256,8 @@
     .btn-top-outline,
     .btn-secondary,
     .slider-btn,
-    .review-link{
+    .review-link,
+    .btn-glass{
       border:1px solid var(--line);
       background:rgba(255,255,255,0.04);
       color:#fff;
@@ -266,7 +268,8 @@
     .btn-primary:hover,
     .btn-secondary:hover,
     .slider-btn:hover,
-    .review-link:hover{
+    .review-link:hover,
+    .btn-glass:hover{
       transform:translateY(-2px);
     }
 
@@ -278,7 +281,7 @@
 
     .hero{
       position:relative;
-      min-height:76vh;
+      min-height:82vh;
       border-radius:32px;
       overflow:hidden;
       margin-top:18px;
@@ -294,20 +297,21 @@
       width:100%;
       height:100%;
       object-fit:cover;
+      transform:scale(1.03);
     }
 
     .hero-overlay{
       position:absolute;
       inset:0;
       background:
-        linear-gradient(to right, rgba(9,9,12,0.84), rgba(9,9,12,0.34)),
-        linear-gradient(to top, rgba(9,9,12,0.78), transparent 42%);
+        linear-gradient(to right, rgba(9,9,12,0.88), rgba(9,9,12,0.30)),
+        linear-gradient(to top, rgba(9,9,12,0.84), transparent 42%);
     }
 
     .hero-content{
       position:relative;
       z-index:2;
-      max-width:780px;
+      max-width:820px;
       padding:48px;
     }
 
@@ -326,8 +330,8 @@
 
     h1{
       font-family: Georgia, "Times New Roman", serif;
-      font-size:58px;
-      line-height:1.04;
+      font-size:60px;
+      line-height:1.02;
       margin-bottom:16px;
       color:#fff9f1;
     }
@@ -361,8 +365,36 @@
       font-size:13px;
     }
 
+    .hero-proof{
+      display:grid;
+      grid-template-columns:repeat(3,1fr);
+      gap:14px;
+      margin-top:26px;
+      max-width:760px;
+    }
+
+    .hero-proof-card{
+      padding:14px 16px;
+      border-radius:18px;
+      background:rgba(255,255,255,0.06);
+      border:1px solid rgba(244,223,184,0.14);
+      backdrop-filter:blur(8px);
+    }
+
+    .hero-proof-card strong{
+      display:block;
+      color:#fff7ed;
+      font-size:17px;
+      margin-bottom:4px;
+    }
+
+    .hero-proof-card span{
+      color:rgba(255,255,255,0.7);
+      font-size:13px;
+    }
+
     .section{
-      padding:42px 0;
+      padding:48px 0;
     }
 
     .section h2{
@@ -380,7 +412,8 @@
     .grid-2,
     .grid-3,
     .contact-grid,
-    .faq-grid{
+    .faq-grid,
+    .stats-grid{
       display:grid;
       gap:18px;
       margin-top:24px;
@@ -390,6 +423,7 @@
     .grid-3{ grid-template-columns:repeat(3,1fr); }
     .contact-grid{ grid-template-columns:repeat(2,1fr); }
     .faq-grid{ grid-template-columns:repeat(2,1fr); }
+    .stats-grid{ grid-template-columns:repeat(4,1fr); }
 
     .card{
       background:var(--card);
@@ -433,6 +467,32 @@
       text-transform:uppercase;
       letter-spacing:.8px;
       font-weight:700;
+    }
+
+    .stats-section{
+      margin-top:10px;
+    }
+
+    .stat-card{
+      text-align:center;
+      padding:26px 18px;
+      border-radius:26px;
+      background:linear-gradient(180deg, rgba(255,255,255,0.07), rgba(255,255,255,0.04));
+      border:1px solid rgba(244,223,184,0.14);
+      box-shadow:var(--shadow-gold);
+    }
+
+    .stat-number{
+      font-family:Georgia, "Times New Roman", serif;
+      font-size:42px;
+      line-height:1;
+      color:#fff8ef;
+      margin-bottom:8px;
+    }
+
+    .stat-label{
+      color:rgba(255,255,255,0.7);
+      font-size:14px;
     }
 
     .media-wrap{
@@ -490,6 +550,11 @@
 
     .gallery-wow img:hover{
       transform:translateY(-4px);
+    }
+
+    .why-premium{
+      background:linear-gradient(180deg, rgba(255,255,255,0.06), rgba(255,255,255,0.04));
+      border:1px solid rgba(244,223,184,0.14);
     }
 
     .form-wrap{
@@ -594,7 +659,6 @@
       cursor:pointer;
     }
 
-    /* PREMIUM REVIEWS */
     .testimonials-wrap{
       margin-top:26px;
       position:relative;
@@ -702,8 +766,7 @@
       position:relative;
       overflow:hidden;
       padding:24px;
-      background:
-        linear-gradient(180deg, rgba(255,255,255,0.08), rgba(255,255,255,0.04));
+      background:linear-gradient(180deg, rgba(255,255,255,0.08), rgba(255,255,255,0.04));
       border:1px solid rgba(244,223,184,0.16);
       box-shadow:0 18px 44px rgba(0,0,0,0.24);
       border-radius:28px;
@@ -851,7 +914,7 @@
       h1{ font-size:44px; }
       .hero-content{ padding:28px; }
 
-      .grid-2, .grid-3, .contact-grid, .media-wrap, .form-wrap, .faq-grid{
+      .grid-2, .grid-3, .contact-grid, .media-wrap, .form-wrap, .faq-grid, .stats-grid{
         grid-template-columns:1fr;
       }
 
@@ -872,7 +935,7 @@
         min-height:420px;
       }
 
-      .testimonials-grid{
+      .testimonials-grid, .hero-proof{
         grid-template-columns:1fr;
       }
 
@@ -929,7 +992,7 @@
       }
 
       .hero{
-        min-height:54vh;
+        min-height:62vh;
         border-radius:18px;
       }
 
@@ -939,7 +1002,7 @@
       }
 
       h1{
-        font-size:27px;
+        font-size:29px;
         line-height:1.08;
         margin-bottom:10px;
       }
@@ -1031,6 +1094,10 @@
       .testimonial-pro p{
         font-size:14px;
       }
+
+      .hero-proof-card strong{
+        font-size:16px;
+      }
     }
   </style>
 </head>
@@ -1083,7 +1150,7 @@
 
       <div class="hero-content">
         <div class="eyebrow">Muzică live premium pentru nunți, botezuri și evenimente private</div>
-        <h1>Formație de nuntă în București – muzică live premium pentru evenimente elegante</h1>
+        <h1>Formație de nuntă în București pentru evenimente elegante, memorabile și pline de energie</h1>
         <p>
           Oferim un show live rafinat, repertoriu variat și atmosferă autentică pentru nunți,
           botezuri și petreceri private în București, Ilfov și în toată țara.
@@ -1092,6 +1159,7 @@
         <div class="hero-buttons">
           <a class="btn-primary" href="#oferta">Cere ofertă personalizată</a>
           <a class="btn-secondary" href="https://www.youtube.com/watch?v=G37C2lHENog" target="_blank" rel="noopener noreferrer">Vezi videoclipul</a>
+          <a class="btn-glass" href="https://www.facebook.com/AlinaRoscaArtist/reviews/" target="_blank" rel="noopener noreferrer">Recenzii Facebook</a>
         </div>
 
         <div class="hero-pills">
@@ -1103,6 +1171,42 @@
           <div class="pill">Clarinet</div>
           <div class="pill">Tarabană</div>
           <div class="pill">Live Show</div>
+        </div>
+
+        <div class="hero-proof">
+          <div class="hero-proof-card">
+            <strong>Recenzii reale</strong>
+            <span>Feedback autentic din Facebook Reviews</span>
+          </div>
+          <div class="hero-proof-card">
+            <strong>Atmosferă live</strong>
+            <span>Ring de dans activ și energie bună</span>
+          </div>
+          <div class="hero-proof-card">
+            <strong>Evenimente premium</strong>
+            <span>Nuntă, botez, corporate și petreceri private</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section stats-section">
+      <div class="stats-grid">
+        <div class="stat-card">
+          <div class="stat-number" data-target="100">0</div>
+          <div class="stat-label">% recomandări în recenzii</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-number" data-target="7">0</div>
+          <div class="stat-label">instrumente și opțiuni live</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-number" data-target="3">0</div>
+          <div class="stat-label">pachete pentru evenimente</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-number" data-target="1">0</div>
+          <div class="stat-label">singur scop: atmosferă memorabilă</div>
         </div>
       </div>
     </section>
@@ -1195,19 +1299,20 @@
     </section>
 
     <section class="section">
-      <h2>De ce să ne alegi</h2>
+      <div class="tag">De ce noi</div>
+      <h2>De ce să ne alegi pentru evenimentul tău</h2>
       <div class="grid-3">
-        <div class="card">
+        <div class="card why-premium">
           <h3>Muzică live cu impact</h3>
-          <p class="muted">Adaptăm repertoriul în timp real, astfel încât atmosfera să rămână vie și invitații să se bucure de fiecare moment.</p>
+          <p class="muted">Adaptăm repertoriul în timp real, astfel încât atmosfera să rămână vie și invitații să se bucure de fiecare moment important al serii.</p>
         </div>
-        <div class="card">
+        <div class="card why-premium">
           <h3>Servicii complete</h3>
-          <p class="muted">Formație live, sonorizare, lumini, efecte și opțiuni extra într-un singur pachet bine organizat.</p>
+          <p class="muted">Formație live, sonorizare, lumini, efecte și opțiuni extra într-un singur pachet bine organizat, fără improvizații inutile.</p>
         </div>
-        <div class="card">
-          <h3>Profesionalism</h3>
-          <p class="muted">Comunicare clară, prezență elegantă și organizare atentă pentru un eveniment fără improvizații neplăcute.</p>
+        <div class="card why-premium">
+          <h3>Profesionalism real</h3>
+          <p class="muted">Comunicare clară, prezență elegantă și organizare atentă pentru un eveniment premium, coerent și memorabil.</p>
         </div>
       </div>
     </section>
@@ -1265,7 +1370,7 @@
             <div class="rating-number">★★★★★</div>
             <div class="rating-meta">
               <div class="stars">★★★★★</div>
-              <div class="rating-text">Recomandări reale din Facebook Reviews</div>
+              <div class="rating-text">Recenzii reale din Facebook Reviews</div>
             </div>
           </div>
 
@@ -1286,7 +1391,6 @@
 
             <div class="testimonial-slide">
               <div class="testimonials-grid">
-
                 <div class="testimonial-pro">
                   <div class="testimonial-top">
                     <div class="client-avatar">PC</div>
@@ -1295,19 +1399,15 @@
                       <div class="client-event">Recenzie Facebook • octombrie 2025</div>
                     </div>
                   </div>
-
                   <div class="review-badge">
                     <span class="review-badge-dot"></span>
                     Atmosferă de senzație
                   </div>
-
                   <div class="stars">★★★★★</div>
-
                   <p>
                     Vă mulțumim că ați contribuit la fericirea noastră! Sunteți extrem de faini și ați făcut o atmosferă de senzație.
                     Oricine își dorește distracție, profesionalism și interpretări live uimitoare ar trebui să vă aleagă cu ochii închiși.
                   </p>
-
                   <div class="client-footer">
                     <div class="verified">Recenzie reală Facebook</div>
                   </div>
@@ -1321,20 +1421,15 @@
                       <div class="client-event">Recenzie Facebook • octombrie 2025</div>
                     </div>
                   </div>
-
                   <div class="review-badge">
                     <span class="review-badge-dot"></span>
                     Profesionalism la superlativ
                   </div>
-
                   <div class="stars">★★★★★</div>
-
                   <p>
                     Recomand din tot sufletul această formație absolut senzațională! Au știut exact cum să țină invitații
-                    pe ringul de dans de la început până la final. Muzică pentru toate gusturile, energie pozitivă
-                    și profesionalism la superlativ.
+                    pe ringul de dans de la început până la final. Muzică pentru toate gusturile, energie pozitivă și profesionalism la superlativ.
                   </p>
-
                   <div class="client-footer">
                     <div class="verified">Invitații au lăudat alegerea</div>
                   </div>
@@ -1348,30 +1443,24 @@
                       <div class="client-event">Recenzie Facebook • octombrie 2025</div>
                     </div>
                   </div>
-
                   <div class="review-badge">
                     <span class="review-badge-dot"></span>
                     Ring plin până dimineața
                   </div>
-
                   <div class="stars">★★★★★</div>
-
                   <p>
                     Recomand cu încredere formația. Sunt minunați și colaborarea a fost foarte frumoasă pentru nunta noastră.
                     Cântă toate genurile muzicale, fac atmosferă și ridică invitații de la masă, menținând ringul de dans plin până dimineața.
                   </p>
-
                   <div class="client-footer">
                     <div class="verified">Toate laudele din partea mirilor</div>
                   </div>
                 </div>
-
               </div>
             </div>
 
             <div class="testimonial-slide">
               <div class="testimonials-grid">
-
                 <div class="testimonial-pro">
                   <div class="testimonial-top">
                     <div class="client-avatar">RG</div>
@@ -1380,20 +1469,16 @@
                       <div class="client-event">Recenzie Facebook • septembrie 2025</div>
                     </div>
                   </div>
-
                   <div class="review-badge">
                     <span class="review-badge-dot"></span>
                     Seară memorabilă
                   </div>
-
                   <div class="stars">★★★★★</div>
-
                   <p>
                     Vă mulțumim din suflet pentru atmosfera extraordinară pe care ați creat-o la nunta noastră!
                     Ați fost absolut senzaționali și ați reușit să țineți ringul de dans plin până dimineața.
                     Profesionalismul, energia și repertoriul variat au făcut ca seara să fie memorabilă.
                   </p>
-
                   <div class="client-footer">
                     <div class="verified">Recomandare din tot sufletul</div>
                   </div>
@@ -1407,20 +1492,16 @@
                       <div class="client-event">Recenzie Facebook • august 2025</div>
                     </div>
                   </div>
-
                   <div class="review-badge">
                     <span class="review-badge-dot"></span>
                     Magie, muzică și emoție
                   </div>
-
                   <div class="stars">★★★★★</div>
-
                   <p>
                     O seară plină de magie, muzică și emoție! De la primul cântec până la ultima horă,
                     ne-ați oferit momente pline de energie, bucurie și emoție autentică.
                     Am dansat, am cântat și am trăit fiecare clipă alături de voi.
                   </p>
-
                   <div class="client-footer">
                     <div class="verified">Recomandare din toată inima</div>
                   </div>
@@ -1434,31 +1515,25 @@
                       <div class="client-event">Recenzie Facebook • noiembrie 2025</div>
                     </div>
                   </div>
-
                   <div class="review-badge">
                     <span class="review-badge-dot"></span>
                     Eveniment de neuitat
                   </div>
-
                   <div class="stars">★★★★★</div>
-
                   <p>
                     Recomand formația Alina Roșca & Profesional Orchestra. Am avut nunta dorită,
                     muzica și dansul nu au încetat toată noaptea. Dacă vă doriți un eveniment de neuitat,
                     cu siguranță Alina va face ca acest lucru să se întâmple.
                   </p>
-
                   <div class="client-footer">
                     <div class="verified">Nuntă și botez reușite</div>
                   </div>
                 </div>
-
               </div>
             </div>
 
             <div class="testimonial-slide">
               <div class="testimonials-grid">
-
                 <div class="testimonial-pro">
                   <div class="testimonial-top">
                     <div class="client-avatar">DN</div>
@@ -1467,20 +1542,16 @@
                       <div class="client-event">Recenzie Facebook • februarie</div>
                     </div>
                   </div>
-
                   <div class="review-badge">
                     <span class="review-badge-dot"></span>
                     Atenție la cerințe
                   </div>
-
                   <div class="stars">★★★★★</div>
-
                   <p>
                     Alina și orchestra au fost alături de noi la botezul băiețelului și au performat extraordinar de bine.
                     Oamenii sunt profesioniști și au tratat totul cu foarte mare atenție cererilor din acea seară.
                     Repertoriul a fost diversificat și deloc monoton.
                   </p>
-
                   <div class="client-footer">
                     <div class="verified">Botez reușit • multă apreciere</div>
                   </div>
@@ -1494,19 +1565,15 @@
                       <div class="client-event">Din pagina oficială de Facebook</div>
                     </div>
                   </div>
-
                   <div class="review-badge">
                     <span class="review-badge-dot"></span>
                     Dovadă socială autentică
                   </div>
-
                   <div class="stars">★★★★★</div>
-
                   <p>
                     Toate recenziile din această secțiune sunt bazate pe feedback real primit de la clienți.
                     Pentru și mai multă încredere, poți vedea recomandările direct pe pagina oficială de Facebook.
                   </p>
-
                   <div class="client-footer">
                     <a class="review-link" href="https://www.facebook.com/AlinaRoscaArtist/reviews/" target="_blank" rel="noopener noreferrer">
                       Deschide Facebook Reviews
@@ -1522,24 +1589,19 @@
                       <div class="client-event">Atmosferă • Eleganță • Energie</div>
                     </div>
                   </div>
-
                   <div class="review-badge">
                     <span class="review-badge-dot"></span>
                     Experiență premium live
                   </div>
-
                   <div class="stars">★★★★★</div>
-
                   <p>
                     Nuntă, botez sau eveniment privat — scopul nostru este același:
                     să oferim o experiență live autentică, elegantă și memorabilă, în care invitații să se simtă parte dintr-o seară specială.
                   </p>
-
                   <div class="client-footer">
                     <div class="verified">Live band pentru evenimente premium</div>
                   </div>
                 </div>
-
               </div>
             </div>
 
@@ -1617,6 +1679,7 @@
     </section>
 
     <section class="section" id="oferta">
+      <div class="tag">Rezervări & ofertă</div>
       <h2>Cere ofertă</h2>
       <div class="form-wrap">
         <div class="card">
@@ -1848,6 +1911,44 @@
 
     updateSlider(0);
     startAutoSlide();
+
+    const counters = document.querySelectorAll('.stat-number');
+    let hasAnimated = false;
+
+    function animateCounters(){
+      if (hasAnimated) return;
+
+      const section = document.querySelector('.stats-section');
+      const rect = section.getBoundingClientRect();
+
+      if (rect.top < window.innerHeight - 80) {
+        hasAnimated = true;
+
+        counters.forEach(counter => {
+          const target = +counter.getAttribute('data-target');
+          const duration = 1600;
+          const start = 0;
+          const startTime = performance.now();
+
+          function update(now){
+            const progress = Math.min((now - startTime) / duration, 1);
+            const value = Math.floor(progress * (target - start) + start);
+            counter.textContent = value;
+
+            if (progress < 1) {
+              requestAnimationFrame(update);
+            } else {
+              counter.textContent = target;
+            }
+          }
+
+          requestAnimationFrame(update);
+        });
+      }
+    }
+
+    window.addEventListener('scroll', animateCounters);
+    window.addEventListener('load', animateCounters);
   </script>
 </body>
 </html>
