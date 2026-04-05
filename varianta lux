@@ -1,10 +1,20 @@
 <!DOCTYPE html>
 <html lang="ro">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Alina Roșca & Profesional Orchestra</title>
-  <meta name="description" content="Muzică live premium pentru nunți, botezuri și evenimente private." />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Formație nuntă București | Alina Roșca & Profesional Orchestra</title>
+
+  <meta name="description" content="Formație nuntă București - muzică live premium pentru nunți și evenimente.">
+
+  <!-- OPEN GRAPH -->
+  <meta property="og:title" content="Formație nuntă București - Profesional Orchestra">
+  <meta property="og:description" content="Muzică live premium pentru nunți și evenimente.">
+  <meta property="og:image" content="https://profesionalorchestra.ro/formatie-nunta-bucuresti.jpg">
+  <meta property="og:url" content="https://profesionalorchestra.ro">
+  <meta property="og:type" content="website">
+</head>
   <style>
     * { box-sizing: border-box; margin: 0; padding: 0; }
 
@@ -786,13 +796,15 @@
       </div>
 
       <div class="menu">
-        <a href="#despre">✦ Despre</a>
-        <a href="#servicii">♬ Servicii</a>
-        <a href="#media">▶ Media</a>
-        <a href="#galerie">◈ Galerie</a>
-        <a href="#pachete">★ Pachete</a>
-        <a href="#oferta">✉ Ofertă</a>
-        <a href="#contact">☎ Contact</a>
+  <a href="#despre">✨ Despre</a>
+  <a href="#servicii">🎵 Servicii</a>
+  <a href="/formatie-nunta-bucuresti">🎤 Formație București</a>
+  <a href="/formatie-nunta-pret.html">💰 Prețuri</a>
+  <a href="#media">▶ Media</a>
+  <a href="#galerie">📸 Galerie</a>
+  <a href="#pachete">💼 Pachete</a>
+  <a href="#oferta">📝 Ofertă</a>
+  <a href="#contact">📞 Contact</a>>
       </div>
 
       <div class="top-actions">
@@ -803,6 +815,7 @@
   </div>
 
   <div class="container">
+   
 
     <section class="hero" id="hero">
       <img src="1.jpg" alt="Alina Roșca & Profesional Orchestra" class="hero-bg">
@@ -810,7 +823,7 @@
 
       <div class="hero-content">
         <div class="eyebrow">Muzică live premium pentru nunți, botezuri și evenimente private</div>
-        <h1>Alina Roșca & Profesional Orchestra</h1>
+      <h1>Formație nuntă București - Muzică live premium pentru evenimente</h1>
         <p>
           Eleganță, rafinament și spectacol live pentru momente de neuitat,
           alături de interpreți vocali, orchestră live și servicii premium complete.
@@ -837,10 +850,9 @@
     <section class="section" id="despre">
       <h2>Despre noi</h2>
       <p class="section-intro">
-        Alina Roșca & Profesional Orchestra este o formație dedicată evenimentelor care au nevoie de
-        atmosferă autentică, muzică live și o prezență scenică elegantă. Adaptăm programul în funcție
-        de public, de tipul evenimentului și de preferințele organizatorilor, astfel încât fiecare
-        apariție să fie memorabilă și perfect integrată în desfășurarea serii.
+        Suntem o formație de nuntă din București specializată în muzică live pentru evenimente premium.
+Asigurăm atmosferă completă pentru nunți, botezuri și petreceri private, cu orchestră live și repertoriu variat.
+</p>
       </p>
 
       <div class="grid-2">
@@ -967,10 +979,10 @@
     <section class="section" id="galerie">
       <h2>Atmosferă reală din evenimente</h2>
       <div class="gallery-wow">
-        <img src="1.jpg" alt="Galerie 1" onclick="openLightbox(this.src)">
-        <img src="2.jpg" alt="Galerie 2" onclick="openLightbox(this.src)">
-        <img src="3.jpg" alt="Galerie 3" onclick="openLightbox(this.src)">
-        <img src="4.jpg" alt="Galerie 4" onclick="openLightbox(this.src)">
+       <img src="formatie-nunta-bucuresti.jpg" alt="formatie nunta Bucuresti muzica live" loading="lazy">
+       <img src="muzica-live-nunta.jpg" alt="muzica live nunta atmosfera petrecere" loading="lazy">
+       <img src="orchestra-nunta-live.jpg" alt="orchestra nunta Bucuresti live band" loading="lazy">
+       <img src="band-evenimente-bucuresti.jpg" alt="formatie evenimente Bucuresti live" loading="lazy">
       </div>
     </section>
 
