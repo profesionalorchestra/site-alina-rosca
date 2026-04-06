@@ -322,22 +322,73 @@
       object-position:center;
     }
 
-    .hero-click-layer{
+    .hero-visual-ui{
       position:absolute;
-      inset:0;
-      z-index:3;
+      left:7.2%;
+      bottom:9.8%;
+      z-index:4;
+      display:flex;
+      flex-direction:column;
+      gap:14px;
+      align-items:flex-start;
+      max-width:min(720px, 78%);
       pointer-events:none;
     }
 
+    .hero-availability{
+      display:inline-flex;
+      align-items:center;
+      gap:10px;
+      min-height:40px;
+      padding:0 15px;
+      border-radius:999px;
+      background:rgba(12,9,17,0.74);
+      border:1px solid rgba(244,223,184,0.18);
+      color:#fff7ea;
+      font-size:12px;
+      font-weight:700;
+      letter-spacing:.2px;
+      backdrop-filter:blur(10px);
+      -webkit-backdrop-filter:blur(10px);
+      box-shadow:0 10px 26px rgba(0,0,0,0.20);
+      pointer-events:auto;
+    }
+
+    .hero-availability-dot{
+      width:9px;
+      height:9px;
+      border-radius:50%;
+      background:linear-gradient(135deg,#f4dfb8,#d4ac69);
+      box-shadow:0 0 14px rgba(244,223,184,0.65);
+      flex-shrink:0;
+      animation:pulseDot 1.8s ease-in-out infinite;
+    }
+
+    @keyframes pulseDot{
+      0%,100%{ transform:scale(1); opacity:1; }
+      50%{ transform:scale(1.18); opacity:.75; }
+    }
+
+    .hero-click-layer{
+      position:static;
+      inset:auto;
+      z-index:auto;
+      pointer-events:none;
+      display:flex;
+      gap:14px;
+      align-items:center;
+      flex-wrap:wrap;
+    }
+
     .hero-real-btn{
-      position:absolute;
+      position:static;
       pointer-events:auto;
       display:inline-flex;
       align-items:center;
       justify-content:center;
       gap:10px;
-      min-height:54px;
-      padding:0 28px;
+      min-height:56px;
+      padding:0 30px;
       border-radius:999px;
       font-weight:800;
       font-size:14px;
@@ -364,36 +415,93 @@
     }
 
     .hero-btn-main{
-      left:7.6%;
-      bottom:15.4%;
-      background:linear-gradient(90deg,#f4dfb8,#d4ac69);
+      position:relative;
+      overflow:hidden;
+      background:linear-gradient(90deg,#f4dfb8 0%, #e8ca96 45%, #d4ac69 100%);
       color:#18120d;
-      border:1px solid rgba(255,255,255,0.10);
+      border:1px solid rgba(255,255,255,0.16);
       box-shadow:
-        0 16px 34px rgba(227,195,139,0.18),
+        0 18px 38px rgba(227,195,139,0.22),
         0 2px 0 rgba(255,255,255,0.18) inset;
+    }
+
+    .hero-btn-main::before{
+      content:"";
+      position:absolute;
+      top:-35%;
+      left:-30%;
+      width:44%;
+      height:170%;
+      background:linear-gradient(
+        90deg,
+        transparent,
+        rgba(255,255,255,0.18),
+        rgba(255,255,255,0.42),
+        rgba(255,255,255,0.16),
+        transparent
+      );
+      transform:rotate(18deg);
+      animation:heroBtnShine 3.8s ease-in-out infinite;
+    }
+
+    @keyframes heroBtnShine{
+      0%{ left:-38%; opacity:0; }
+      10%{ opacity:1; }
+      28%{ left:118%; opacity:0; }
+      100%{ left:118%; opacity:0; }
     }
 
     .hero-btn-main:hover{
       box-shadow:
-        0 18px 36px rgba(227,195,139,0.24),
+        0 22px 42px rgba(227,195,139,0.28),
         0 2px 0 rgba(255,255,255,0.18) inset;
     }
 
     .hero-btn-video{
-      left:28.7%;
-      bottom:15.4%;
-      background:rgba(19,14,27,0.55);
-      border:1px solid rgba(244,223,184,0.30);
+      background:rgba(19,14,27,0.58);
+      border:1px solid rgba(244,223,184,0.28);
       color:#fff;
       box-shadow:
         0 14px 30px rgba(0,0,0,0.22),
-        0 1px 0 rgba(255,255,255,0.05) inset;
+        0 1px 0 rgba(255,255,255,0.06) inset;
     }
 
     .hero-btn-video:hover{
-      background:rgba(30,22,42,0.72);
+      background:rgba(30,22,42,0.76);
       border-color:rgba(244,223,184,0.42);
+    }
+
+    .hero-proof{
+      display:flex;
+      gap:12px;
+      flex-wrap:wrap;
+      pointer-events:auto;
+    }
+
+    .hero-proof-item{
+      min-width:150px;
+      padding:12px 14px;
+      border-radius:18px;
+      background:rgba(12,9,17,0.64);
+      border:1px solid rgba(244,223,184,0.14);
+      backdrop-filter:blur(10px);
+      -webkit-backdrop-filter:blur(10px);
+      box-shadow:0 12px 26px rgba(0,0,0,0.20);
+    }
+
+    .hero-proof-item strong{
+      display:block;
+      color:#fff7ea;
+      font-size:14px;
+      line-height:1.2;
+      margin-bottom:3px;
+    }
+
+    .hero-proof-item span{
+      display:block;
+      color:rgba(255,255,255,0.68);
+      font-size:12px;
+      line-height:1.4;
     }
 
     .section{
@@ -950,20 +1058,24 @@
         min-height:auto;
       }
 
+      .hero-visual-ui{
+        left:6.2%;
+        bottom:7.4%;
+        max-width:86%;
+      }
+
       .hero-real-btn{
-        min-height:48px;
+        min-height:50px;
         padding:0 22px;
         font-size:13px;
       }
 
-      .hero-btn-main{
-        left:6.8%;
-        bottom:12.3%;
+      .hero-click-layer{
+        gap:10px;
       }
 
-      .hero-btn-video{
-        left:30.1%;
-        bottom:12.3%;
+      .hero-proof-item{
+        min-width:138px;
       }
     }
 
@@ -1022,19 +1134,33 @@
         aspect-ratio:auto;
       }
 
-      .hero-click-layer{
+      .hero-visual-ui{
         position:static;
+        display:block;
+        max-width:none;
+      }
+
+      .hero-availability{
+        margin:14px 12px 10px;
+        width:calc(100% - 24px);
+        justify-content:center;
+        text-align:center;
+        min-height:40px;
+        padding:8px 12px;
+        border-radius:16px;
+      }
+
+      .hero-click-layer{
         display:flex;
         gap:10px;
         flex-wrap:wrap;
         justify-content:center;
-        padding:14px 12px 16px;
+        padding:0 12px 12px;
         background:rgba(10,8,14,0.96);
-        border-top:1px solid rgba(244,223,184,0.12);
+        pointer-events:auto;
       }
 
       .hero-real-btn{
-        position:static;
         min-height:46px;
         padding:0 16px;
         font-size:12px;
@@ -1042,10 +1168,14 @@
         max-width:260px;
       }
 
-      .hero-btn-main,
-      .hero-btn-video{
-        left:auto;
-        bottom:auto;
+      .hero-proof{
+        padding:0 12px 16px;
+        background:rgba(10,8,14,0.96);
+      }
+
+      .hero-proof-item{
+        flex:1 1 100%;
+        min-width:0;
       }
 
       .section{
@@ -1178,17 +1308,42 @@
         fetchpriority="high"
       >
 
-      <div class="hero-click-layer" aria-label="Acțiuni hero">
-        <a href="#oferta" class="hero-real-btn hero-btn-main">
-          Verifică disponibilitatea
-        </a>
+      <div class="hero-visual-ui">
+        <div class="hero-availability">
+          <span class="hero-availability-dot"></span>
+          Disponibilitate limitată pentru 2026 • răspuns rapid pe WhatsApp
+        </div>
 
-        <a href="https://www.youtube.com/watch?v=G37C2lHENog" target="_blank" rel="noopener noreferrer" class="hero-real-btn hero-btn-video">
-          <svg viewBox="0 0 24 24" aria-hidden="true" fill="currentColor">
-            <path d="M8 6.5v11l9-5.5-9-5.5z"></path>
-          </svg>
-          Vezi video
-        </a>
+        <div class="hero-click-layer" aria-label="Acțiuni hero">
+          <a href="#oferta" class="hero-real-btn hero-btn-main">
+            <svg viewBox="0 0 24 24" aria-hidden="true" fill="currentColor">
+              <path d="M12 2l2.4 4.86L20 7.7l-4 3.9.94 5.5L12 14.77 7.06 17.1 8 11.6 4 7.7l5.6-.84L12 2z"></path>
+            </svg>
+            Verifică disponibilitatea
+          </a>
+
+          <a href="https://www.youtube.com/watch?v=G37C2lHENog" target="_blank" rel="noopener noreferrer" class="hero-real-btn hero-btn-video">
+            <svg viewBox="0 0 24 24" aria-hidden="true" fill="currentColor">
+              <path d="M8 6.5v11l9-5.5-9-5.5z"></path>
+            </svg>
+            Vezi video
+          </a>
+        </div>
+
+        <div class="hero-proof">
+          <div class="hero-proof-item">
+            <strong>★★★★★</strong>
+            <span>Recenzii reale</span>
+          </div>
+          <div class="hero-proof-item">
+            <strong>Live premium</strong>
+            <span>Nuntă • botez • privat</span>
+          </div>
+          <div class="hero-proof-item">
+            <strong>București + țară</strong>
+            <span>Deplasări disponibile</span>
+          </div>
+        </div>
       </div>
     </section>
 
