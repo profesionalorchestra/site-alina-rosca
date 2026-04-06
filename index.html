@@ -148,16 +148,16 @@
       position:sticky;
       top:0;
       z-index:50;
-      background:rgba(12,9,17,0.82);
-      backdrop-filter:blur(14px);
-      border-bottom:1px solid var(--line);
-      box-shadow:0 8px 24px rgba(0,0,0,0.18);
+      background:rgba(10,8,14,0.72);
+      backdrop-filter:blur(16px);
+      border-bottom:1px solid rgba(244,223,184,0.10);
+      box-shadow:0 10px 30px rgba(0,0,0,0.18);
     }
 
     .topbar-inner{
       max-width:1180px;
       margin:auto;
-      padding:10px 18px;
+      padding:12px 18px;
       display:flex;
       align-items:center;
       justify-content:space-between;
@@ -290,14 +290,15 @@
       padding:22px;
     }
 
-    /* HERO PREMIUM CU IMAGINE */
     .hero-premium{
       position:relative;
       margin-top:18px;
       border-radius:34px;
       overflow:hidden;
-      border:1px solid var(--line);
-      box-shadow:var(--shadow);
+      border:1px solid rgba(244,223,184,0.16);
+      box-shadow:
+        0 28px 60px rgba(0,0,0,0.28),
+        0 0 0 1px rgba(255,255,255,0.02) inset;
       background:#0c0a10;
     }
 
@@ -305,18 +306,18 @@
       content:"";
       position:absolute;
       inset:0;
-      background:
-        linear-gradient(to top, rgba(8,7,12,0.10), transparent 22%),
-        linear-gradient(to right, rgba(8,7,12,0.06), transparent 30%);
       z-index:1;
       pointer-events:none;
+      background:
+        linear-gradient(to top, rgba(6,5,8,0.14), transparent 22%),
+        linear-gradient(to right, rgba(6,5,8,0.08), transparent 28%);
     }
 
     .hero-premium img.hero-banner{
       display:block;
       width:100%;
       height:auto;
-      aspect-ratio: 16 / 9;
+      aspect-ratio:16 / 9;
       object-fit:cover;
       object-position:center;
     }
@@ -334,47 +335,64 @@
       display:inline-flex;
       align-items:center;
       justify-content:center;
-      min-height:52px;
-      padding:0 26px;
+      gap:10px;
+      min-height:54px;
+      padding:0 28px;
       border-radius:999px;
       font-weight:800;
       font-size:14px;
       letter-spacing:.2px;
-      transition:transform .25s ease, box-shadow .25s ease, background .25s ease, border-color .25s ease;
-      white-space:nowrap;
       line-height:1;
-      backdrop-filter:blur(8px);
-      -webkit-backdrop-filter:blur(8px);
+      white-space:nowrap;
+      transition:
+        transform .22s ease,
+        box-shadow .22s ease,
+        background .22s ease,
+        border-color .22s ease;
+      backdrop-filter:blur(10px);
+      -webkit-backdrop-filter:blur(10px);
     }
 
     .hero-real-btn:hover{
       transform:translateY(-2px);
     }
 
+    .hero-real-btn svg{
+      width:16px;
+      height:16px;
+      flex-shrink:0;
+    }
+
     .hero-btn-main{
-      left:8.3%;
-      bottom:16.3%;
+      left:7.6%;
+      bottom:15.4%;
       background:linear-gradient(90deg,#f4dfb8,#d4ac69);
       color:#18120d;
+      border:1px solid rgba(255,255,255,0.10);
       box-shadow:
-        0 14px 28px rgba(227,195,139,0.18),
+        0 16px 34px rgba(227,195,139,0.18),
         0 2px 0 rgba(255,255,255,0.18) inset;
-      border:1px solid rgba(255,255,255,0.12);
+    }
+
+    .hero-btn-main:hover{
+      box-shadow:
+        0 18px 36px rgba(227,195,139,0.24),
+        0 2px 0 rgba(255,255,255,0.18) inset;
     }
 
     .hero-btn-video{
-      left:28.6%;
-      bottom:16.3%;
-      background:rgba(255,255,255,0.05);
-      border:1px solid rgba(244,223,184,0.28);
+      left:28.7%;
+      bottom:15.4%;
+      background:rgba(19,14,27,0.55);
+      border:1px solid rgba(244,223,184,0.30);
       color:#fff;
       box-shadow:
-        0 12px 26px rgba(0,0,0,0.22),
-        0 1px 0 rgba(255,255,255,0.06) inset;
+        0 14px 30px rgba(0,0,0,0.22),
+        0 1px 0 rgba(255,255,255,0.05) inset;
     }
 
     .hero-btn-video:hover{
-      background:rgba(255,255,255,0.09);
+      background:rgba(30,22,42,0.72);
       border-color:rgba(244,223,184,0.42);
     }
 
@@ -939,13 +957,13 @@
       }
 
       .hero-btn-main{
-        left:7.2%;
-        bottom:13.2%;
+        left:6.8%;
+        bottom:12.3%;
       }
 
       .hero-btn-video{
-        left:30.2%;
-        bottom:13.2%;
+        left:30.1%;
+        bottom:12.3%;
       }
     }
 
@@ -1001,7 +1019,7 @@
       }
 
       .hero-premium img.hero-banner{
-        aspect-ratio: auto;
+        aspect-ratio:auto;
       }
 
       .hero-click-layer{
@@ -1161,8 +1179,16 @@
       >
 
       <div class="hero-click-layer" aria-label="Acțiuni hero">
-        <a href="#oferta" class="hero-real-btn hero-btn-main">Verifică disponibilitatea</a>
-        <a href="https://www.youtube.com/watch?v=G37C2lHENog" target="_blank" rel="noopener noreferrer" class="hero-real-btn hero-btn-video">Vezi video</a>
+        <a href="#oferta" class="hero-real-btn hero-btn-main">
+          Verifică disponibilitatea
+        </a>
+
+        <a href="https://www.youtube.com/watch?v=G37C2lHENog" target="_blank" rel="noopener noreferrer" class="hero-real-btn hero-btn-video">
+          <svg viewBox="0 0 24 24" aria-hidden="true" fill="currentColor">
+            <path d="M8 6.5v11l9-5.5-9-5.5z"></path>
+          </svg>
+          Vezi video
+        </a>
       </div>
     </section>
 
